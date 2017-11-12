@@ -1,0 +1,362 @@
+P	BT_JAL	1	BT_	0x40016000	Bluetooth	JAL	controller			
+A	0x0	0x2000	IOregisters							
+I 	INT_BT_BB 	0
+R	JAL_COM_CTRL_BD_LO	0x00	32	read-write	Bluetooth	Device	Address			
+F	UAP	24	8	read-write						
+F	LAP	0	24	read-write						
+R	JAL_COM_CTRL_BD_HI	0x04	32	read-write	Bluetooth	Device	Address			
+F	NAP	0	16	read-write						
+R	JAL_COM_CTRL_SYNC_LO	0x08	32	read-write	Device	Sync	Word			
+F	SYNC_LO	0	32	read-write						
+R	JAL_COM_CTRL_SYNC_HI	0x0C	32	read-write	Device	Sync	Word			
+F	SYNC_HI	0	32	read-write						
+R	JAL_COM_CTRL_INTRASLOT_OFFSET	0x10	32	read-write	Intraslot	Offset				
+F	INTRASLOT_OFFSET	0	11	read-write						
+R	JAL_COM_CTRL_BT_CLK_READ_or_OFFSET_WR	0x18	32	read-write	Bluetooth	Clock	Offset or Bluetooth	Clock
+F	BT_CLK_or_BT_CLK_OFFSET	0	28	read-only						
+R	JAL_COM_CTRL_NATIVE_CLK	0x1C	32	read-write	Native	Bluetooth	Clock			
+F	NATIVE_BT_CLK	0	28	read-write						
+R	JAL_COM_CTRL_GP1	0x20	32	read-write	common	control	reg1			
+F	CRC_INIT	24	8	read-write						
+F	VCI_CLK_SEL	22	2	read-write						
+F	SCO_FIFO	20	2	read-write						
+F	SCO_CFG2	16	4	read-write						
+F	SCO_CFG1	12	4	read-write						
+F	SCO_CFG0	8	4	read-write						
+F	PAGE	7	1	read-write						
+F	SLAVE	6	1	read-write						
+F	USE_LF	5	1	read-write						
+F	ENCRYPT	3	2	read-write						
+F	AM_ADDR	0	3	read-write						
+R	JAL_COM_CTRL_GP2	0x24	32	read-write	common	control	reg2			
+F	WHITEN	31	1	read-write						
+F	DOUBLE_BUF	30	1	read-write						
+F	DWH2_INIT	24	6	read-write						
+F	DWH_BY_BT_CLK	23	1	read-write						
+F	DWH_INIT	16	6	read-write						
+F	USE_HAB_CRL1	15	1	read-write						
+F	TEST_TX_SHIFT	12	3	read-write						
+F	TEST_FORCE_NO_DDW	10	1	read-write						
+F	VCI_CLK_SEL_MAP	9	1	read-write						
+F	TEST_RADIO	8	1	read-write						
+F	TEST_HEC	7	1	read-write						
+F	TEST_CRC	6	1	read-write						
+F	ECO_ERR	2	4	read-write						
+F	TEST_ECO	1	1	read-write						
+F	LOOP	0	1	read-write						
+R	JAL_COM_CTRL_IRQ	0x28	32	read-write	common	control	irq	int		
+F	VCI_SYNC_DIR	31	1	read-write						
+F	SYNC_DET_INTR_CLR	30	1	read-write						
+F	NO_PKT_RCVD_INTR_CLR	29	1	read-write						
+F	AES_INTR_CLR	28	1	read-write						
+F	SER0_WR_CLR	27	1	read-write						
+F	SPI_NOW_CONFLICT_CLR	25	1	read-write						
+F	PKD_RX_HDR_INTR_CLR	23	1	read-write						
+F	PKA_INTR_CLR	22	1	read-write						
+F	AUX_TMR_INTR_CLR	21	1	read-write						
+F	PKD_INTR_CLR	20	1	read-write						
+F	TIM_INTR_CLR_3	19	1	read-write						
+F	TIM_INTR_CLR_2	18	1	read-write						
+F	TIM_INTR_CLR_1	17	1	read-write						
+F	TIM_INTR_CLR_0	16	1	read-write						
+F	TX_RX_AUX1_PKT	15	1	read-write						
+F	SYNC_DET_INTR_MASK	14	1	read-write						
+F	NO_PKT_RCVD_INTR_MASK	13	1	read-write						
+F	AES_INTR_MASK	12	1	read-write						
+F	PKD_RX_HDR_INTR_MASK	7	1	read-write						
+F	PKA_INTR_MASK	6	1	read-write						
+F	AUX_TMR_INTR_MASK	5	1	read-write						
+F	PKD_INTR_MASK	4	1	read-write						
+F	TIM_INTR_MASK	0	4	read-write						
+R	JAL_COM_STAT_IRQ	0x2C	32	read-write	common	int	status	register		
+F	SLEEP	15	1	read-write						
+F	SYNC_DET_INTR	14	1	read-write						
+F	NO_PKT_RCVD_INTR	13	1	read-write						
+F	AES_INTR	        12	1	read-write						
+F	SPI_NOW_CONFLICT	9	1	read-write						
+F	PKD_RX_HDR_INTR	7	1	read-write						
+F	PKA_INTR	6	1	read-write						
+F	AUX_TMR_INTR	5	1	read-write						
+F	PKD_INTR	4	1	read-write						
+F	TIM_INTR	0	4	read-write						
+R	JAL_TX_CTRL	0x30	32	read-write	Transmit	Control				
+F	TX_P_FLOW	21	1	read-write						
+F	TX_L_CH	19	2	read-write						
+F	TX_MODE	17	2	read-write						
+F	TX_SEQN	15	1	read-write						
+F	TX_ARQN	14	1	read-write						
+F	TX_FLOW	13	1	read-write						
+F	TX_TYPE	9	4	read-write						
+F	TX_LEN	0	9	read-write						
+R	JAL_ESCO_CTRL	0x34	32	read-write	eSCO	packet	control			
+F	SCO_ROUTE	19	1	read-write						
+F	ESCO_LT_ADDR	16	3	read-write						
+F	RX_LEN_ESCO	8	8	read-write						
+F	TX_LEN_ESCO	0	8	read-write						
+R	JAL_NATIVE_BIT_CNT	0x38	32	read-only	native	bit	count			
+F	native_bitcnt	0	11	read-only						
+R	JAL_CODEC_TYPE	0x3C	32	read-write	codec	type				
+F	CODEC_TYPE	0	3	read-write						
+R	JAL_RX_CTRL	0x48	32	read-write	receive	control				
+F	ABORT_ON_WRONG_AM_ADDR	23	1	read-write						
+F	FREEZE_BIT_CNT	22	1	read-write						
+F	WIN_EXT	12	10	read-write						
+F	ERR_SEL	9	3	read-write						
+F	ABORT_ON_FEC_FAIL	7	1	read-write						
+F	SYNC_ERR	2	5	read-write						
+F	RX_MODE	0	2	read-write						
+R	JAL_RX_STATUS_GP1	0x50	32	read-write	receive	status	reg1			
+F	AM_ADDR_ABORT	29	1	read-only						
+F	FEC_ABORT	28	1	read-only						
+F	RX_HDR	27	1	read-only						
+F	CRC_ERR	26	1	read-only						
+F	HEC_ERR	25	1	read-only						
+F	RX_PKT	24	1	read-only						
+F	RX_P_FLOW	21	1	read-only						
+F	RX_L_CH	    19	2	read-only						
+F	RX_AM_ADDR	16	3	read-only						
+F	RX_SEQN	15	1	read-only						
+F	RX_ARQN	14	1	read-only						
+F	RX_FLOW	13	1	read-only						
+F	RX_TYPE	9	4	read-only						
+F	RX_LEN	0	9	read-only						
+R	JAL_RX_STATUS_GP2	0x58	32	read-only	receive	status	reg2			
+F	PKD_POS_ERR	0	7	read-only						
+R	JAL_SER_CFG_or_JTAG	0x60	32	read-write	Serial	Interface	config			
+F	SER_BUSY	31	1	read-only						
+F	SER_MODE	30	1	read-write						
+F	Dbus_En	27	1	read-write						
+F	low_enable	26	1	read-write						
+F	lsb_first	25	1	read-write						
+F	SEL_Pol	24	1	read-write						
+F	Clk_Byp	23	1	read-write						
+F	Clock_High	20	3	read-write						
+F	Clock_Low	16	4	read-write						
+F	Enable	12	4	read-write						
+F	Data_Pol	11	1	read-write						
+F	Clk_Pol	10	1	read-write						
+F	Packet_length	5	5	read-write						
+F	Address_length	0	5	read-write						
+R	JAL_SER_ESER_CTRL	0x64	32	read-write	enhanced	SER	control			
+F	SER_MAP_SEL	23	1	read-write						
+F	SER_SEQ	21	1	read-write						
+F	SER_NOW	20	1	read-write						
+F	SER_ONE_SHOT	19	1	read-write						
+F	SER_COMBINE	16	3	read-write						
+F	SER_MASK	0	16	read-write						
+R	JAL_SER_ESER_TIME	0x68	32	read-write	enhanced	SER	timing			
+F	SER_TIME_LATE_EN	20	4	read-write						
+F	SER_TIME_EARLY_EN	16	4	read-write						
+R	JAL_SER_ESER_TIME0	0x70	32	read-write	enhanced	SER	timing	0		
+F	SER_TIME_0	0	4	read-write						
+R	JAL_SER_ESER_TIME1	0x74	32	read-write	enhanced	SER	timing	1		
+F	SER_TIME_1	4	4	read-write						
+R	JAL_SER_ESER_TIME2	0x78	32	read-write	enhanced	SER	timing	2		
+F	SER_TIME_2	0	4	read-write						
+R	JAL_SER_ESER_TIME3	0x7C	32	read-write	enhanced	SER	timing	3		
+F	SER_TIME_3	4	4	read-write						
+R	JAL_SER_READ_DATA	0x6C	32	read-write	Serial	interface	read	data		
+F	SER_READ_DATA	0	32	Read-only						
+R	JAL_STB_CFG	0x80	32	read-write	STB	config or SCO codec
+F	STB_BUSY	31	1	Read-only						
+F	STB_CFG	0	26	read-write						
+R	JAL_HIGH_SER	0x90	32	read-write	high	SER	reg			
+F	HIGH_SER1_OVERRIDE	31	1	read-write						
+F	HIGH_SER1_EXT	29	2	read-write						
+F	HIGH_SER1	16	11	read-write						
+F	HIGH_SER0_OVERRIDE	15	1	read-write						
+F	HIGH_SER0_EXT	13	2	read-write						
+F	HIGH_SER0	0	11	read-write						
+R	JAL_LOW_SER	0x94	32	read-write	LOW	SER	reg			
+F	LOW_SER1_OVERRIDE	31	1	read-write						
+F	LOW_SER1_EXT	29	2	read-write						
+F	LOW_SER1	16	11	read-write						
+F	LOW_SER0_OVERRIDE	15	1	read-write						
+F	LOW_SER0_EXT	13	2	read-write						
+F	LOW_SER0	0	11	read-write						
+R	JAL_CODEC_VOL_CTL	0x9C	32	read-write	codec	vol	control			
+F	PF3_BYPASS	7	1	read-write						
+F	sco_vol_att	0	3	read-write						
+R	JAL_AUX_TIMER	0xA0	32	read-write	auxiliary	timer				
+F	AUX_TIMER	0	14	read-write						
+R	JAL_PIA_DATA	0xA4	32	read-write	Parallel	Interface	Adaptor	Data		
+F	P_DATA_3	24	8	read-write						
+F	P_DATA_2	16	8	read-write						
+F	P_DATA_1	8	8	read-write						
+F	P_DATA_0	0	8	read-write						
+R	JAL_PIA_CTRL	0xA8	32	read-write	Parallel	Interface	Adaptor	Control		
+F	P_RDATA	16	7	Read-only						
+F	P_DATA_DIR	14	1	read-write						
+F	P_SEQ	13	1	read-write						
+F	P_NOW	12	1	read-write						
+F	P_MASK	8	4	read-write						
+F	P_SETUP	0	8	read-write						
+R	JAL_PATH_DELAYS	0xB0	32	read-write	Receive_Transmit	Path	Delay			
+F	TX_DELAY	8	4	read-write						
+F	RX_DELAY	0	7	read-write						
+R	JAL_ENC_KEY_LENGTH	0xB8	32	read-write	Encryption	Key	Length			
+F	ENC_KEY_LEN	0	4	read-write						
+R	JAL_ENCRYPTION_KEY0	0xC0	32	read-write	Encryption	Key	0			
+F	ENC_KEY0	0	32	read-write						
+R	JAL_ENCRYPTION_KEY1	0xC4	32	read-write	Encryption	Key	1			
+F	ENC_KEY1	0	32	read-write						
+R	JAL_ENCRYPTION_KEY2	0xC8	32	read-write	Encryption	Key	2			
+F	ENC_KEY2	0	32	read-write						
+R	JAL_ENCRYPTION_KEY3	0xCC	32	read-write	Encryption	Key	3			
+F	ENC_KEY3	0	32	read-write						
+R	JAL_HSE_BT_CLK	0xD0	32	read-write	Hop	Selection	Engine	BT	clock	
+F	HSE_BT_CLK	0	28	read-write						
+R	JAL_HSE_UAP_LAP	0xD4	32	read-write	Hop	Selection	Engine	UAP	LAP	
+F	HSE_UAP_LAP	0	28	read-write						
+R	JAL_HSE_SUM	0xD8	32	read-write	HSE	summation	for	the	re-mapping	function
+F	HSE_SUM	0	26	read-only						
+R	JAL_HSE_RF_CHAN_INDEX	0xDC	32	read-write	HSE	hop-79	connection	state	channel	index
+F	HSE_RF_CHAN_INDEX	0	7	read-only						
+R	JAL_BT_CLK_CTL	0xF0	32	read-write	BT	clock	control			
+F	SCO_REP_MODE	4	1	read-write						
+F	FREEZE_BT_CLOCK	3	1	read-write						
+F	DELAYED_BT_CLK_UPDATE	2	1	read-write						
+F	WRITE_ABSOLUTE_BT_CLK	1	1	read-write						
+F	ADD_BT_CLK_RELATIVE	0	1	read-write						
+R	JAL_REV_CODE	0xF8	32	read-only	LC	Revision	Code			
+F	MAJOR_REV	8	8	read-only						
+F	MINOR_REV	0	8	read-only						
+R	JAL_RST_CTL	0xFC	32	read-write	LC	Reset	Controls			
+F	RST_CODE	23	8	read-write						
+R	JAL_WR_RX_HPF_FILT	0x110	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_HPF_FILT	0	16	read-write						
+R	JAL_WR_RX_PF1_FILT_A	0x114	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_PF1_FILT_A	0	32	read-write						
+R	JAL_WR_RX_PF1_FILT_B	0x118	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_PF1_FILT_B	0	32	read-write						
+R	JAL_WR_RX_PF2_FILT	0x11C	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_PF2_FILT	0	32	read-write						
+R	JAL_WR_RX_PF3_FILT	0x120	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_PF3_FILT	0	32	read-write						
+R	JAL_WR_RX_CVSD_FILT_A	0x124	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	WR_RX_CVSD_FILT_A	0	26	read-write						
+R	JAL_LD_WR_RX_CVSD_FILT_B	0x128	32	read-write	CVSD	Receive	Initial	Value	Registers	
+F	LD_RX	26	1	read-write						
+F	WR_RX_CVSD_FILT_B	0	26	read-write						
+R	JAL_WR_TX_HPF_FILT	0x130	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_HPF_FILT	0	16	read-write						
+R	JAL_WR_TX_PF1_FILT_A	0x134	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_PF1_FILT_A	0	32	read-write						
+R	JAL_WR_TX_PF1_FILT_B	0x138	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_PF1_FILT_B	0	32	read-write						
+R	JAL_WR_TX_PF2_FILT	0x13C	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_PF2_FILT	0	32	read-write						
+R	JAL_WR_TX_PF3_FILT	0x140	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_PF3_FILT	0	32	read-write						
+R	JAL_WR_TX_CVSD_FILT_A	0x144	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	WR_TX_CVSD_FILT_A	0	26	read-write						
+R	JAL_LD_WR_TX_CVSD_FILT_B	0x148	32	read-write	CVSD	TransmitInitial	Value	Registers		
+F	LD_TX	26	1	read-write						
+F	WR_TX_CVSD_FILT_B	0	26	read-write						
+R	JAL_TX_HPF_FILT	0x150	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_HPF_FILT	0	16	read-only						
+R	JAL_TX_PF1_FILT_A	0x154	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_PF1_FILT_A	0	32	read-only						
+R	JAL_TX_PF1_FILT_B	0x158	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_PF1_FILT_B	0	32	read-only						
+R	JAL_TX_PF2_FILT	0x15C	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_PF2_FILT	0	32	read-only						
+R	JAL_TX_PF3_FILT	0x160	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_PF3_FILT	0	32	read-only						
+R	JAL_TX_CVSD_FILT_A	0x164	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_CVSD_FILT_A	0	26	read-only						
+R	JAL_TX_CVSD_FILT_B	0x168	32	read-only	CVSD	Transmit	Final	Value	Registers	
+F	TX_CVSD_FILT_B	0	26	read-only						
+R	JAL_RX_HPF_FILT	0x170	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_HPF_FILT	0	16	read-only						
+R	JAL_RX_PF1_FILT_A	0x174	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_PF1_FILT_A	0	32	read-only						
+R	JAL_RX_PF1_FILT_B	0x178	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_PF1_FILT_B	0	32	read-only						
+R	JAL_RX_PF2_FILT	0x17C	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_PF2_FILT	0	32	read-only						
+R	JAL_RX_PF3_FILT	0x180	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_PF3_FILT	0	32	read-only						
+R	JAL_RX_CVSD_FILT_A	0x184	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_CVSD_FILT_A	0	32	read-only						
+R	JAL_RX_CVSD_FILT_B	0x188	32	read-only	CVSD	Receive	Final	Value	registers	
+F	RX_CVSD_FILT_B	0	32	read-only						
+R	JAL_SCO_TX_FIFO_CTL_STATUS	0x1A0	32	read-write	SCO	transmit	fifo	control	status	
+F	SCO_TX_FIFO_FILL_LEVEL0	26	6	Read-only						
+F	SCO_RX_FIFO_FILL_LEVEL0	20	6	Read-only						
+F	SCO_TX_FIFO_THRESHOLD0	14	6	read-write						
+F	SCO_RX_FIFO_THRESHOLD0	8	6	read-write						
+F	SCO_TX_FIFO_HIGH0	4	1	Read-only						
+F	SCO_RX_FIFO_LOW0	3	1	Read-only						
+F	SCO_CHAN_FIFO_RST0	2	1	read-write						
+F	SCO_CHAN_16_8BIT0	1	1	read-write						
+F	SCO_CHAN_FIFO_MODE0	0	1	read-write						
+R	JAL_SER_DATA0	0x600	32	read-write	SER	Data	0			
+F	JAL_SER_DATA0	0	32	read-write						
+R	JAL_SER_DATA1	0x604	32	read-write	SER	Data	1			
+F	JAL_SER_DATA1	0	32	read-write						
+R	JAL_SER_DATA2	0x608	32	read-write	SER	Data	2			
+F	JAL_SER_DATA2	0	32	read-write						
+R	JAL_SER_DATA3	0x60C	32	read-write	SER	Data	3			
+F	JAL_SER_DATA3	0	32	read-write						
+R	JAL_SER_DATA4	0x610	32	read-write	SER	Data	4			
+F	JAL_SER_DATA4	0	32	read-write						
+R	JAL_SER_DATA5	0x614	32	read-write	SER	Data	5			
+F	JAL_SER_DATA5	0	32	read-write						
+R	JAL_SER_DATA6	0x618	32	read-write	SER	Data	6			
+F	JAL_SER_DATA6	0	32	read-write						
+R	JAL_SER_DATA7	0x61C	32	read-write	SER	Data	7			
+F	JAL_SER_DATA7	0	32	read-write						
+R	JAL_SER_DATA8	0x620	32	read-write	SER	Data	8			
+F	JAL_SER_DATA8	0	32	read-write						
+R	JAL_SER_DATA9	0x624	32	read-write	SER	Data	9			
+F	JAL_SER_DATA9	0	32	read-write						
+R	JAL_SER_DATA10	0x628	32	read-write	SER	Data	10			
+F	JAL_SER_DATA10	0	32	read-write						
+R	JAL_SER_DATA11	0x62C	32	read-write	SER	Data	11			
+F	JAL_SER_DATA11	0	32	read-write						
+R	JAL_SER_DATA12	0x630	32	read-write	SER	Data	12			
+F	JAL_SER_DATA12	0	32	read-write						
+R	JAL_SER_DATA13	0x634	32	read-write	SER	Data	13			
+F	JAL_SER_DATA13	0	32	read-write						
+R	JAL_SER_DATA14	0x638	32	read-write	SER	Data	14			
+F	JAL_SER_DATA14	0	32	read-write						
+R	JAL_SER_DATA15	0x63C	32	read-write	SER	Data	15			
+F	JAL_SER_DATA15	0	32	read-write						
+R	JAL_EDR_CTRL	0x700	32	read-write	EDR	control				
+F	TX_EDR_DELAY	12	4	read-write						
+F	RX_EDR_DELAY	8	4	read-write						
+F	EDR_SYNC_ERROR	3	5	read-write						
+F	PTT_ESCO	2	1	read-write						
+F	PTT_ACL	1	1	read-write						
+F	ENABLE_EDR	0	1	read-write						
+R	JAL_TX_CTRL_EDR	0x710	32	read-write	Transmit	Control				
+F	TX_P_FLOW	22	1	read-write						
+F	TX_L_CH	20	2	read-write						
+F	TX_MODE	18	2	read-write						
+F	TX_SEQN	16	1	read-write						
+F	TX_ARQN	15	1	read-write						
+F	TX_FLOW	14	1	read-write						
+F	TX_TYPE	10	4	read-write						
+F	TX_LEN	0	10	read-write						
+R	JAL_ESCO_CTRL_EDR	0x720	32	read-write	ESCO	control				
+F	RX_LEN_ESCO	16	10	read-write						
+F	SCO_ROUTE	13	1	read-write						
+F	ESCO_LT_ADDR	10	3	read-write						
+F	TX_LEN_ESCO	0	10	read-write						
+R	JAL_RX_STATUS_GP_EDR	0x730	32	read-write	receive	status				
+F	NO_EDR_SYNC	30	1	Read-only						
+F	AM_ADDR_ABORT	29	1	Read-only						
+F	FEC_ABORT	28	1	Read-only						
+F	RX_HDR	27	1	Read-only						
+F	CRC_ERR	26	1	Read-only						
+F	HEC_ERR	25	1	Read-only						
+F	RX_PKT	24	1	Read-only						
+F	RX_P_FLOW	22	1	Read-only						
+F	RX_L_CH	20	2	Read-only						
+F	RX_AM_ADDR	17	3	Read-only						
+F	RX_SEQN	16	1	Read-only						
+F	RX_ARQN	15	1	Read-only						
+F	RX_FLOW	14	1	Read-only						
+F	RX_TYPE	10	4	Read-only						
+F	RX_LEN	0	10	Read-only						

@@ -1,0 +1,81 @@
+;
+; Huntersun HS66xx USB Serial Port Setup File
+;
+; Based on Windows USB CDC ACM Setup File
+; Copyright (c) 2000 Microsoft Corporation
+; Copyright (c) 2014 Huntersun Electronics
+
+[Version] 
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%PROVIDER%
+DriverVer=05/09/2014,1.0.0.2
+
+[Manufacturer] 
+%MFGNAME%=DeviceList,NTx86,NTamd64
+
+
+[DeviceList.NTx86]
+%DESC_HS66xx%   = DriverInstall, USB\VID_F012&PID_0000
+%DESC_HS6600%   = DriverInstall, USB\VID_F012&PID_6600
+%DESC_HS6601%   = DriverInstall, USB\VID_F012&PID_0001
+
+[DeviceList.NTamd64]
+%DESC_HS66xx%   = DriverInstall, USB\VID_F012&PID_0000
+%DESC_HS6600%   = DriverInstall, USB\VID_F012&PID_6600
+%DESC_HS6601%   = DriverInstall, USB\VID_F012&PID_0001
+
+
+;------------------------------------------------------------------------------
+;  Windows 32-bit sections
+;------------------------------------------------------------------------------
+
+[DriverInstall.NTx86]
+include=mdmcpq.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=DriverRegistryKeys
+
+[DriverInstall.NTx86.Services]
+AddService=usbser, 0x00000002, DriverService
+
+
+;------------------------------------------------------------------------------
+;  Windows 64-bit sections
+;------------------------------------------------------------------------------
+
+[DriverInstall.NTamd64]
+include=mdmcpq.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=DriverRegistryKeys
+
+[DriverInstall.NTamd64.Services]
+AddService=usbser, 0x00000002, DriverService
+
+
+;------------------------------------------------------------------------------
+;
+;------------------------------------------------------------------------------
+
+[DriverRegistryKeys]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverService]
+DisplayName   = %SERVICE%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\usbser.sys
+
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+PROVIDER      = "Huntersun Electronics"
+MFGNAME       = "Huntersun Electronics"
+SERVICE       = "Huntersun USB CDC Driver"
+DESC_HS66xx   = "HS66xx USB CDC Serial Port"
+DESC_HS6600   = "HS6600 USB CDC Serial Port"
+DESC_HS6601   = "HS6601 USB CDC Serial Port"

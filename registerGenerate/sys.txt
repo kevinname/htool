@@ -1,0 +1,10 @@
+P	SYS	1.0	SYS_	0x40000000	System module
+A	0x0	0x1000	IOregisters
+R	CHIP_ID				0x00	32	read-write	Chip ID register
+R	CLK_EN				0x14	32	read-write	
+R	CPU_SYS_TICK		0x18	32	read-write	SysTick Calib config register
+R	USB_CTRL			0x1C	32	read-write	USB Control register
+R	DEBUG_MON_ID		0x38	32	read-write	Monitor Bus ID register
+R	CHIP_REG_UPD		0x3C	32	read-write	Update Clock register
+R	CHARGER_STATE		0x40	32	read-write	Charger State register
+

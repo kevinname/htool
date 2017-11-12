@@ -1,0 +1,162 @@
+P	BT_LE	1.0	BT_	0x4001A000	Bluetooth LE controller
+A 	0x0 	0x2000 	IOregisters
+R	JAL_LE_COM_CTRL_GP1	0x00	32	read-write	common control reg
+F	AES_DATA_READY	31	1	read-write	
+F	AES_START	30	1	read-write	
+F	DELAY_SRCH_WIN	24	6	read-write	
+F	TEST_CRC	23	1	read-write	
+F	WHITEN_EN	22	1	read-write	
+F	WHITEN_INIT	16	6	read-write	
+F	T_IFS_DELAY	10	6	read-write	
+F	T_IFS_ABORT	9	1	read-write	
+F	T_IFS_DEFAULT	8	1	read-write	
+F	AES_ENABLE	7	1	read-write	
+F	AES_MODE	5	1	read-write	
+F	TX_EN	4	1	read-write	
+F	ADV_STATE	3	1	read-write	
+F	MASTER_MODE	2	1	read-write	
+F	LE_MODE	0	1	read-write	
+R	JAL_LE_ACC_ADDR	0x14	32	read-write	Access Address
+F	ACC_ADDR	0	32	read-write	
+R	JAL_LE_PREAMBLE_CRC_ERR	0x18	32	read-write	Preamble and CRC error
+F	CRC_ERROR	8	1	read-write	
+F	PREAMBLE	0	8	read-only	
+R	JAL_LE_CRC_INIT	0x1C	32	read-write	CRC initial value
+F	CRC_INIT	0	24	read-write	
+R	JAL_LE_AES_KEY0	0x20	32	read-write	AES KEY Word 0 in Big Endian
+F	AES_KEY0	0	32	read-write	
+R	JAL_LE_AES_KEY1	0x24	32	read-write	AES KEY Word 1 in Big Endian
+F	AES_KEY1	0	32	read-write	
+R	JAL_LE_AES_KEY2	0x28	32	read-write	AES KEY Word 2 in Big Endian
+F	AES_KEY2	0	32	read-write	
+R	JAL_LE_AES_KEY3	0x2C	32	read-write	AES KEY Word 3 in Big Endian
+F	AES_KEY	0	32	read-write	
+R	JAL_LE_AES_IV_L	0x30	32	read-write	AES Initialisation Vector Low word in Big Endian
+F	AES_IV_L	0	32	read-write	
+R	JAL_LE_AES_IV_H	0x34	32	read-write	AES Initialisation Vector High half word in Big Endian
+F	AES_IV_H	0	32	read-write	
+R	JAL_LE_AES_PKTCNT_L	0x38	32	read-write	AES Packet counter Low word
+F	AES_PKT_CNT_L	0	32	read-write	
+R	JAL_LE_AES_PKT_CNTH_LLID_LEN	0x3C	32	read-write	AES Packet counter High Byte and  LLID and LEN
+F	AES_PKT_LLID	13	2	read-write	
+F	AES_PKT_LENGTH	8	5	read-write	
+F	AES_PKT_CNT_H	0	8	read-write	
+R	JAL_LE_TX_HEADER_PDU	0x40	32	read-write	Transmitter Advertising or Data Channel Header
+F	RFU_DATA_5_3	29	3	read-write	
+F	TX_LENGTH_DATA	24	5	read-write	
+F	RFU_DATA_2_0	21	3	read-write	
+F	MD	20	1	read-write	
+F	SN	19	1	read-write	
+F	NESN	18	1	read-write	
+F	LLID	16	2	read-write	
+F	RFU_ADV_3_2	14	2	read-write	
+F	TX_LENGTH_ADV	8	6	read-write	
+F	RX_ADD	7	1	read-write	
+F	TX_ADD	6	1	read-write	
+F	RFU_ADV_1_0	4	2	read-write	
+F	PDU_TYPE	0	4	read-write	
+R	JAL_LE_RX_HEADER_APDU_or_DPDU	0x44	32	read-write	Advertising or Data Channel Header received
+F	RFU_DATA_5_3	13	3	read-write	
+F	TX_LENGTH_DATA	8	5	read-write	
+F	RFU_DATA_2_0	5	3	read-write	
+F	MD	4	1	read-write	
+F	SN	3	1	read-write	
+F	NESN	2	1	read-write	
+F	LLID	0	2	read-write	
+R	JAL_LE_STATUS	0x54	32	read-write	AES Status
+F	TARGET_ADDR_MATCH	11	1	read-only	
+F	LE_RX_FILTERED	8	3	read-only	
+F	CRC_ERROR	7	1	read-only	
+F	TIFS_ABORTED	6	1	read-only	
+F	AES_FINISHED	2	1	read-write	
+F	AES_ACTIVE	1	1	read-write	
+F	MIC_STATUS	0	1	read-only	
+R	JAL_LE_ADV_CTRL	0x58	32	read-write	Advanced LE Control
+F	FLTR_IMD_LOADED	22	1	read-write	
+F	FLTR_5_LOADED	21	1	read-write	
+F	FLTR_4_LOADED	20	1	read-write	
+F	FLTR_3_LOADED	19	1	read-write	
+F	FLTR_2_LOADED	18	1	read-write	
+F	FLTR_1_LOADED	17	1	read-write	
+F	FLTR_0_LOADED	16	1	read-write	
+F	USE_ADDR_FLTRS_SCAN_REQ	15	1	read-write	
+F	USE_ADDR_FLTRS_CON_REQ	14	1	read-write	
+F	USE_ADDR_FLTRS	13	1	read-write	
+F	T_IFS_ABORT	9	1	read-write	
+F	T_IFS_DEFAULT	8	1	read-write	
+F	LE_FILTER_MODE	5	3	read-write	
+F	TX_EN	4	1	read-write	
+F	ADV_STATE	3	1	read-write	
+F	MASTER_MODE	2	1	read-write	
+F	SPI_TIMED_EN	0	1	read-write	
+R	JAL_LE_FLTR_ADDR_0_L	0x60	32	read-write	LE Address Filter 0 Low word
+F	FLTR_ADDR_0_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_0_H	0x64	32	read-write	LE Address Filter 0 High and control and matched
+F	FLTR_0_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_0	30	1	read-write	
+F	FLTR_MATCHED_0	29	1	read-only	
+F	FLTR_ADDR_0_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_1_L	0x68	32	read-write	LE Address Filter 1 Low word
+F	FLTR_ADDR_1_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_1_H	0x6C	32	read-write	LE Address Filter 1 High and control and matched
+F	FLTR_1_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_1	30	1	read-write	
+F	FLTR_MATCHED_1	29	1	read-only	
+F	FLTR_ADDR_1_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_2_L	0x70	32	read-write	LE Address Filter 2 Low word
+F	FLTR_ADDR_2_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_2_H	0x74	32	read-write	LE Address Filter 2 High and control and matched
+F	FLTR_2_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_2	30	1	read-write	
+F	FLTR_MATCHED_2	29	1	read-only	
+F	FLTR_ADDR_2_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_3_L	0x78	32	read-write	LE Address Filter 3 Low word
+F	FLTR_ADDR_3_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_3_H	0x7C	32	read-write	LE Address Filter 3 High and control and matched
+F	FLTR_3_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_3	30	1	read-write	
+F	FLTR_MATCHED_3	29	1	read-only	
+F	FLTR_ADDR_3_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_4_L	0x80	32	read-write	LE Address Filter 4 Low word
+F	FLTR_ADDR_4_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_4_H	0x84	32	read-write	LE Address Filter 4 High and control and matched
+F	FLTR_4_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_4	30	1	read-write	
+F	FLTR_MATCHED_4	29	1	read-only	
+F	FLTR_ADDR_4_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_5_L	0x88	32	read-write	LE Address Filter 5 Low word
+F	FLTR_ADDR_5_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_5_H	0x8C	32	read-write	LE Address Filter 5 High and control and matched
+F	FLTR_5_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_5	30	1	read-write	
+F	FLTR_MATCHED_5	29	1	read-only	
+F	FLTR_ADDR_5_H	0	16	read-write	
+R	JAL_LE_FLTR_ADDR_DIRECT_L	0x90	32	read-write	LE Direct Address Filter Low word
+F	FLTR_ADDR_DIRECT_L	0	32	read-write	
+R	JAL_LE_FLTR_CTRL_ST_ADDR_DIRECT_H	0x94	32	read-write	LE Direct Address Filter High and control and matched
+F	FLTR_DIRECT_LOADED	31	1	read-write	
+F	FLTR_ADDR_TYPE_DIRECT	30	1	read-write	
+F	FLTR_MATCHED_DIRECT	29	1	read-only	
+F	FLTR_ADDR_DIRECT_H	0	16	read-write	
+R	JAL_LE_LOCAL_ADDR_L	0x98	32	read-write	LE Local Address Filter Low word
+F	LE_LOCAL_ADDR_L	0	32	read-write	
+R	JAL_LE_LOCAL_CTRL_ST_ADDR_H	0x9C	32	read-write	LE Local Address Filter High and control and matched
+F	LE_LOCAL_ADDR_TYPE	30	1	read-write	
+F	LE_LOCAL_ADDR_MATCHED	29	1	read-only	
+F	LE_LOCAL_ADDR_H	0	16	read-write	
+R	JAL_LE_AES_MIC	0x200	32	read-write	AES MIC in Big Endian
+F	AES_MIC	0	32	read-write	
+R	JAL_LE_AES_DATA_0	0x204	32	read-write	AES Data Word 0
+F	AES_DATA_0	0	32	read-write	
+R	JAL_LE_AES_DATA_1	0x208	32	read-write	AES Data Word 1
+F	AES_DATA_1	0	32	read-write	
+R	JAL_LE_AES_DATA_2	0x20C	32	read-write	AES Data Word 2
+F	AES_DATA_2	0	32	read-write	
+R	JAL_LE_AES_DATA_3	0x210	32	read-write	AES Data Word 3
+F	AES_DATA_3	0	32	read-write	
+R	JAL_LE_AES_DATA_4	0x214	32	read-write	AES Data Word 4
+F	AES_DATA_4	0	32	read-write	
+R	JAL_LE_AES_DATA_5	0x218	32	read-write	AES Data Word 5
+F	AES_DATA_5	0	32	read-write	
+R	JAL_LE_AES_DATA_6	0x21C	32	read-write	AES Data Word 6
+F	AES_DATA_6	0	32	read-write	

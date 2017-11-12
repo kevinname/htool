@@ -1,0 +1,326 @@
+P	CODEC	1	CODEC_	0x400B0000	CODEC	controller			
+A	0x0	0x10000	IOregisters	
+I 	INT_CODEC	 	1	
+I 	INT_CODEC_TX 	24	
+I 	INT_CODEC_RX 	25				
+R	ADC_CTRL	0x000	32	read-write	ADC	status	control		
+F	adc_input_inv	16	1	read-write	
+F	adc_sr_32k	14	1	read-write					
+F	adc_sr_44k	13	1	read-write					
+F	adc_sr_48k	12	1	read-write					
+F	adc_sr_4x	10	1	read-write					
+F	adc_sr_2x	9	1	read-write					
+F	adc_sr_1x	8	1	read-write					
+F	adc_cic_scale	4	3	read-write					
+F	adc_dc_en	3	1	read-write					
+F	dmic_en	2	1	read-write					
+F	adc_sw_reset_x	1	1	read-write					
+F	adc_en	0	1	read-write					
+R	ADC_DECI_FILT_11	0x004	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b1_a2	16	16	read-write					
+F	adc_deci_b1_a1	0	16	read-write					
+R	ADC_DECI_FILT_12	0x008	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b1_b1	16	16	read-write					
+F	adc_deci_b1_b0	0	16	read-write					
+R	ADC_DECI_FILT_13	0x00C	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b1_b2	0	16	read-write					
+R	ADC_DECI_FILT_21	0x010	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b2_a2	16	16	read-write					
+F	adc_deci_b2_a1	0	16	read-write					
+R	ADC_DECI_FILT_22	0x014	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b2_b1	16	16	read-write					
+F	adc_deci_b2_b0	0	16	read-write					
+R	ADC_DECI_FILT_23	0x018	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b2_b2	0	16	read-write					
+R	ADC_DECI_FILT_31	0x01C	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b3_a2	16	16	read-write					
+F	adc_deci_b3_a1	0	16	read-write					
+R	ADC_DECI_FILT_32	0x020	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b3_b1	16	16	read-write					
+F	adc_deci_b3_b0	0	16	read-write					
+R	ADC_DECI_FILT_33	0x024	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b3_b2	0	16	read-write					
+R	ADC_DECI_FILT_41	0x028	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b4_a2	16	16	read-write					
+F	adc_deci_b4_a1	0	16	read-write					
+R	ADC_DECI_FILT_42	0x02C	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b4_b1	16	16	read-write					
+F	adc_deci_b4_b0	0	16	read-write					
+R	ADC_DECI_FILT_43	0x030	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b4_b2	0	16	read-write					
+R	ADC_DECI_FILT_51	0x034	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b5_a2	16	16	read-write					
+F	adc_deci_b5_a1	0	16	read-write					
+R	ADC_DECI_FILT_52	0x038	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b5_b1	16	16	read-write					
+F	adc_deci_b5_b0	0	16	read-write					
+R	ADC_DECI_FILT_53	0x03C	32	read-write	ADC	decimation	filter	coefficients	
+F	adc_deci_b5_b2	0	16	read-write					
+R	ADC_IIR_FILT_11	0x040	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b1_a2	16	16	read-write					
+F	adc_iir_b1_a1	0	16	read-write					
+R	ADC_IIR_FILT_12	0x044	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b1_b1	16	16	read-write					
+F	adc_iir_b1_b0	0	16	read-write					
+R	ADC_IIR_FILT_13	0x048	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_bps	16	1	read-write					
+F	adc_iir_b1_b2	0	16	read-write					
+R	ADC_IIR_FILT_21	0x04C	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b2_a2	16	16	read-write					
+F	adc_iir_b2_a1	0	16	read-write					
+R	ADC_IIR_FILT_22	0x050	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b2_b1	16	16	read-write					
+F	adc_iir_b2_b0	0	16	read-write					
+R	ADC_IIR_FILT_23	0x054	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b2_b2	0	16	read-write					
+R	ADC_IIR_FILT_31	0x058	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b3_a2	16	16	read-write					
+F	adc_iir_b3_a1	0	16	read-write					
+R	ADC_IIR_FILT_32	0x05C	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b3_b1	16	16	read-write					
+F	adc_iir_b3_b0	0	16	read-write					
+R	ADC_IIR_FILT_33	0x060	32	read-write	ADC	iir	filter	coefficients	
+F	adc_iir_b3_b2	0	16	read-write					
+R	ADC_DRC_CTRL_1	0x064	32	read-write	ADC	drc	control	registers	
+F	adc_drc_at1	16	16	read-write					
+F	adc_drc_at0	0	16	read-write					
+R	ADC_DRC_CTRL_2	0x068	32	read-write	ADC	drc	control	registers	
+F	adc_drc_rt1	16	16	read-write					
+F	adc_drc_rt0	0	16	read-write					
+R	ADC_DRC_CTRL_3	0x06C	32	read-write	ADC	drc	control	registers	
+F	adc_drc_gain_jitter_limit	28	4	read-write					
+F	adc_drc_nt	24	3	read-write					
+F	adc_drc_et	16	7	read-write					
+F	adc_drc_ct	8	7	read-write					
+F	adc_drc_lt	2	5	read-write					
+F	adc_drc_mode_sel	0	2	read-write					
+R	ADC_DRC_CTRL_4	0x070	32	read-write	ADC	drc	control	registers	
+F	adc_drc_gain_neg_limit	24	8	read-write					
+F	adc_drc_gain_pos_limit	16	8	read-write					
+F	adc_drc_gain_shft	10	2	read-write					
+F	adc_drc_es_inv	9	1	read-write					
+F	adc_drc_ns_mode	8	1	read-write					
+F	adc_drc_delay	6	2	read-write					
+F	adc_drc_es	3	3	read-write					
+F	adc_drc_cs	0	3	read-write					
+R	ADC_DRC_CTRL_5	0x074	32	read-write	ADC	drc	control	registers	
+F	adc_drc_rms_en	16	1	read-write					
+F	adc_drc_tav	0	16	read-write					
+R	ADC_VOL_CTRL	0x078	32	read-write	ADC	volume	control	registers	
+F	adc_vol_update	24	1	read-write					
+F	radcvol	16	8	read-write					
+F	ladcvol	8	8	read-write					
+F	adc_mute_rate	4	4	read-write					
+F	adc_mix_en	3	1	read-write					
+F	adc_mute_bypass	2	1	read-write					
+F	adcunmu	1	1	read-write					
+F	adcmu	0	1	read-write					
+R	ADC_SIDE_CTRL	0x07C	32	read-write	ADC	side	control	register	
+F	adc_side_en	16	1	read-write					
+F	adc_side_gr	8	8	read-write					
+F	adc_side_gl	0	8	read-write					
+R	DAC_EQ_CTRL_1	0x080	32	read-write	DAC	eq	control	registers	
+F	dac_eq_bps	24	1	read-write					
+F	dac_eq_b1_ga	16	5	read-write					
+F	dac_eq_b1_a	0	16	read-write					
+R	DAC_EQ_CTRL_2	0x084	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b2_b	16	16	read-write					
+F	dac_eq_b2_a	0	16	read-write					
+R	DAC_EQ_CTRL_3	0x088	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b3_b	16	16	read-write					
+F	dac_eq_b3_a	0	16	read-write					
+R	DAC_EQ_CTRL_4	0x08C	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b4_b	16	16	read-write					
+F	dac_eq_b4_a	0	16	read-write					
+R	DAC_EQ_CTRL_5	0x090	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b5_b	16	16	read-write					
+F	dac_eq_b5_a	0	16	read-write					
+R	DAC_EQ_CTRL_6	0x094	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b6_b	16	16	read-write					
+F	dac_eq_b6_a	0	16	read-write					
+R	DAC_EQ_CTRL_7	0x098	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b7_ga	24	5	read-write					
+F	dac_eq_b6_ga	16	5	read-write					
+F	dac_eq_b7_a	0	16	read-write					
+R	DAC_EQ_CTRL_8	0x09C	32	read-write	DAC	eq	control	registers	
+F	dac_eq_b5_ga	24	5	read-write					
+F	dac_eq_b4_ga	16	5	read-write					
+F	dac_eq_b3_ga	8	5	read-write					
+F	dac_eq_b2_ga	0	5	read-write					
+R	DAC_DRC_CTRL_1	0x0A0	32	read-write	DAC	drc	control	registers	
+F	dac_drc_at1	16	16	read-write					
+F	dac_drc_at0	0	16	read-write					
+R	DAC_DRC_CTRL_2	0x0A4	32	read-write	DAC	drc	control	registers	
+F	dac_drc_rt1	16	16	read-write					
+F	dac_drc_rt0	0	16	read-write					
+R	DAC_DRC_CTRL_3	0x0A8	32	read-write	DAC	drc	control	registers	
+F	dac_drc_gain_jitter_limit	28	4	read-write					
+F	dac_drc_nt	24	3	read-write					
+F	dac_drc_et	16	7	read-write					
+F	dac_drc_ct	8	7	read-write					
+F	dac_drc_lt	2	5	read-write					
+F	dac_drc_mode_sel	0	2	read-write					
+R	DAC_DRC_CTRL_4	0x0AC	32	read-write	DAC	drc	control	registers	
+F	dac_drc_gain_neg_limit	24	8	read-write					
+F	dac_drc_gain_pos_limit	16	8	read-write					
+F	dac_drc_gain_shft	10	2	read-write					
+F	dac_drc_es_inv	9	1	read-write					
+F	dac_drc_ns_mode	8	1	read-write					
+F	dac_drc_delay	6	2	read-write					
+F	dac_drc_es	3	3	read-write					
+F	dac_drc_cs	0	3	read-write					
+R	DAC_DRC_CTRL_5	0x0B0	32	read-write	DAC	drc	control	registers	
+F	dac_drc_rms_en	16	1	read-write					
+F	dac_drc_tav	0	16	read-write					
+R	DAC_VOL_CTRL	0x0B4	32	read-write	DAC	volume	control	registers	
+F	dac_vol_update	24	1	read-write					
+F	rdacvol	16	8	read-write					
+F	ldacvol	8	8	read-write					
+F	dac_mute_rate	4	4	read-write					
+F	dac_mix_en	3	1	read-write					
+F	dac_mute_bypass	2	1	read-write					
+F	dacunmu	1	1	read-write					
+F	dacmu	0	1	read-write					
+R	DAC_MOD_CTRL	0x0B8	32	read-write	DAC	modulator	control	regiseters	
+F	dac_dither_scale	4	2	read-write
+F	dac_dither_rpdf_en	3	1	read-write					
+F	dac_dither_static_en	2	1	read-write					
+F	dac_dither_en	1	1	read-write					
+F	dac_dither_in_sel	0	1	read-write					
+R	DAC_CTRL	0x0BC	32	read-write	DAC	status	control		
+F	dac_rom_sel_32k	11	1	read-write					
+F	dac_fir_clr	10	1	read-write					
+F	dac_sw_reset_x	9	1	read-write					
+F	dac_en	8	1	read-write					
+F	dac_sr_96k	7	1	read-write					
+F	dac_sr_32k	6	1	read-write					
+F	dac_sr_44k	5	1	read-write					
+F	dac_sr_48k	4	1	read-write					
+F	dac_sr_4x	2	1	read-write					
+F	dac_sr_2x	1	1	read-write					
+F	dac_sr_1x	0	1	read-write					
+R	TEST_MODE	0x0C0	32	read-write	codec	test	mode	control	registers
+F	codec_typass	4	1	read-write
+F	codec_full_loop	3	1	read-write					
+F	dac_phy_mode	2	1	read-write					
+F	a2dloop	1	1	read-write					
+F	adc_loopbk	0	1	read-write					
+R	GAIN_READ	0x0C4	32	read-only	adc/dac	gain	control	read	out
+F	dac_gainr_mon	24	8	read-only					
+F	dac_gainl_mon	16	8	read-only					
+F	adc_gainr_mon	8	8	read-only					
+F	adc_gainl_mon	0	8	read-only
+R	CLK_CTRL_1	0x0C8	32	read-write	audio clock contorl registers
+F	pcm_clk_inv	2	1	read-write
+F	codec_clk_en_reg	1	1	read-write
+F	codec_rstn_reg	0	1	read-write
+R	CLK_CTRL_2 	0x0CC	32	read-write	audio clock control registers
+F	i2s_rx_high_num	24	8	read-write
+F	i2s_rx_odd	23	1	read-write
+F	i2s_rx_sel	20	3	read-write
+F	i2s_tx_high_num	12	8	read-write
+F	i2s_tx_odd	11	1	read-write
+F	i2s_tx_sel	8	3	read-write
+F	dmic_clk_sel	7	1	read-write
+F	div_clk_en	0	4	read-write
+R	ADC_DITHER_CTRL_1	0x0D0	32	read-write adc dither control registers
+F	pnoise_en	15	1	read-write
+F	adc_dither_en	13	1	read-write
+F	adc_dither_pd	12	1	read-write
+F	adc_dither_thd	0	12	read-write
+R	ADC_DITHER_CTRL_2	0x0D4	32	read-write	adc dither control registers
+F	adc_dither_rt	16	16	read-write
+F	adc_dither_at	0	16	read-write
+R	DAC_DITHER_CTRL	0x0D8	32	read-write	dac dither control registers
+F	dac_dither_rt	16	16	read-write
+F	dac_dither_at	0	16	read-write
+R	INT_STATUS	0x0DC	32	read-only	codec interrupt status
+F	micbias_cmp_out_sync	11	1	read-only
+F	drv_ocp_r_sync	10	1	read-only
+F	drv_ocp_l_sync	9	1	read-only
+F	plug_det_sync	8	1	read-only
+F	codec_int	4	1	read-only
+F	drv_ocp_r_int	3	1	read-only
+F	drv_ocp_l_int	2	1	read-only
+F	unplug_det_int	1	1	read-only
+F	plug_det_int	0	1	read-only
+R	INT_CTRL	0x0E0	32	read-write	codec interrupt control
+F	codec_int_pol_sel	19	1	read-write
+F	drv_ocp_r_pol_sel	18	1	read-write
+F	drv_ocp_l_pol_sel	17	1	read-write
+F	plug_det_pol_sel	16	1	read-write
+F	drv_ocp_r_edge_en	14	1	read-write
+F	drv_ocp_l_edge_en	13	1	read-write
+F	plug_det_edge_en	12	1	read-write
+F	drv_ocp_r_db_en		10	1	read-write
+F	drv_ocp_l_db_en		9	1	read-write
+F	plug_det_db_en		8	1	read-write
+F	drv_ocp_r_int_im	3	1	read-write
+F	drv_ocp_l_int_im	2	1	read-write
+F	unplug_det_int_im	1	1	read-write
+F	plug_det_int_im		0	1	read-write
+R	ANA_CTRL_1	0x0E4	32	read-write analog control registers
+F	reg_DET_SEL	31	1	read-write
+F	reg_DAC_DEM	30	1	read-write
+F	reg_AUDIO_TSTSEL	27	3	read-write
+F	reg_AUDIO_BIAS_TST	26	1	read-write
+F	reg_AUADC_TSTSEL	23	3	read-write
+F	reg_ADDA_seltest	22	1	read-write
+F	reg_EN_ADC_DITHER	21	1	read-write
+F	reg_EN_ADC_DEM	20	1	read-write
+F	reg_PD_plug_detect	19	1	read-write
+F	reg_PD_TIA_DRV_R	18	1	read-write
+F	reg_PD_TIA_DRV_L	17	1	read-write
+F	reg_PD_PGA_R	16	1	read-write
+F	reg_PD_PGA_L	15	1	read-write
+F	reg_PD_MICBIAS_CALI	14	1	read-write
+F	reg_PD_MICBIAS	13	1	read-write
+F	reg_PD_LDO_DVDD	12	1	read-write
+F	reg_PD_LDO_DRV	11	1	read-write
+F	reg_PD_LDO_AVDD12	10	1	read-write
+F	reg_PD_LDO_AUD	9	1	read-write
+F	reg_PD_DRV_R	8	1	read-write
+F	reg_PD_DRV_L	7	1	read-write
+F	reg_PD_DAC_R	6	1	read-write
+F	reg_PD_DAC_L	5	1	read-write
+F	reg_PD_CLK	4	1	read-write
+F	reg_PD_BIAS_GEN	3	1	read-write
+F	reg_PD_AUREF	2	1	read-write
+F	reg_PD_ADC_R	1	1	read-write
+F	reg_PD_ADC_L	0	1	read-write
+R	ANA_CTRL_2	0x0E8	32	read-write analog control register2
+F	reg_bias_sel	27	2	read-write
+F	reg_TST_EN	26	1	read-write
+F	reg_TST_AUADC_ibias	25	1	read-write
+F	reg_SHRT_ADC	24	1	read-write
+F	reg_SEL_PGA_INPUT	23	1	read-write
+F	reg_SEL_ADC_INPUT	22	1	read-write
+F	reg_REF_ADC	21	1	read-write
+F	reg_REF_fast	20	1	read-write
+F	reg_REF_BYP	19	1	read-write
+F	reg_Rctune	15	4	read-write
+F	reg_PGA_GAIN	12	3	read-write
+F	reg_MICBIAS_tune	8	4	read-write
+F	reg_MICBIAS_CC	7	1	read-write
+F	reg_LDO_DRV_CTRL	5	2	read-write
+F	reg_LDO_AUD_CTRL	3	2	read-write
+F	reg_DRV_OCP_EN	1	1	read-write
+F	reg_DRV_GAIN	0	1	read-write
+R	RSVD_1	0x0EC	32	read-write	reserved registers
+F	rsvd_reg_1	0	32	read-write
+R	ADC_PEAK_READ	0x0F0	32	read-write adc signal peak value
+F	adc_peak_r	16	16	read-write
+F	adc_peak_l	0	16	read-write
+R	DAC_PEAK_READ	0x0F4	32	read-write dac signal peak value
+F	dac_peak_r	16	16	read-write
+F	dac_peak_l	0	16	read-write					
+R	IF_CTRL	0x0FC	32	read-write	Interface control
+F	pcm_mode_ctrl	9	1	read-write
+F	pcm_con_ctrl	8	1	read-write			
+F	i2s_con_ctrl	7	1	read-write					
+F	transmit_en	6	1	read-write					
+F	receive_en	5	1	read-write					
+F	i2s_pcm_mode	4	1	read-write					
+F	i2s_input_track_sel	2	2	read-write					
+F	i2s_output_track_sel_r	1	1	read-write					
+F	i2s_output_track_sel_l	0	1	read-write					

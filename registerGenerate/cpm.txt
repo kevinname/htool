@@ -1,0 +1,9 @@
+P	CPM	1.0	CPM_	0x40002000	Low Clock module
+A	0x0	0x1000	IOregisters
+R	REV				0x00	32	read-write	CPM Revision register
+R	UPD				0x04	32	read-write	CPM Update register
+R	APB_CFG			0x08	32	read-write	CPM Config register
+R	RTC_CFG			0x0C	32	read-write	RTC Clock Config register
+R	CRY_CFG			0x10	32	read-write	XTAL Config register
+R	PLL_SRC_CFG		0x14	32	read-write	pll Clock Source register
+R	CPM_CEVA_CFG	0x18	32	read-write	Clock Source register

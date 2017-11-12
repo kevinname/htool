@@ -1,0 +1,51 @@
+P	GPIO1	1	GPIO1_	0x44000000	GPIO1	controller				
+A	0x0	0x10000	IOregisters							
+R	DATA	0x0000	16	read-write	Data	value	[15:0]			
+F	data	0	16	read-write						
+R	DATAOUT	0x0004	16	read-write	Data	output	Register	value	[15:0]	
+F	data_output	0	16	read-write						
+R	OUTENSET	0x0010	16	read-write	Output	enable	set	[15:0]		
+F	out_enable	0	16	read-write						
+R	OUTENCLR	0x0014	16	read-write	Output	enable	clear	[15:0]		
+F	outen_clr	0	16	read-write						
+R	ALTFUNCSET	0x0018	16	read-write	Alternative	function	set	[15:0]		
+F	ALTFUNC_set	0	16	read-write						
+R	ALTFUNCCLR	0x001C	16	read-write	Alternative	function	clear	[15:0]		
+F	ALTFUNC_clr	0	16	read-write						
+R	INTENSET	0x0020	16	read-write	Interrupt	enable	set	[15:0]		
+F	Int_en_set	0	16	read-write						
+R	INTENCLR	0x0024	16	read-write	Interrupt	enable	clear	[15:0]		
+F	Int_en_clr	0	16	read-write						
+R	INTTYPESET	0x0028	16	read-write	Interrupt	type	set	[15:0]		
+F	Int_type_set	0	16	read-write						
+R	INTTYPECLR	0x002C	16	read-write	Interrupt	type	clear	[15:0]		
+F	Int_type_clr	0	16	read-write						
+R	INTPOLSET	0x0030	16	read-write	Polarity-level	edge	IRQ	configuration	[15:0]	
+F	Int_polarity_set	0	16	read-write						
+R	INTPOLCLR	0x0034	16	read-write	Polarity-level	edge	IRQ	configuration	[15:0]	
+F	Int_polarity_clr	0	16	read-write						
+R	INTSTATUS	0x0038	16	read-write	Write	one	to	clear	interrupt	request:
+F	Int_status	0	16	read-write						
+R	PID4	0x0FD0	8	read-only	Peripheral	ID	Register	4:00		
+F	block_count	4	4	read-only						
+F	jep106_c_code	0	4	read-only						
+R	PID0	0x0FE0	8	read-only	Peripheral	ID	Register	0:00		
+F	part_number__7_0	0	8	read-only						
+R	PID1	0x0FE4	8	read-only	Peripheral	ID	Register	1:00		
+F	jep106_id_3_0	4	4	read-only						
+F	part_number__11_8	0	4	read-only						
+R	PID2	0x0FE8	8	read-only	Peripheral	ID	Register	2:00		
+F	Revision	4	4	read-only						
+F	jedec_used	3	1	read-only						
+F	jep106_id_6_4	0	3	read-only						
+R	PID3	0x0FEC	8	read-only	Peripheral	ID	Register	3:00		
+F	custom_modify_no	4	4	read-only						
+F	ECO_revision	0	4	read-only						
+R	CID0	0x0FF0	8	read-only	Component	ID	Register	0		
+F	component_ID_0	0	8	read-only						
+R	CID1	0x0FF4	8	read-only	Component	ID	Register	1		
+F	component_ID_1	0	8	read-only						
+R	CID2	0x0FF8	8	read-only	Component	ID	Register	2		
+F	component_ID_2	0	8	read-only						
+R	CID3	0x0FFC	8	read-only	Component	ID	Register	3		
+F	component_ID_3	0	8	read-only						

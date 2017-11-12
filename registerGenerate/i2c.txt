@@ -1,0 +1,142 @@
+P I2C 1.0 IC_ 0x40070000 I2C controller
+A 0x0 0x10000 IOregisters
+I INT_I2C 10
+R CON 0x00 16  read-write   I2C Control Register
+F IC_SLAVE_DISABLE 6 1 read-write disable slave
+E en 0 slave is enabled
+E dis 1 slave is disabled
+F IC_RESTART_EN 5 1 read-write Determines whether RESTART conditions may be sent when as a master
+F IC_10BITADDR_MASTER 4 1 read-write 7- or 10- bit address selection when master
+F IC_10BITADDR_SLAVE 3 1 read-write 7- or 10- bit address selection when slave
+F SPEED 1 2 read-write speed setting 
+E standard 1 standard mode
+E fast 2 fast mode
+E high 3 high mode
+F MASTER_MODE 0 1 read-write enable master
+R TAR 0x04 16 read-write   I2C Target Address
+F	IC_10BITADDR_MASTER	12	1	read-write	address	mode	when	master	
+F	SPECIAL	11	1	read-write	IC_TAR	or	GC_OR_START		
+F	GC_OR_START	10	1	read-write	general	call	or	START	BYTE
+F	IC_TAR	0	10	read-write	Target	address			
+R SAR 0x08 16  read-write  I2C Slave Address
+F	IC_SAR	0	10	read-write	address	as	a	slave	
+R HS_MADDR 0x0C 16  read-write  I2C HS Master Mode Code Address
+F	IC_HS_MAR	0	3	read-write	HS	mode	master	code	
+R SS_SCL_HCNT 0x14 16  read-write  Standard speed I2C Clock SCL High Count
+F	IC_SS_SCL_HCNT	0	16	read-write	Standard	Speed	scl	high	count
+R SS_SCL_LCNT 0x18 16  read-write  Standard speed I2C Clock SCL Low Count
+F	IC_SS_SCL_LCNT	0	16	read-write	Standard	Speed	scl	low	count
+R FS_SCL_HCNT 0x1C 16  read-write  Fast speed I2C Clock SCL High Count
+F	IC_FS_SCL_HCNT	0	16	read-write	Fast	Speed	scl	high	count
+R FS_SCL_LCNT 0x20 16  read-write  Fast speed I2C Clock SCL Low Count
+F	IC_FS_SCL_LCNT	0	16	read-write	Fast	Speed	scl	low	count
+R HS_SCL_HCNT 0x24 16  read-write  High speed I2C Clock SCL High Count
+F	IC_HS_SCL_HCNT	0	16	read-write	High	Speed	scl	high	count
+R HS_SCL_LCNT 0x28 16 read-write  High speed I2C Clock SCL Low Count
+F	IC_HS_SCL_LCNT	0	16	read-write	High	Speed	scl	low	count
+R INTR_STAT 0x2C 16  read-only I2C Interrupt Status
+F	R_GEN_CALL	11	1	read-only						
+F	R_START_DET	10	1	read-only					
+F	R_STOP_DET	9	1	read-only					
+F	R_ACTIVITY	8	1	read-only					
+F	R_RX_DONE	7	1	read-only					
+F	R_TX_ABRT	6	1	read-only					
+F	R_RD_REQ	5	1	read-only					
+F	R_TX_EMPTY	4	1	read-only					
+F	R_TX_OVER	3	1	read-only					
+F	R_RX_FULL	2	1	read-only					
+F	R_RX_OVER	1	1	read-only					
+F	R_RX_UNDER	0	1	read-only					
+R INTR_MASK 0x30 16  read-write  I2C Interrupt MAsk
+F	M_GEN_CALL	11	1	read-write					
+F	M_START_DET	10	1	read-write					
+F	M_STOP_DET	9	1	read-write					
+F	M_ACTIVITY	8	1	read-write					
+F	M_RX_DONE	7	1	read-write					
+F	M_TX_ABRT	6	1	read-write					
+F	M_RD_REQ	5	1	read-write					
+F	M_TX_EMPTY	4	1	read-write					
+F	M_TX_OVER	3	1	read-write					
+F	M_RX_FULL	2	1	read-write					
+F	M_RX_OVER	1	1	read-write					
+F	M_RX_UNDER	0	1	read-write					
+R RAW_INTR_STAT 0x34 16  read-only I2C Raw Interrupt Status
+F	GEN_CALL	11	1	read-only	general call				
+F	START_DET	10	1	read-only	start or restart				
+F	STOP_DET	9	1	read-only					
+F	ACTIVITY	8	1	read-only					
+F	RX_DONE	7	1	read-only					
+F	TX_ABRT	6	1	read-only					
+F	RD_REQ	5	1	read-only					
+F	TX_EMPTY	4	1	read-only					
+F	TX_OVER	3	1	read-only					
+F	RX_FULL	2	1	read-only					
+F	RX_OVER	1	1	read-only					
+F	RX_UNDER	0	1	read-only					
+R RX_TL 0x38 16  read-write  I2C Receive FIFO Threshold
+F	RX_TL	0	8	read-write					
+R TX_TL 0x3C 16  read-write  I2C Transmit FIFO Threshold
+F	TX_TL	0	8	read-write					
+R ENABLE 0x6C 16  read-write  I2C Enable
+F	ENABLE	0	1	read-write					
+R STATUS 0x70 32  read-only I2C Status Register
+F	SLV_ACTIVITY	6	1	read-only					
+F	MST_ACTIVITY	5	1	read-only					
+F	RFF	4	1	read-only					
+F	RFNE	3	1	read-only					
+F	TFE	2	1	read-only					
+F	TFNF	1	1	read-only					
+F	ACTIVITY	0	1	read-only					
+R TXFLR 0x74 32 read-only Transmit FIFO Level Register
+F	TXFLR	0	4	read-only					
+R RXFLR 0x78 32 read-only Receive FIFO Level Register
+F	RXFLR	0	4	read-only					
+R SDA_HOLD 0x7C 32  read-write  SDA hold time length register
+F	IC_SDA_HOLD	0	16	read-write					
+R TX_ABRT_SOURCE 0x80 32  read-only I2C Transmit Abort Status Register
+F	ABRT_SLVRD_INTX	15	1	read-only					
+F	ABRT_SLV_ARBLOST	14	1	read-only					
+F	ABRT_SLVFLUSH_TXFIFO	13	1	read-only					
+F	ARB_LOST	12	1	read-only					
+F	ABRT_MASTER_DIS	11	1	read-only					
+F	ABRT_10B_RD_NORSTRT	10	1	read-only					
+F	ABRT_SBYTE_NORSTRT	9	1	read-only					
+F	ABRT_HS_NORSTRT	8	1	read-only					
+F	ABRT_SBYTE_ACKDET	7	1	read-only					
+F	ABRT_HS_ACKDET	6	1	read-only					
+F	ABRT_GCALL_READ	5	1	read-only					
+F	ABRT_GCALL_NOACK	4	1	read-only					
+F	ABRT_TXDATA_NOACK	3	1	read-only					
+F	ABRT_10ADDR2_NOACK	2	1	read-only					
+F	ABRT_10ADDR1_NOACK	1	1	read-only					
+F	ABRT_7B_ADDR_NOACK	0	1	read-only					
+R SLV_DATA_NACK_ONLY 0x84 32  read-write  Generate SLV_DATA_NACK Register
+F	NACK	0	1	read-write					
+R DMA_CR 0x88 32  read-write  DMA Control Register for transmit and receive 
+F	TDMAE	0	1	read-write					
+F	RDMAE	1	1	read-write					
+R DMA_TDLR 0x8c 32 read-write  DMA Transmit Data Level
+F	DMATDL	0	3	read-write					
+R DMA_RDLR 0x90 32 read-write  DMA Receive Data Level
+F	DMARDL	0	3	read-write					
+R SDA_SETUP 0x94 32  read-write  I2C SDA Setup Register
+F	SDA_SETUP	0	8	read-write					
+R ACK_GENERAL_CALL 0x98 32  read-write  I2C ACK General Call Register
+F	ACK_GEN_CALL	0	1	read-write					
+R ENABLE_STATUS 0x9C 32  read-only I2C Enable Status Register
+F	SLV_FIFO_FILLED_AND_FLUSHED	2	1	read-only					
+F	SLV_RX_ABORTED	1	1	read-only					
+F	IC_EN	0	1	read-only					
+R	IC_COMP_PARAM_1	0xf4	32	read-only	Component	Parameter	Register	
+F	TX_BUFFER_DEPTH	16	8	read-only				
+F	RX_BUFFER_DEPTH	8	8	read-only				
+F	ADD_ENCODED_PARAMS	7	1	read-only				
+F	HAS_DMA	6	1	read-only				
+F	INTR_IO	5	1	read-only				
+F	HC_COUNT_VALUES	4	1	read-only				
+F	MAX_SPEED_MODE	2	2	read-only				
+F	APB_DATA_WIDTH	0	2	read-only				
+R	IC_COMP_VERSION	0xf8	32	read-only	Component	Version	ID	
+F	IC_COMP_VERSION	0	32	read-only				
+R	IC_COMP_TYPE	0xfc	32	read-only	DesignWare	Component	Type	Register
+F	IC_COMP_TYPE	0	32	read-only				

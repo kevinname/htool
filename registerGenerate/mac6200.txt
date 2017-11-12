@@ -1,0 +1,21 @@
+P	MAC6200	1.0	MAC6200_	0x40004000	MAC6200
+A 	0x0 	0x1000 	IOregisters
+R	SPIRCON	0x00	32	read-write	MAC6200 SPI Control register
+F	MAC_SEL	7	1	read-write
+F	maskIrqRxFifoFull	3	1	read-write	
+F	maskIrqRxDataReady	2	1	read-write	
+F	maskIrqTxFifoEmpty	1	1	read-write	
+F	maskIrqTxFifoReady	0	1	read-write	
+R	SPIRSTAT	0x04	32	read-only	MAC6200 SPI Master status register
+F	spi_busy	4	1	read-only
+F	Rxfifo_full	3	1	read-only	
+F	Rxdata_ready	2	1	read-only	
+F	Txfifo_empty	1	1	read-only	
+F	Txfifo_ready	0	1	read-only
+R	SPIRDAT		0x08	32	read-write	MAC6200 SPI Master data register
+F	DATA	0	8	read-write
+R	RFCON	0x0C	32	read-write	MAC6200 RF R/W control
+F	RF_CSN	1	1	read-write
+F	RF_CE	0	1	read-write	
+R	ICR	0x10	32	read-write	MAC6200 Clear SPI interrupt
+F	icr	1	1	read-write

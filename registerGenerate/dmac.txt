@@ -1,0 +1,597 @@
+P	DMAC	1	DMAC_	0x41100000	DMA	controller					
+A	0x0	0x10000	IOregisters								
+I	INT_DMAC	2									
+I	INT_DMAC0	16									
+I	INT_DMAC1	17									
+I	INT_DMAC2	18									
+I	INT_DMAC3	19									
+I	INT_DMAC4	20									
+I	INT_DMAC5	21									
+I	INT_DMAC6	22									
+I	INT_DMAC7	23									
+R	DmaCfgReg	0x398	32	read-write	DMA	Configuration	Register				
+F	DMA_EN	0	1	read-write							
+R	ChEnReg	0x3a0	32	read-write	DMA	Channel	Enable	Register			
+F	CH_EN_WE	8	8	write-only							
+F	CH_EN	0	8	read-write							
+R	SAR0	0x000	32	read-write	Channel	0	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR0	0x008	32	read-write	Channel	0	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP0	0x010	32	read-write	Channel	0	Linked	List	Pointer	Register	
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL0_H	0x01C	32	read-write	Channel	0	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL0_L	0x018	32	read-write	Channel	0	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT0	0x020	32	read-write	Channel	0	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT0	0x028	32	read-write	Channel	0	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR0	0x030	32	read-write	Channel	0	Source	Status	Address	Register	
+F	SSTATAR	0	32	read-write							
+R	DSTATAR0	0x038	32	read-write	Channel	0	Destination	Status	Address	Register	
+F	DSTATAR	0	32	read-write							
+R	CFG0_H	0x044	32	read-write	Channel	0	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG0_L	0x040	32	read-write	Channel	0	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR0	0x048	32	read-write	Channel	0	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR0	0x050	32	read-write	Channel	0	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	SAR1	0x58	32	read-write	Channel	1	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR1	0x60	32	read-write	Channel	1	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP1	0x68	32	read-write	Channel	1	Linked	List	Pointer		
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL1_H	0x74	32	read-write	Channel	1	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL1_L	0x70	32	read-write	Channel	1	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT1	0x78	32	read-write	Channel	1	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT1	0x80	32	read-write	Channel	1	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR1	0x88	32	read-write	Channel	1	Source	Status	Address		
+F	SSTATAR	0	32	read-write							
+R	DSTATAR1	0x90	32	read-write	Channel	1	Destination	Status	Address		
+F	DSTATAR	0	32	read-write							
+R	CFG1_H	0x9c	32	read-write	Channel	1	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG1_L	0x98	32	read-write	Channel	1	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR1	0xa0	32	read-write	Channel	1	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR1	0xa8	32	read-write	Channel	1	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	SAR2	0xb0	32	read-write	Channel	2	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR2	0xb8	32	read-write	Channel	2	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP2	0xc0	32	read-write	Channel	2	Linked	List	Pointer		
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL2_H	0xcc	32	read-write	Channel	2	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL2_L	0xc8	32	read-write	Channel	2	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT2	0xd0	32	read-write	Channel	2	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT2	0xd8	32	read-write	Channel	2	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR2	0xe0	32	read-write	Channel	2	Source	Status	Address		
+F	SSTATAR	0	32	read-write							
+R	DSTATAR2	0xe8	32	read-write	Channel	2	Destination	Status	Address		
+F	DSTATAR	0	32	read-write							
+R	CFG2_H	0xf4	32	read-write	Channel	2	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG2_L	0xf0	32	read-write	Channel	2	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR2	0xf8	32	read-write	Channel	2	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR2	0x100	32	read-write	Channel	2	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	SAR3	0x108	32	read-write	Channel	3	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR3	0x110	32	read-write	Channel	3	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP3	0x118	32	read-write	Channel	3	Linked	List	Pointer		
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL3_H	0x124	32	read-write	Channel	3	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL3_L	0x120	32	read-write	Channel	3	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT3	0x128	32	read-write	Channel	3	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT3	0x130	32	read-write	Channel	3	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR3	0x138	32	read-write	Channel	3	Source	Status	Address		
+F	SSTATAR	0	32	read-write							
+R	DSTATAR3	0x140	32	read-write	Channel	3	Destination	Status	Address		
+F	DSTATAR	0	32	read-write							
+R	CFG3_H	0x14c	32	read-write	Channel	3	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG3_L	0x148	32	read-write	Channel	3	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR3	0x150	32	read-write	Channel	3	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR3	0x158	32	read-write	Channel	3	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	SAR4	0x160	32	read-write	Channel	4	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR4	0x168	32	read-write	Channel	4	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP4	0x170	32	read-write	Channel	4	Linked	List	Pointer		
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL4_H	0x17c	32	read-write	Channel	4	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL4_L	0x178	32	read-write	Channel	4	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT4	0x180	32	read-write	Channel	4	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT4	0x188	32	read-write	Channel	4	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR4	0x190	32	read-write	Channel	4	Source	Status	Address		
+F	SSTATAR	0	32	read-write							
+R	DSTATAR4	0x198	32	read-write	Channel	4	Destination	Status	Address		
+F	DSTATAR	0	32	read-write							
+R	CFG4_H	0x1a4	32	read-write	Channel	4	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG4_L	0x1a0	32	read-write	Channel	4	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR4	0x1a8	32	read-write	Channel	4	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR4	0x1b0	32	read-write	Channel	4	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	SAR5	0x1b8	32	read-write	Channel	5	Source	Address	Register		
+F	SAR	0x0	32	read-write							
+R	DAR5	0x1c0	32	read-write	Channel	5	Destination	Address	Register		
+F	DAR	0x0	32	read-write							
+R	LLP5	0x1c8	32	read-write	Channel	5	Linked	List	Pointer		
+F	LOC	2	30	read-write							
+F	LMS	0	2	read-write							
+R	CTL5_H	0x1d4	32	read-write	Channel	5	Control	Register	High	word	
+F	DONE	12	1	read-write							
+F	BLOCK_TS	0	12	read-write							
+R	CTL5_L	0x1d0	32	read-write	Channel	5	Control	Register	Low	word	
+F	LLP_SRC_EN	28	1	read-write							
+F	LLP_DST_EN	27	1	read-write							
+F	SMS	25	2	read-write							
+F	DMS	23	2	read-write							
+F	TT_FC	20	3	read-write							
+F	DST_SCATTER_EN	18	1	read-write							
+F	SRC_GATHER_EN	17	1	read-write							
+F	SRC_MSIZE	14	3	read-write							
+F	DEST_MSIZE	11	3	read-write							
+F	SINC	9	2	read-write							
+F	DINC	7	2	read-write							
+F	SRC_TR_WIDTH	4	3	read-write							
+F	DST_TR_WIDTH	1	3	read-write							
+F	INT_EN	0	1	read-write							
+R	SSTAT5	0x1d8	32	read-write	Channel	5	Source	Status	Register		
+F	SSTAT	0	32	read-write							
+R	DSTAT5	0x1e0	32	read-write	Channel	5	Destination	Status	Register		
+F	DSTAT	0	32	read-write							
+R	SSTATAR5	0x1e8	32	read-write	Channel	5	Source	Status	Address		
+F	SSTATAR	0	32	read-write							
+R	DSTATAR5	0x1f0	32	read-write	Channel	5	Destination	Status	Address		
+F	DSTATAR	0	32	read-write							
+R	CFG5_H	0x1fc	32	read-write	Channel	5	Configuration	Register	High	word	
+F	DEST_PER	11	4	read-write							
+F	SRC_PER	7	4	read-write							
+F	SS_UPD_EN	6	1	read-write							
+F	DS_UPD_EN	5	1	read-write							
+F	PROTCTL	2	3	read-write							
+F	FIFO_MODE	1	1	read-write							
+F	FCMODE	0	1	read-write							
+R	CFG5_L	0x1f8	32	read-write	Channel	5	Configuration	Register	Low	word	
+F	RELOAD_DST	31	1	read-write							
+F	RELOAD_SRC	30	1	read-write							
+F	MAX_ABRST	20	10	read-write							
+F	SRC_HS_POL	19	1	read-write							
+F	DST_HS_POL	18	1	read-write							
+F	LOCK_B	17	1	read-write							
+F	LOCK_CH	16	1	read-write							
+F	LOCK_B_L	14	2	read-write							
+F	LOCK_CH_L	12	2	read-write							
+F	HS_SEL_SRC	11	1	read-write							
+F	HS_SEL_DST	10	1	read-write							
+F	FIFO_EMPTY	9	1	read-write							
+F	CH_SUSP	8	1	read-write							
+F	CH_PRIOR	5	3	read-write							
+R	SGR5	0x200	32	read-write	Channel	5	Source	Gather	Register		
+F	SGC	20	12	read-write							
+F	SGI	0	20	read-write							
+R	DSR5	0x208	32	read-write	Channel	5	Destination	Scatter	Register		
+F	DSC	20	12	read-write							
+F	DSI	0	20	read-write							
+R	RawTfr	0x2c0	32	read-only	Raw	Status	for	IntTfr	Interrupt		
+F	RAW	0	8	read-write							
+R	RawBlock	0x2c8	32	read-only	Raw	Status	for	IntBlock	Interrupt		
+F	RAW	0	8	read-write							
+R	RawSrcTran	0x2d0	32	read-only	Raw	Status	for	IntSrcTran	Interrupt		
+F	RAW	0	8	read-write							
+R	RawDstTran	0x2d8	32	read-only	Raw	Status	for	IntDstTran	Interrupt		
+F	RAW	0	8	read-write							
+R	RawErr	0x2e0	32	read-only	Raw	Status	for	IntErr	Interrupt		
+F	RAW	0	8	read-write							
+R	StatusTfr	0x2e8	32	read-only	Status	for	IntTfr	Interrupt			
+F	STATUS	0	8	read-only							
+R	StatusBlock	0x2f0	32	read-only	Status	for	IntBlock	Interrupt			
+F	STATUS	0	8	read-only							
+R	StatusSrcTran	0x2f8	32	read-only	Status	for	IntSrcTran	Interrupt			
+F	STATUS	0	8	read-only							
+R	StatusDstTran	0x300	32	read-only	Status	for	IntDstTran	Interrupt			
+F	STATUS	0	8	read-only							
+R	StatusErr	0x308	32	read-only	Status	for	IntErr	Interrupt			
+F	STATUS	0	8	read-only							
+R	MaskTfr	0x310	32	read-write	Mask	for	IntTfr	Interrupt			
+F	INT_MASK_WE	8	8	write-only							
+F	INT_MASK	0	8	read-write							
+R	MaskBlock	0x318	32	read-write	Mask	for	IntBlock	Interrupt			
+F	INT_MASK_WE	8	8	write-only							
+F	INT_MASK	0	8	read-write							
+R	MaskSrcTran	0x320	32	read-write	Mask	for	IntSrcTran	Interrupt			
+F	INT_MASK_WE	8	8	write-only							
+F	INT_MASK	0	8	read-write							
+R	MaskDstTran	0x328	32	read-write	Mask	for	IntDstTran	Interrupt			
+F	INT_MASK_WE	8	8	write-only							
+F	INT_MASK	0	8	read-write							
+R	MaskErr	0x330	32	read-write	Mask	for	IntErr	Interrupt			
+F	INT_MASK_WE	8	8	write-only							
+F	INT_MASK	0	8	read-write							
+R	ClearTfr	0x338	32	write-only	Clear	for	IntTfr	Interrupt			
+F	CLEAR	0	8	write-only							
+R	ClearBlock	0x340	32	write-only	Clear	for	IntBlock	Interrupt			
+F	CLEAR	0	8	write-only							
+R	ClearSrcTran	0x348	32	write-only	Clear	for	IntSrcTran	Interrupt			
+F	CLEAR	0	8	write-only							
+R	ClearDstTran	0x350	32	write-only	Clear	for	IntDstTran	Interrupt			
+F	CLEAR	0	8	write-only							
+R	ClearErr	0x358	32	write-only	Clear	for	IntErr	Interrupt			
+F	CLEAR	0	8	write-only							
+R	StatusInt	0x360	32	write-only	Status	for	each	interrupt	type		
+F	ERR	4	1	read-only							
+F	DSTT	3	1	read-only							
+F	SRCT	2	1	read-only							
+F	BLOCK	1	1	read-only							
+F	TFR	0	1	read-only							
+R	ReqSrcReg	0x368	32	read-write	Source	Software	Transaction	Request	Register		
+F	SRC_REQ_WE	8	8	write-only							
+F	SRC_REQ	0	8	read-write							
+R	ReqDstReg	0x370	32	read-write	Destination	SoftwareTransaction	Request	Register			
+F	DST_REQ_WE	8	8	write-only							
+F	DST_REQ	0	8	read-write							
+R	SglReqSrcReg	0x378	32	read-write	Single	Source	Transaction	Request	Register		
+F	SRC_SGLREQ_WE	8	8	write-only							
+F	SRC_SGLREQ	0	8	read-write							
+R	SglReqDstReg	0x380	32	read-write	Single	Destination	Transaction	Request	Register		
+F	DST_SGLREQ_WE	8	8	write-only							
+F	DST_SGLREQ	0	8	read-write							
+R	LstSrcReg	0x388	32	read-write	Last	Source	Transaction	Request	Register		
+F	LSTSRC_WE	8	8	write-only							
+F	LSTSRC	0	8	read-write							
+R	LstDstReg	0x390	32	read-write	Last	Destination	Transaction	Request	Register		
+F	LSTDST_WE	8	8	write-only							
+F	LSTDST	0	8	read-write							
+R	DmaIdReg	0x3a8	32	read-only	DMA	ID	Register				
+F	DMA_ID	0	32	read-only							
+R	DmaTestReg	0x3b0	32	read-write	DMA	Test	Register				
+F	TEST_SLV_IF	0	1	read-write							
+R	DMA_COMP_PARAMS_5_H	0x3d4	32	read-only	dmac	Component	Parameters	Register	5	High	word
+F	CH5_FIFO_DEPTH	28	3	read-only							
+F	CH5_SMS	25	3	read-only							
+F	CH5_LMS	22	3	read-only							
+F	CH5_DMS	19	3	read-only							
+F	CH5_MAX_MULT_SIZE	16	3	read-only							
+F	CH5_FC	14	2	read-only							
+F	CH5_HC_LLP	13	1	read-only							
+F	CH5_CTL_WB_EN	12	1	read-only							
+F	CH5_MULTI_BLK_EN	11	1	read-only							
+F	CH5_LOCK_EN	10	1	read-only							
+F	CH5_SRC_GAT_EN	9	1	read-only							
+F	CH5_DST_SCA_EN	8	1	read-only							
+F	CH5_STAT_SRC	7	1	read-only							
+F	CH5_STAT_DST	6	1	read-only							
+F	CH5_STW	3	3	read-only							
+F	CH5_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_4_H	0x3dc	32	read-only	dmac	Component	Parameters	Register	4	High	word
+F	CH3_FIFO_DEPTH	28	3	read-only							
+F	CH3_SMS	25	3	read-only							
+F	CH3_LMS	22	3	read-only							
+F	CH3_DMS	19	3	read-only							
+F	CH3_MAX_MULT_SIZE	16	3	read-only							
+F	CH3_FC	14	2	read-only							
+F	CH3_HC_LLP	13	1	read-only							
+F	CH3_CTL_WB_EN	12	1	read-only							
+F	CH3_MULTI_BLK_EN	11	1	read-only							
+F	CH3_LOCK_EN	10	1	read-only							
+F	CH3_SRC_GAT_EN	9	1	read-only							
+F	CH3_DST_SCA_EN	8	1	read-only							
+F	CH3_STAT_SRC	7	1	read-only							
+F	CH3_STAT_DST	6	1	read-only							
+F	CH3_STW	3	3	read-only							
+F	CH3_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_4_L	0x3d8	32	read-only	dmac	Component	Parameters	Register	4	Low	word
+F	CH4_FIFO_DEPTH	28	3	read-only							
+F	CH4_SMS	25	3	read-only							
+F	CH4_LMS	22	3	read-only							
+F	CH4_DMS	19	3	read-only							
+F	CH4_MAX_MULT_SIZE	16	3	read-only							
+F	CH4_FC	14	2	read-only							
+F	CH4_HC_LLP	13	1	read-only							
+F	CH4_CTL_WB_EN	12	1	read-only							
+F	CH4_MULTI_BLK_EN	11	1	read-only							
+F	CH4_LOCK_EN	10	1	read-only							
+F	CH4_SRC_GAT_EN	9	1	read-only							
+F	CH4_DST_SCA_EN	8	1	read-only							
+F	CH4_STAT_SRC	7	1	read-only							
+F	CH4_STAT_DST	6	1	read-only							
+F	CH4_STW	3	3	read-only							
+F	CH4_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_3_H	0x3e4	32	read-only	dmac	Component	Parameters	Register	3	High	word
+F	CH1_FIFO_DEPTH	28	3	read-only							
+F	CH1_SMS	25	3	read-only							
+F	CH1_LMS	22	3	read-only							
+F	CH1_DMS	19	3	read-only							
+F	CH1_MAX_MULT_SIZE	16	3	read-only							
+F	CH1_FC	14	2	read-only							
+F	CH1_HC_LLP	13	1	read-only							
+F	CH1_CTL_WB_EN	12	1	read-only							
+F	CH1_MULTI_BLK_EN	11	1	read-only							
+F	CH1_LOCK_EN	10	1	read-only							
+F	CH1_SRC_GAT_EN	9	1	read-only							
+F	CH1_DST_SCA_EN	8	1	read-only							
+F	CH1_STAT_SRC	7	1	read-only							
+F	CH1_STAT_DST	6	1	read-only							
+F	CH1_STW	3	3	read-only							
+F	CH1_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_3	0x3e0	32	read-only	dmac	Component	Parameters	Register	3	Low	Word
+F	CH2_FIFO_DEPTH	28	3	read-only							
+F	CH2_SMS	25	3	read-only							
+F	CH2_LMS	22	3	read-only							
+F	CH2_DMS	19	3	read-only							
+F	CH2_MAX_MULT_SIZE	16	3	read-only							
+F	CH2_FC	14	2	read-only							
+F	CH2_HC_LLP	13	1	read-only							
+F	CH2_CTL_WB_EN	12	1	read-only							
+F	CH2_MULTI_BLK_EN	11	1	read-only							
+F	CH2_LOCK_EN	10	1	read-only							
+F	CH2_SRC_GAT_EN	9	1	read-only							
+F	CH2_DST_SCA_EN	8	1	read-only							
+F	CH2_STAT_SRC	7	1	read-only							
+F	CH2_STAT_DST	6	1	read-only							
+F	CH2_STW	3	3	read-only							
+F	CH2_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_2_H	0x3ec	32	read-only	dmac	Component	Parameters	Register	2	High	word
+F	CH7_MULTI_BLK_TYPE	28	4	read-only							
+F	CH6_MULTI_BLK_TYPE	24	4	read-only							
+F	CH5_MULTI_BLK_TYPE	20	4	read-only							
+F	CH4_MULTI_BLK_TYPE	16	4	read-only							
+F	CH3_MULTI_BLK_TYPE	12	4	read-only							
+F	CH2_MULTI_BLK_TYPE	8	4	read-only							
+F	CH1_MULTI_BLK_TYPE	4	4	read-only							
+F	CH0_MULTI_BLK_TYPE	0	4	read-only							
+R	DMA_COMP_PARAMS_2	0x3e8	32	read-only	dmac	Component	Parameters	Register	2	Low	Word
+F	CH0_FIFO_DEPTH	28	3	read-only							
+F	CH0_SMS	25	3	read-only							
+F	CH0_LMS	22	3	read-only							
+F	CH0_DMS	19	3	read-only							
+F	CH0_MAX_MULT_SIZE	16	3	read-only							
+F	CH0_FC	14	2	read-only							
+F	CH0_HC_LLP	13	1	read-only							
+F	CH0_CTL_WB_EN	12	1	read-only							
+F	CH0_MULTI_BLK_EN	11	1	read-only							
+F	CH0_LOCK_EN	10	1	read-only							
+F	CH0_SRC_GAT_EN	9	1	read-only							
+F	CH0_DST_SCA_EN	8	1	read-only							
+F	CH0_STAT_SRC	7	1	read-only							
+F	CH0_STAT_DST	6	1	read-only							
+F	CH0_STW	3	3	read-only							
+F	CH0_DTW	0	3	read-only							
+R	DMA_COMP_PARAMS_1_H	0x3f4	32	read-only	dmac	Component	Parameters	Register	1	High	word
+F	STATIC_ENDIAN_SELECT	29	1	read-only	Component	version	register				
+F	ADD_ENCODED_PARAMS	28	1	read-only							
+F	NUM_HS_INT	23	5	read-only							
+F	M4_HDATA_WIDTH	21	2	read-only							
+F	M3_HDATA_WIDTH	19	2	read-only							
+F	M2_HDATA_WIDTH	17	2	read-only							
+F	M1_HDATA_WIDTH	15	2	read-only							
+F	S_HDATA_WIDTH	13	2	read-only							
+F	NUM_MASTER_INT	11	2	read-only							
+F	NUM_CHANNELS	8	3	read-only							
+F	MABRST	4	4	read-only							
+F	INTR_IO	1	2	read-only							
+F	BIG_ENDIAN	0	1	read-only							
+R	DMA_COMP_PARAMS_1_L	0x3f0	32	read-only	dmac	Component	Parameters	Register	1	Low	word
+F	CH5_MAX_BLK_SIZE	20	4	read-only							
+F	CH4_MAX_BLK_SIZE	16	4	read-only							
+F	CH3_MAX_BLK_SIZE	12	4	read-only							
+F	CH2_MAX_BLK_SIZE	8	4	read-only							
+F	CH1_MAX_BLK_SIZE	4	4	read-only							
+F	CH0_MAX_BLK_SIZE	0	4	read-only							
+R	DMA_Component_ID_H	0x3fc	32	read-only	DMA	Component	ID	Register	High	word	
+F	DMA_COMP_VERSION	0	32	read-only							
+R	DMA_Component_ID_L	0x3f8	32	read-only	DMA	Component	ID	Register	Low	word	
+F	DMA_COMP_TYPE	0	32	read-only							

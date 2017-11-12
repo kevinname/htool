@@ -1,0 +1,175 @@
+P	BT_HAB	1	BT_	0x40018000	Bluetooth	HAB	controller				
+A	0x0	0x2000	IOregisters								
+R	HAB_RX_CTRL_GP1	0x08	32	read-write	receive	control	reg				
+F	OCL_FB_MODE	30	1	read-write							
+F	SYM_MASK	20	1	read-write							
+F	SYM_ENB	29	1	read-write							
+F	SYM_GN	28	1	read-write							
+F	FDB_DIS	11	1	read-write							
+F	RXMODE	6	1	read-write							
+F	SYNC_ERROR	0	6	read-write							
+R	HAB_INTR_CTRL_GP1	0x20	32	read-write	Radio	Interrupt	control				
+F	LTR_INTR_MASK	8	1	read-write							
+F	RIF_INTR_MASK3	6	2	read-write							
+F	RIF_INTR_MASK2	4	2	read-write							
+F	RIF_INTR_MASK1	2	2	read-write							
+F	RIF_INTR_MASK0	0	2	read-write							
+R	HAB_INTR_CLR	0x24	32	write-only	Radio	Interrupt	clear				
+F	LTR_INTR_CLR	4	1	Write-only							
+F	RIF_INTR_CLR	0	4	Write-only							
+R	HAB_PHY_CONFIG	0x28	32	read-write	PHY	Configuration					
+F	Ceva_Reserved	31	1	read-write							
+F	RX_INV	30	1	read-write							
+F	LTR_BYP	29	1	read-write							
+F	GAU_BYP	28	1	read-write							
+F	OCL_BYP	26	1	read-write							
+F	DAT_BYP	25	1	read-write							
+F	RX_FMT	23	1	read-write							
+F	TX_FMT	22	1	read-write							
+F	TXDIR_INV	21	1	read-write							
+F	TX_INV	20	1	read-write							
+F	SYNC_TX	18	2	read-write							
+F	SYNC_RX	17	1	read-write							
+F	SYNC_INV	16	1	read-write							
+F	REFCLK_INV	15	1	read-write							
+F	RXBDW_DIR	13	2	read-write							
+F	TXDATA_FRC	11	2	read-write							
+F	TXDATA_DIR	10	1	read-write							
+F	RST_DIR	    9	1	read-write							
+F	OPEN_DRAIN	8	1	read-write							
+F	LPOCLK_DIV	7	1	read-write							
+F	PHYCLK_GATE	6	1	read-write							
+F	REFCLK_DIR	5	1	read-write							
+F	REFCLK_DIV	0	5	read-write							
+R	HAB_STAT_GP1	0x2C	32	read-only	status	reg					
+F	Ceva_Reserved	16	16	Read-only							
+F	GIO_STATUS	12	4	Read-only							
+F	RIF_INTR	8	4	Read-only							
+F	LTR_INTR	7	1	Read-only							
+F	LTR_LONG_PERIOD	5	1	Read-only							
+R	HAB_GIO_HIGH_CTRL_1_AND_0	0x30	32	read-write	GIO	Control_Ext_Override	High	Position	0	and	1
+F	HIGH_1_OVERRIDE	31	1	read-write							
+F	HIGH_1_EXT	29	2	read-write							
+F	HIGH_1_VAL	16	11	read-write							
+F	HIGH_0_OVERRIDE	15	1	read-write							
+F	HIGH_0_EXT	13	2	read-write							
+F	HIGH_0_VAL	0	11	read-write							
+R	HAB_GIO_HIGH_CTRL_3_AND_2	0x34	32	read-write	GIO	Control_Ext_Override	High	Position	2	and	3
+F	HIGH_3_OVERRIDE	31	1	read-write							
+F	HIGH_3_EXT	29	2	read-write							
+F	HIGH_3_VAL	16	11	read-write							
+F	HIGH_2_OVERRIDE	15	1	read-write							
+F	HIGH_2_EXT	13	2	read-write							
+F	HIGH_2_VAL	0	11	read-write							
+R	HAB_GIO_HIGH_CTRL_5_AND_4	0x38	32	read-write	GIO	Control_Ext_Override	High	Position	4	and	5
+F	HIGH_5_OVERRIDE	31	1	read-write							
+F	HIGH_5_EXT	29	2	read-write							
+F	HIGH_5_VAL	16	11	read-write							
+F	HIGH_4_OVERRIDE	15	1	read-write							
+F	HIGH_4_EXT	13	2	read-write							
+F	HIGH_4_VAL	0	11	read-write							
+R	HAB_GIO_HIGH_CTRL_7_AND_6	0x3c	32	read-write	GIO	Control_Ext_Override	High	Position	6	and	7
+F	HIGH_7_OVERRIDE	31	1	read-write							
+F	HIGH_7_EXT	29	2	read-write							
+F	HIGH_7_VAL	16	11	read-write							
+F	HIGH_6_OVERRIDE	15	1	read-write							
+F	HIGH_6_EXT	13	2	read-write							
+F	HIGH_6_VAL	0	11	read-write							
+R	HAB_GIO_HIGH_CTRL_9_AND_8	0x40	32	read-write	GIO	Control_Ext_Override	High	Position	8	and	9
+F	HIGH_9_OVERRIDE	31	1	read-write							
+F	HIGH_9_EXT	29	2	read-write							
+F	HIGH_9_VAL	16	11	read-write							
+F	HIGH_8_OVERRIDE	15	1	read-write							
+F	HIGH_8_EXT	13	2	read-write							
+F	HIGH_8_VAL	0	11	read-write							
+R	HAB_GIO_HIGH_CTRL_B_AND_A	0x44	32	read-write	GIO	Control_Ext_Override	High	Position	A	and	B
+F	HIGH_11_OVERRIDE	31	1	read-write							
+F	HIGH_11_EXT	29	2	read-write							
+F	HIGH_11_VAL	16	11	read-write							
+F	HIGH_10_OVERRIDE	15	1	read-write							
+F	HIGH_10_EXT	13	2	read-write							
+F	HIGH_10_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_1_AND_0	0x48	32	read-write	GIO	Control_Ext_Override	Low	Position	0	and	1
+F	LOW_1_OVERRIDE	31	1	read-write							
+F	LOW_1_EXT	29	2	read-write							
+F	LOW_1_VAL	16	11	read-write							
+F	LOW_0_OVERRIDE	15	1	read-write							
+F	LOW_0_EXT	13	2	read-write							
+F	LOW_0_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_3_AND_2	0x4c	32	read-write	GIO	Control_Ext_Override	Low	Position	2	and	3
+F	LOW_3_OVERRIDE	31	1	read-write							
+F	LOW_3_EXT	29	2	read-write							
+F	LOW_3_VAL	16	11	read-write							
+F	LOW_2_OVERRIDE	15	1	read-write							
+F	LOW_2_EXT	13	2	read-write							
+F	LOW_2_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_5_AND_4	0x50	32	read-write	GIO	Control_Ext_Override	Low	Position	4	and	5
+F	LOW_5_OVERRIDE	31	1	read-write							
+F	LOW_5_EXT	29	2	read-write							
+F	LOW_5_VAL	16	11	read-write							
+F	LOW_4_OVERRIDE	15	1	read-write							
+F	LOW_4_EXT	13	2	read-write							
+F	LOW_4_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_7_AND_6	0x54	32	read-write	GIO	Control_Ext_Override	Low	Position	6	and	7
+F	LOW_7_OVERRIDE	31	1	read-write							
+F	LOW_7_EXT	29	2	read-write							
+F	LOW_7_VAL	16	11	read-write							
+F	LOW_6_OVERRIDE	15	1	read-write							
+F	LOW_6_EXT	13	2	read-write							
+F	LOW_6_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_9_AND_8	0x58	32	read-write	GIO	Control_Ext_Override	Low	Position	8	and	9
+F	LOW_9_OVERRIDE	31	1	read-write							
+F	LOW_9_EXT	29	2	read-write							
+F	LOW_9_VAL	16	11	read-write							
+F	LOW_8_OVERRIDE	15	1	read-write							
+F	LOW_8_EXT	13	2	read-write							
+F	LOW_8_VAL	0	11	read-write							
+R	HAB_GIO_LOW_CTRL_B_AND_A	0x5c	32	read-write	GIO	Control_Ext_Override	Low	Position	A	and	B
+F	LOW_11_OVERRIDE	31	1	read-write							
+F	LOW_11_EXT	29	2	read-write							
+F	LOW_11_VAL	16	11	read-write							
+F	LOW_10_OVERRIDE	15	1	read-write							
+F	LOW_10_EXT	13	2	read-write							
+F	LOW_10_VAL	0	11	read-write							
+R	HAB_GIO_CTRL_COMB_3_2_1_0	0x60	32	read-write	GIO	Auto-Extension	Control	0_1_2_3			
+F	AUTO_EXT_3	31	1	Write-only							
+F	GIO_COMBINE_3	24	6	read-write							
+F	AUTO_EXT_2	23	1	Write-only							
+F	GIO_COMBINE_2	16	6	read-write							
+F	AUTO_EXT_1	15	1	Write-only							
+F	GIO_COMBINE_1	8	6	read-write							
+F	AUTO_EXT_0	7	1	Write-only							
+F	GIO_COMBINE_0	0	6	read-write							
+R	HAB_GIO_CTRL_COMB_7_6_5_4	0x64	32	read-write	GIO	Auto-Extension	Control	4_5_6_7			
+F	AUTO_EXT_7	31	1	Write-only							
+F	GIO_COMBINE_7	24	6	read-write							
+F	AUTO_EXT_6	23	1	Write-only							
+F	GIO_COMBINE_6	16	6	read-write							
+F	AUTO_EXT_5	15	1	Write-only							
+F	GIO_COMBINE_5	8	6	read-write							
+F	AUTO_EXT_4	7	1	Write-only							
+F	GIO_COMBINE_4	0	6	read-write							
+R	HAB_GIO_CTRL_COMB_B_A_9_8	0x68	32	read-write	GIO	Auto-Extension	Control	8_9_A_B			
+F	AUTO_EXT_11	31	1	Write-only							
+F	GIO_COMBINE_B	24	6	read-write							
+F	AUTO_EXT_10	23	1	Write-only							
+F	GIO_COMBINE_A	16	6	read-write							
+F	AUTO_EXT_9	15	1	Write-only							
+F	GIO_COMBINE_9	8	6	read-write							
+F	AUTO_EXT_8	7	1	Write-only							
+F	GIO_COMBINE_8	0	6	read-write							
+R	HAB_RF_SUPPORT	0x70	32	read-write	RF	Support	Register				
+F	RF_SUPPORT	0	3	read-write							
+R	HAB_GIO_WIN_EXT_H	0x80	32	read-write	GIO	Window	Extension	Control	HIGH		
+F	HIGH_LATE_EN	12	12	read-write							
+F	HIGH_EARLY_EN	0	12	read-write							
+R	HAB_GIO_WIN_EXT_L	0x84	32	read-write	GIO	Window	Extension	Control	LOW		
+F	LOW_LATE_EN	12	12	read-write							
+F	LOW_EARLY_EN	0	12	read-write							
+R	HAB_RF_MUX_CLK_DIV	0xA0	32	read-write	RF	MUX	clock	reg			
+F	Ceva_Reserved2	16	8	read-write							
+F	AUTO_WAKEUP	13	3	read-write							
+F	Ceva_Reserved1	11	2	read-write							
+F	RFMUX	8	3	read-write							
+F	SYNC_RXBDW_TRCLK_EDGE	1	1	read-write							
+F	SYNC_RXBDW_TRCLK	0	1	read-write							

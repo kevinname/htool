@@ -1,0 +1,69 @@
+P	I2S_TX	1.0	I2S_	0x40080000	I2S controller
+A 	0x0 	0x10000 	IOregisters
+I 	INT_I2S 	11
+R	IER	0x000	32	read-write	DW_apb_i2s	Enable	Register				
+F	IEN	0	1	read-write							
+R	IRER	0x004	32	read-write	I2S	Receiver	Block	Enable	Register		
+F	RXEN	0	1	read-write							
+R	ITER	0x008	32	read-write	I2S	Transmitter	Block	Enable	Register		
+F	TXEN	0	1	read-write							
+R	CER	0x00C	32	read-write	Clock	Enable	Register				
+F	CLKEN	0	1	read-write							
+R	CCR	0x010	32	read-write	Clock	Configuration	Register				
+F	WSS	3	2	read-write							
+F	SCLKG	0	3	read-write							
+R	RXFFR	0x014	32	write-only	Receiver Block FIFO Reset Register						
+F	RXFFR	0	1	write-only							
+R	TXFFR	0x018	32	write-only	Transmitter Block FIFO Reset Register						
+F	TXFFR	0	1	write-only							
+R	RER	0x028	32	read-write	channel	0	Receive	Enable	Register	0	
+F	RXCHEN0	0	1	read-write							
+R	TER	0x02C	32	read-write	channel	0	Transmit	Enable	Register	0	
+F	TXCHEN0	0	1	read-write							
+R	RCR	0x030	32	read-write	channel	0	Receive	Configuration	Register	0	
+F	WLEN	0	3	read-write							
+R	TCR	0x034	32	read-write	channel	0	Transmit	Configuration	Register	0	
+F	WLEN	0	3	read-write							
+R	ISR	0x038	32	read-only	channel	0	Interrupt	Status	Register	0	
+F	TXFO	5	1	read-only							
+F	TXFE	4	1	read-only							
+F	RXFO	1	1	read-only							
+F	RXDA	0	1	read-only							
+R	IMR	0x03C	32	read-write	channel	0	Interrupt	Mask	Register	0	
+F	TXFOM	5	1	read-write							
+F	TXFEM	4	1	read-write							
+F	RXFOM	1	1	read-write							
+F	RXDAM	0	1	read-write							
+R	RFCR	0x048	32	read-write	channel	0	Receive	FIFO	Configuration	Register	0
+F	RXCHDT	0	4	read-write							
+R	TFCR	0x04C	32	read-write	channel	0	Transmit	FIFO	Configuration	Register	0
+F	TXCHET	0	4	read-write							
+R	RFF	0x050	32	write-only	channel	0	Receive	FIFO	Flush	0	
+F	RXCHFR	0	1	write-only							
+R	TFF	0x054	32	write-only	channel	0	Transmit	FIFO	Flush	0	
+F	TXCHFR	0	1	write-only							
+R	RRXDMA	0x1C4	32	write-only	Reset	Receiver	Block	DMA	Register		
+F	RRXDMA	0	1	write-only							
+R	RTXDMA	0x1CC	32	write-only	Reset	Transmitter	Block	DMA	Register		
+F	RTXDMA	0	1	write-only							
+R	I2S_COMP_PARAM_2	0x01F0	32	read-only	Component	Parameter	2	Register			
+F	I2S_RX_WORDSIZE_3	10	3	read-only							
+F	I2S_RX_WORDSIZE_2	7	3	read-only							
+F	I2S_RX_WORDSIZE_1	3	3	read-only							
+F	I2S_RX_WORDSIZE_0	0	3	read-only							
+R	I2S_COMP_PARAM_1	0x01F4	32	read-only	Component	Parameter	1	Register			
+F	I2S_TX_WORDSIZE_3	25	3	read-only							
+F	I2S_TX_WORDSIZE_2	22	3	read-only							
+F	I2S_TX_WORDSIZE_1	19	3	read-only							
+F	I2S_TX_WORDSIZE_0	16	3	read-only							
+F	I2S_TX_CHANNELS	9	2	read-only							
+F	I2S_RX_CHANNELS	7	2	read-only							
+F	I2S_RECEIVER_BLOCK	6	1	read-only							
+F	I2S_TRANSMITTER_BLOCK	5	1	read-only							
+F	I2S_MODE_EN	4	1	read-only							
+F	I2S_FIFO_DEPTH_GLOBAL	2	2	read-only							
+F	APB_DATA_WIDTH	0	2	read-only							
+R	I2S_COMP_VERSION	0x01F8	32	read-only	Component	Version	ID				
+F	I2S_COMP_VERSION	0	32	read-only							
+R	I2S_COMP_TYPE	0x1FC	32	read-only	DesignWare	Component	Type				
+F	I2S_COMP_TYPE	0	32	read-only					

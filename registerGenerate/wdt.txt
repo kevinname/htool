@@ -1,0 +1,47 @@
+P	WDT	1	WDT_	0x400D0000	WDT	controller		
+A	0x0	0x1000	IOregisters					
+I	INT_WDT	32						
+R	CR	0x00	32	read-write	Control	register		
+F	RPL	2	3	read-write	reset pulse length			
+F	RMOD	1	1	read-write	response mode			
+F	WDT_EN	0	1	read-write	WDT enable			
+R	TORR	0x04	32	read-write	Timeout	range	register	
+F	TOP_INIT	4	4	read-write	Timeout period for initialization			
+F	TOP	0	4	read-write	Timeout period			
+R	CCVR	0x08	32	read-only	Current	counter	value	register
+F	CCVR	0	32	read-only	 current value of the internal 			
+R	CRR	0x0c	32	write-only	Counter	restart	register	
+F	CRR	0	8	write-only	 restart the WDT counter			
+R	STAT	0x10	32	read-only	Interrupt	status	register	
+F	STAT	0	1	read-only	WDT interrupt status			
+R	EOI	0x14	32	read-only	EOI	
+F	EOI	0	32	read-only	
+R	CLOCK_EN	0x1c	32	read-only	EOI	
+F	CLOCK_EN	0	1	read-write	
+R	WDT_COMP_PARAMS_5	0xe4	32	read-only	Component	Parameters	Register	5
+F	CP_WDT_USER_TOP_MAX	0	32	read-only				
+R	WDT_COMP_PARAMS_4	0xe8	32	read-only	Component	Parameters	Register	4
+F	CP_WDT_USER_TOP_INIT_MAX	0	32	read-only				
+R	WDT_COMP_PARAMS_3	0xec	32	read-only	Component	Parameters	Register	3
+F	CD_WDT_TOP_RST	0	32	read-only				
+R	WDT_COMP_PARAMS_2	0xf0	32	read-only	Component	Parameters	Register	2
+F	CP_WDT_CNT_RST	0	32	read-only				
+R	WDT_COMP_PARAMS_1	0xf4	32	read-only	Component	Parameters	Register	1
+F	CP_WDT_CNT_WIDTH	24	5	read-only				
+F	CP_WDT_DFLT_TOP_INIT	20	4	read-only				
+F	CP_WDT_DFLT_TOP	16	4	read-only				
+F	Reserve		13	3	read-only		
+F	CP_WDT_DFLT_RPL	10	3	read-only				
+F	CP_WDT_APB_DATA_WIDTH	8	2	read-only				
+F	CP_WDT_PAUSE	7	1	read-only				
+F	CP_WDT_USE_FIX_TOP	6	1	read-only				
+F	CP_WDT_HC_TOP	5	1	read-only				
+F	CP_WDT_HC_RPL	4	1	read-only				
+F	CP_WDT_HC_RMOD	3	1	read-only				
+F	CP_WDT_DUAL_TOP	2	1	read-only				
+F	CP_WDT_DFLT_RMOD	1	1	read-only				
+F	CP_WDT_ALWAYS_EN	0	1	read-only				
+R	WDT_COMP_VERSION	0xf8	32	read-only	DesignWare	Component	Version	register
+F	WDT_COMP_VERSION	0	32	read-only				
+R	WDT_COMP_TYPE	0xfc	32	read-only	DesignWare	Component	Type	register
+F	WDT_COMP_TYPE	0	32	read-only				

@@ -1,0 +1,85 @@
+P	UART1	1	UART1_	0x40040000	UART0	controller				
+A	0x0	0x10000	IOregisters							
+I	INT_UART1	9	
+R	DLL_BR_THR	0x00	32	read-write	Divisor	Latch	High	LCR[7]=1
+F	DLH_B	0	8	read-write								
+R	DLH_IER	0x04	32	read-write	Divisor	Latch	High	LCR[7]=1
+F	DLH_B	0	8	read-write	
+R	IIR_FCR	0x08	32	read-only	Interrupt	Identification	Register
+F	IIR_B	0	32	read-write				
+R	LCR	0x0C	32	read-write	Line	Control	Register			
+F	DLAB	7	1	read-write	Divisor Latch Access Bit						
+F	BC	6	1	read-write	Break Control Bit						
+F	EPS	4	1	read-write	Even Parity Select						
+F	PEN	3	1	read-write	Parity Enable						
+F	STOP	2	1	read-write	Number of stop bits						
+F	DLS	0	2	read-write	Data Length Select						
+R	MCR	0x10	32	read-write	Modem	Control	Register			
+F	SIRE	6	1	read-write	SIR Mode Enable						
+F	AFCE	5	1	read-write	Auto Flow Control Enable						
+F	LB	4	1	read-write	LoopBack Bit						
+F	OUT2	3	1	read-write	control the user-designated Output2						
+F	OUT1	2	1	read-write	control the user-designated Output1						
+F	RTS	1	1	read-write	Request to Send						
+F	DTR	0	1	read-write	Data Terminal Ready						
+R	SCR	0x1C	32	read-write	Scratchpad	Register				
+F	Scratchpad	0	8	read-write	use as a temporary storage space						
+R	LPDLL	0x20	32	read-write	Low	Power	Divisor	Latch	(Low)	Register
+F	LPDLL	0	8	lower  8-bits of baud rate divisor to give 115.2k for SIR low power 						
+R	LPDLH	0x24	32	read-write	Low	Power	Divisor	Latch	(High)	Register
+F	LPDLH	0	8	read-write	upper 8-bits of baud rate divisor to give 115.2k for SIR low power 						
+R	FAR	0x70	32	read-write	FIFO	Access	Register			
+F	FAR	0	1	read-write							
+R	TFR	0x74	32	read-only	Transmit	FIFO	Read			
+F	TFR	0	8	read-write							
+R	RFW	0x78	32	write-only	Receive	FIFO	Write			
+F	RFFE	9	1	read-write							
+F	RFPE	8	1	read-write							
+F	RFWD	0	8	read-write							
+R	USR	0x7C	32	read-only	UART	Status	Register			
+F	RFF	4	1	read-write	Receive FIFO Full						
+F	RFNE	3	1	read-write	Receive FIFO Not Empty						
+F	TFE	2	1	read-write	Transmit FIFO Empty						
+F	TFNF	1	1	read-write	Transmit FIFO Not Full						
+F	BUSY	0	1	read-write	UART Busy						
+R	TFL	0x80	32  read-only	Transmit	FIFO	Level				
+F	TFL	0	4	read-write	Transmit FIFO Level						
+R	RFL	0x84	32  read-only	Receive	FIFO	Level				
+F	RFL	0	4	read-write	Receive FIFO Level						
+R	SRR	0x88	32	write-only	Software	Reset	Register			
+F	XFR	2	1	read-write							
+F	RFR	1	1	read-write							
+F	UR	0	1	read-write							
+R	SRTS	0x8C	32	read-write	Shadow	Request	to	Send		
+F	SRTS	0	1	read-write	Shadow Request to Send.						
+R	SBCR	0x90	32	read-write	Shadow	Break	Control	Register		
+F	SBCR	0	1	read-write							
+R	SDMAM	0x94	32	read-write	Shadow	DMA	Mode			
+F	SDMAM	0	1	read-write							
+R	SFE	0x98	32	read-write	Shadow	FIFO	Enable			
+F	SFE	0	1		read-write						
+R	SRT	0x9C	32	read-write	Shadow	RCVR	Trigger			
+F	SRT	0	2		read-write						
+R	STET	0xA0	32	read-write	Shadow	TX	Empty	Trigger		
+F	STET	0	2	read-write							
+R	HTX	0xA4	32	read-write	Halt	TX				
+F	HTX	0	1		read-write						
+R	DMASA	0xA8	32	write-only	DMA	Software	Acknowledge			
+F	DMASA	0	1	read-write							
+R	CPR	0xF4	32	read-only	Component	Parameter	Register
+F	FIFO_MODE	16	8	read-only			
+F	DMA_EXTRA	13	1	read-only			
+F	UART_ADD_ENCODED_PARAMS	12	1	read-only			
+F	SHADOW	11	1	read-only			
+F	FIFO_STAT	10	1	read-only			
+F	FIFO_ACCESS	9	1	read-only			
+F	NEW_FEAT	8	1	read-only			
+F	SIR_LP_MODE	7	1	read-only			
+F	SIR_MODE	6	1	read-only			
+F	THRE_MODE	5	1	read-only			
+F	AFCE_MODE	4	1	read-only			
+F	APB_DATA_WIDTH	0	2	read-only			
+R	UCV		0xF8	32	read-only	UART	Component	Version
+F	UART_component_version	0	32	read-only			
+R	CTR		0xFC	32	read-only	Component	Type	Register
+F	Peripheral_ID	0	32	read-only			

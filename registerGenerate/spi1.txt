@@ -1,0 +1,75 @@
+P	SPI1	1.0	SPI1_	0x40060000	SPI1 (DW apb ssi)
+A 	0x0 	0x10000 	IOregisters
+I 	INT_SPI1_0 	34
+I 	INT_SPI1_1 	35
+R	CTRLR0	0x0	32	read-write	Control	Register	0	
+F	CFS	12	4	read-write				
+F	SRL	11	1	read-write				
+F	SLV_OE	10	1	read-write				
+F	TMOD	8	2	read-write				
+F	SCPOL	7	1	read-write				
+F	SCPH	6	1	read-write				
+F	FRF	4	2	read-write				
+F	DFS	0	4	read-write				
+R	CTRLR1	0x04	32		Control	Register	1	
+F	NDF	0	16	read-write				
+R	SSIENR	0x08	32		SSI	Enable	Register	
+F	SSI_EN	0	1	read-write				
+R	MWCR	0x0C	32		Microwire	Control	Register	
+F	MHS	2	1	read-write				
+F	MDD	1	1	read-write				
+F	MWMOD	0	1	read-write				
+R	SER	0x10	32		Slave	Enable	Register	
+F	SER	0	4	read-write				
+R	BAUDR	0x14	32		Baud	Rate	Select	
+F	SCKDV	0	16	read-write				
+R	TXFTLR	0x18	32		Transmit	FIFO	Threshold	Level
+F	TFT	0	4	read-write				
+R	RXFTLR	0x1C	32		Receive	FIFO	Threshold	Level
+F	RFT	0	4	read-write				
+R	TXFLR	0x20	32		Transmit	FIFO	Level	Register
+F	TXTFL	0	4	read-only				
+R	RXFLR	0x24	32		Receive	FIFO	Level	Register
+F	RXTFL	0	4	read-only				
+R	SR	0x28	32		Status	Register		
+F	DCOL	6	1	read-only				
+F	TXE	5	1	read-only				
+F	RFF	4	1	read-only				
+F	RFNE	3	1	read-only				
+F	TFE	2	1	read-only				
+F	TFNF	1	1	read-only				
+F	BUSY	0	1	read-only				
+R	IMR	0x2C	32		Interrupt	Mask	Register	
+F	MSTIM	5	1	read-write				
+F	RXFIM	4	1	read-write				
+F	RXOIM	3	1	read-write				
+F	RXUIM	2	1	read-write				
+F	TXOIM	1	1	read-write				
+F	TXEIM	0	1	read-write				
+R	ISR	0x30	32		Interrupt	Status	Register	
+F	MSTIS	5	1	read-only				
+F	RXFIS	4	1	read-only				
+F	RXOIS	3	1	read-only				
+F	RXUIS	2	1	read-only				
+F	TXOIS	1	1	read-only				
+F	TXEIS	0	1	read-only				
+R	RISR	0x34	32		Raw	Interrupt	Status	Register
+F	MSTIR	5	1	read-only				
+F	RXFIR	4	1	read-only				
+F	RXOIR	3	1	read-only				
+F	RXUIR	2	1	read-only				
+F	TXOIR	1	1	read-only				
+F	TXEIR	0	1	read-only				
+R	DMACR	0x4C	32		DMA	Control	Register	
+F	TDMAE	1	1	read-write				
+F	RDMAE	0	1	read-write				
+R	DMATDLR	0x50	32		DMA	Transmit	Data	Level
+F	DMATDL	0	4	read-write				
+R	DMARDLR	0x54	32		DMA	Receive	Data	Level
+F	DMARDL	0	4	read-write				
+R	IDR	0x58	32		Identification	Register		
+F	IDCODE	0	32	read-only				
+R	SSI_COMP_VERSION	0x5C	32		coreKit	version	ID	register
+F	SSI_COMP_VERSION	0	32	read-only				
+R	RX_SAMPLE_DLY	0xf0	32		RXD	Sample	Delay	Register
+F	RSD	0	15	read-write				

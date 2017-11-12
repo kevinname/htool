@@ -1,0 +1,183 @@
+P	RTC	1.0	RTC_	0x400f0000	RTC	controller				
+A	0x0	0x1000	IOregisters							
+R	TR	0x00	32	read-write	RTC time register
+F	PM	22	1	read-write	
+F	HT	20	2	read-write	
+F	HU	16	4	read-write	
+F	MNT	12	3	read-write	
+F	MNU	8	4	read-write	
+F	ST	4	3	read-write	
+F	SU	0	4	read-write	
+R	DR	0x04	32	read-write	RTC date register
+F	YT	20	4	read-write	
+F	YU	16	4	read-write	
+F	WDU	13	3	read-write	
+F	MT	12	1	read-write	
+F	MU	8	4	read-write	
+F	DT	4	2	read-write	
+F	DU	0	4	read-write	
+R	CR	0x08	32	read-write	RTC control register
+F	COE	23	1	read-write	
+F	OSEL	21	2	read-write	
+F	POL	20	1	read-write	
+F	COSEL	19	1	read-write	
+F	BKP	18	1	read-write	
+F	SUB1H	17	1	write-only	
+F	ADD1H	16	1	write-only	
+F	TSIE	15	1	read-write	
+F	WUTIE	14	1	read-write	
+F	ALRBIE	13	1	read-write	
+F	ALRAIE	12	1	read-write	
+F	TSE	11	1	read-write	
+F	WUTE	10	1	read-write	
+F	ALRBE	9	1	read-write	
+F	ALRAE	8	1	read-write	
+F	DCE	7	1	read-write	
+F	FMT	6	1	read-write	
+F	BYPSHAD	5	1	read-write	
+F	REFCKON	4	1	read-write	
+F	TSEDGE	3	1	read-write	
+F	WUCKSEL	0	3	read-write	
+R	ISR	0x0C	32	read-write	RTC initialization and status register
+F	RECALPF	16	1	read-only	
+F	TAMP2F	14	1	read-write	
+F	TAMP1F	13	1	read-write	
+F	TSOVF	12	1	read-write	
+F	TSF	11	1	read-write	
+F	WUTF	10	1	read-write	
+F	ALRBF	9	1	read-write	
+F	ALRAF	8	1	read-write	
+F	INIT	7	1	read-write	
+F	INITF	6	1	read-only	
+F	RSF	5	1	read-write	
+F	INITS	4	1	read-only	
+F	SHPF	3	1	read-write	
+F	WUTWF	2	1	read-only	
+F	ALRBWF	1	1	read-only	
+F	ALRAWF	0	1	read-only	
+R	PRER	0x10	32	read-write	RTC prescaler register
+F	PREDIV_A	16	7	read-write	
+F	PREDIV_S	0	15	read-write	
+R	WUTR	0x14	32	read-write	RTC wakeup timer register
+F	WUT	0	16	read-write	
+R	CALIBR	0x18	32	read-write	RTC calibration register
+F	DCS	7	1	read-write	
+F	DC	0	5	read-write	
+R	ALRMAR	0x1C	32	read-write	RTC alarm A register
+F	MSK4	31	1	read-write	
+F	WDSEL	30	1	read-write	
+F	DT	28	2	read-write	
+F	DU	24	4	read-write	
+F	MSK3	23	1	read-write	
+F	PM	22	1	read-write	
+F	HT	20	2	read-write	
+F	HU	16	4	read-write	
+F	MSK2	15	1	read-write	
+F	MNT	12	3	read-write	
+F	MNU	8	4	read-write	
+F	MSK1	7	1	read-write	
+F	ST	4	3	read-write	
+F	SU	0	4	read-write	
+R	ALRMBR	0x20	32	read-write	RTC alarm B register
+F	MSK4	31	1	read-write	
+F	DSEL	30	1	read-write	
+F	DT	28	2	read-write	
+F	DU	24	4	read-write	
+F	MSK3	23	1	read-write	
+F	PM	22	1	read-write	
+F	HT	20	2	read-write	
+F	HU	16	4	read-write	
+F	MSK2	15	1	read-write	
+F	MNT	12	3	read-write	
+F	MNU	8	4	read-write	
+F	MSK1	7	1	read-write	
+F	ST	4	3	read-write	
+F	SU	0	4	read-write	
+R	WPR	0x24	32	write-only	RTC write protection register
+F	KEY	0	8	write-only	
+R	SSR	0x28	32	write-only	RTC sub second register
+F	SS	0	16	read-only	
+R	SHIFTR	0x2C	32	write-only	RTC shift control register
+F	ADD1S	31	1	write-only	
+F	SUBFS	0	15	write-only	
+R	TSTR	0x30	32	read-only	RTC time stamp time register
+F	PM	22	1	read-only	
+F	HT	20	2	read-only	
+F	HU	16	4	read-only	
+F	MNT	12	3	read-only	
+F	MNU	8	4	read-only	
+F	ST	4	3	read-only	
+F	SU	0	4	read-only	
+R	TSDR	0x34	32	read-only	RTC time stamp date register
+F	WDU	13	3	read-only	
+F	MT	12	1	read-only	
+F	MU	8	4	read-only	
+F	DT	4	2	read-only	
+F	DU	0	4	read-only	
+R	TSSSR	0x38	32	read-only	RTC timestamp sub second register
+F	SS	0	16	read-only	
+R	CALR	0x3C	32	read-write	RTC calibration register
+F	CALP	15	1	read-write	
+F	CALW8	14	1	read-write	
+F	CALW16	13	1	read-write	
+F	CALM	0	9	read-write	
+R	TAFCR	0x40	32	read-write	RTC tamper and alternate function configuration register
+F	ALARMOUTTYPE	18	1	read-write	
+F	TSINSEL	17	1	read-write	
+F	TAMP1INSEL	16	1	read-write	
+F	TAMPPUDIS	15	1	read-write	
+F	TAMPPRCH	13	2	read-write	
+F	TAMPFLT	11	2	read-write	
+F	TAMPFREQ	8	3	read-write	
+F	TAMPTS	7	1	read-write	
+F	TAMP2TRG	4	1	read-write	
+F	TAMP2E	3	1	read-write	
+F	TAMPIE	2	1	read-write	
+F	TAMP1TRG	1	1	read-write	
+F	TAMP1E	0	1	read-write	
+R	ALRMASSR	0x44	32	read-write	RTC alarm A sub second register
+F	MASKSS	24	4	read-write	
+F	SS	0	15	read-write	
+R	ALRMBSSR	0x48	32	read-write	RTC alarm B sub second register
+F	MASKSS	24	4	read-write	
+F	SS	0	15	read-write	
+R	BKP0R	0x50	32	read-write	RTC backup register 0
+F	BKP	0	32	read-write	
+R	BKP1R	0x54	32	read-write	RTC backup register 1
+F	BKP	0	32	read-write	
+R	BKP2R	0x58	32	read-write	RTC backup register 2
+F	BKP	0	32	read-write	
+R	BKP3R	0x5C	32	read-write	RTC backup register 3
+F	BKP	0	32	read-write	
+R	BKP4R	0x60	32	read-write	RTC backup register 4
+F	BKP	0	32	read-write	
+R	BKP5R	0x64	32	read-write	RTC backup register 5
+F	BKP	0	32	read-write	
+R	BKP6R	0x68	32	read-write	RTC backup register 6
+F	BKP	0	32	read-write	
+R	BKP7R	0x6C	32	read-write	RTC backup register 7
+F	BKP	0	32	read-write	
+R	BKP8R	0x70	32	read-write	RTC backup register 8
+F	BKP	0	32	read-write	
+R	BKP9R	0x74	32	read-write	RTC backup register 9
+F	BKP	0	32	read-write	
+R	BKP10R	0x78	32	read-write	RTC backup register 10
+F	BKP	0	32	read-write	
+R	BKP11R	0x7C	32	read-write	RTC backup register 11
+F	BKP	0	32	read-write	
+R	BKP12R	0x80	32	read-write	RTC backup register 12
+F	BKP	0	32	read-write	
+R	BKP13R	0x84	32	read-write	RTC backup register 13
+F	BKP	0	32	read-write	
+R	BKP14R	0x88	32	read-write	RTC backup register 14
+F	BKP	0	32	read-write	
+R	BKP15R	0x8C	32	read-write	RTC backup register 15
+F	BKP	0	32	read-write	
+R	BKP16R	0x90	32	read-write	RTC backup register 16
+F	BKP	0	32	read-write	
+R	BKP17R	0x94	32	read-write	RTC backup register 17
+F	BKP	0	32	read-write	
+R	BKP18R	0x98	32	read-write	RTC backup register 18
+F	BKP	0	32	read-write	
+R	BKP19R	0x9C	32	read-write	RTC backup register 19
+F	BKP	0	32	read-write	

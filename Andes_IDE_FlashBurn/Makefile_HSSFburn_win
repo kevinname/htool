@@ -1,0 +1,43 @@
+#
+# Makefile for Burner
+#
+BUILD_ID = "`date +%Y%m%d%H`"
+
+# For Windows platform with MinGW
+#C++ = i386-mingw32-g++
+#CC = i386-mingw32-gcc
+#RM = rm -f
+#AR = i386-mingw32-ar
+
+C++ = i686-pc-cygwin-g++
+CC = i686-pc-cygwin-gcc
+RM = rm -f
+AR = i686-pc-cygwin-gcc-ar
+
+CFLAGS += -g3 -O2 -Wall -DHSSF_BURN -DBUILD_ID=$(BUILD_ID) $(LIBUSB)
+LIBS = -lwsock32 -lm -lgdi32 -luser32 -lcfgmgr32 -lsetupapi -lcomctl32 
+
+
+CPPFLAGS = $(CFLAGS) 
+
+srcdir = $(shell pwd)
+
+OBJS =	$(srcdir)/util.o \
+	$(srcdir)/main.o \
+	$(srcdir)/platform-hs6601.o \
+	$(srcdir)/spiflash-MD.o
+
+#%.o:%.cpp
+#	$(C++) $(CPPFLAGS) -c -o $@ $<
+
+all: HSSF_burn.exe
+
+HSSF_burn.exe: $(OBJS)
+	$(C++) -static -o $@ $(CPPFLAGS) $(OBJS) $(LIBS)
+
+clean:
+	rm -f HSSF_burn.exe *.o
+
+%.o:%.cpp
+	$(C++) $(CPPFLAGS) -c -o $@ $<
+

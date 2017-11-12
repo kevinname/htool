@@ -1,0 +1,75 @@
+P	SFLASH	1	SF_	0x42800000	Serial	Flash	Interface		
+A	0x0	0x10000	IOregisters						
+I	INT_SFLASH	33							
+R	spi_intr_status	0x00008000	32	read-only	SPI	Interrupt	Status	Register	
+F	done	0	1	read-only					
+R	spi_raw_intr_status	0x00008004	32	read-write	SPI	Raw	Interrupt	Status	Register
+F	done_ris	0	1	read-write					
+R	spi_intr_mask	0x00008008	32	read-write	SPI	Interrupt	Mask	register	
+F	done_mask	0	1	read-write					
+R	spi_command	0x0000800c	32	read-write	SPI	Command	Register		
+F	data_bytes	16	16	read-write					
+F	cmd_bits	8	7	read-write					
+F	keep_cs	6	1	read-write					
+F	chip_select	4	2	read-write					
+F	dev_dwidth	2	2	read-write					
+F	command	0	2	read-write					
+R	spi_command_data0_reg	0x00008010	32	read-write	SPI	command	data0	register	
+F	command_data	0	32	read-write					
+R	spi_command_data1_reg	0x00008014	32	read-write	SPI	command	data1	register	
+F	command_data1	0	32	read-write					
+R	spi_read0_reg	0x00008018	32	read-write	SPI	Read0	Register		
+F	read_data0	0	32	read-write					
+R	spi_read1_reg	0x0000801c	32	read-write	SPI	Read1	Register		
+F	read_data1	0	32	read-write					
+R	spi_address_reg	0x00008020	32	read-write	SPI	Address	Register		
+F	address	0	32	read-write					
+R	spi_read_opcode_reg	0x00008024	32	read-write	SPI	Read	Opcode	Register	
+F	cs1_opcode	8	8	read-write					
+F	cs0_opcode	0	8	read-write					
+R	spi_configuration_0	0x00008028	32	read-write	SPI	Configuration	Register	0	
+F	width	16	2	read-write					
+F	fe_dly_sample	14	1	read-write					
+F	dly_sample	12	2	read-write					
+F	cpol	9	1	read-write					
+F	cpha	8	1	read-write					
+F	clock_div	0	8	read-write					
+R	spi_cs_configuration_0	0x0000802c	32	read-write	SPI	CS	Configuration	Register	0
+F	cs_recover	24	8	read-write					
+F	cs_hold	16	8	read-write					
+F	cs_setup	8	8	read-write					
+F	cs_pol	0	1	read-write					
+R	spi_configuration_1	0x00008030	32	read-write	SPI	Configuration	Register	1	
+F	width	16	2	read-write					
+F	fe_dly_sample	14	1	read-write					
+F	dly_sample	12	2	read-write					
+F	cpol	9	1	read-write					
+F	cpha	8	1	read-write					
+F	clock_div	0	8	read-write					
+R	spi_cs_configuration_1	0x00008034	32	read-write	SPI	CS	Configuration	Register	1
+F	cs_recover	24	8	read-write					
+F	cs_hold	16	8	read-write					
+F	cs_setup	8	8	read-write					
+F	cs_pol	0	1	read-write					
+R	spi_configuration_2	0x00008038	32	read-write	SPI	Configuration	Register	2	
+F	width	16	2	read-write					
+F	fe_dly_sample	14	1	read-write					
+F	dly_sample	12	2	read-write					
+F	cpol	9	1	read-write					
+F	cpha	8	1	read-write					
+F	clock_div	0	8	read-write					
+R	spi_cs_configuration_2	0x0000803c	32	read-write	SPI	CS	Configuration	Register	2
+F	cs_recover	24	8	read-write					
+F	cs_hold	16	8	read-write					
+F	cs_setup	8	8	read-write					
+F	cs_pol	0	1	read-write					
+R	spi_configuration_3	0x00008040	32	read-write	SPI	Configuration	Register	3	
+F	width	16	2	read-write					
+F	cpol	9	1	read-write					
+F	cpha	8	1	read-write					
+F	clock_div	0	8	read-write					
+R	spi_cs_configuration_3	0x00008044	32	read-write	SPI	CS	Configuration	Register	3
+F	cs_recover	24	8	read-write					
+F	cs_hold	16	8	read-write					
+F	cs_setup	8	8	read-write					
+F	cs_pol	0	1	read-write					

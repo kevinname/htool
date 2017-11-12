@@ -1,0 +1,129 @@
+P	TIMER0	1	TIMER0_	0x400C0000	TIMER0				
+A	0x0	0x10000	IOregisters						
+R	CR1	0x00	16	read-write	control	register	1		
+F	CKD	8	2	read-write					
+F	ARPE	7	1	read-write					
+F	CMS	5	2	read-write					
+F	DIR	4	1	read-write					
+F	OPM	3	1	read-write					
+F	URS	2	1	read-write					
+F	UDIS	1	1	read-write					
+F	CEN	0	1	read-write					
+R	CR2	0x04	16	read-write	control	register	2		
+F	OIS4	14	1	read-write					
+F	OIS3N	13	1	read-write					
+F	OIS3	12	1	read-write					
+F	OIS2N	11	1	read-write					
+F	OIS2	10	1	read-write					
+F	OIS1N	9	1	read-write					
+F	OIS1	8	1	read-write					
+F	TI1S	7	1	read-write					
+F	MMS	4	3	read-write					
+F	CCDS	3	1	read-write					
+F	CCUS	2	1	read-write					
+F	CCPC	0	1	read-write					
+R	SMCR	0x08	16	read-write	slave	mode	control	register	
+F	ETP	15	1	read-write					
+F	ECE	14	1	read-write					
+F	ETPS	12	2	read-write					
+F	ETF	8	4	read-write					
+F	MSM	7	1	read-write					
+F	TS	4	3	read-write					
+F	SMS	0	3	read-write					
+R	DIER	0x0C	16	read-write	DMA/interrupt	enable	register		
+F	TDE	14	1	read-write					
+F	COMDE	13	1	read-write					
+F	CC4DE	12	1	read-write					
+F	CC3DE	11	1	read-write					
+F	CC2DE	10	1	read-write					
+F	CC1DE	9	1	read-write					
+F	UDE	8	1	read-write					
+F	BIE	7	1	read-write					
+F	TIE	6	1	read-write					
+F	COMIE	5	1	read-write					
+F	CC4IE	4	1	read-write					
+F	CC3IE	3	1	read-write					
+F	CC2IE	2	1	read-write					
+F	CC1IE	1	1	read-write					
+F	UIE	0	1	read-write					
+R	SR	0x10	16	read-write	status	register			
+F	CC4OF	12	1	read-write					
+F	CC3OF	11	1	read-write					
+F	CC2OF	10	1	read-write					
+F	CC1OF	9	1	read-write					
+F	BIF	7	1	read-write					
+F	TIF	6	1	read-write					
+F	COMIF	5	1	read-write					
+F	CC4IF	4	1	read-write					
+F	CC3IF	3	1	read-write					
+F	CC2IF	2	1	read-write					
+F	CC1IF	1	1	read-write					
+F	UIF	0	1	read-write					
+R	EGR	0x14	16	read-write	event	generation	register		
+F	BG	7	1	read-write					
+F	TG	6	1	read-write					
+F	COMG	5	1	read-write					
+F	CC4G	4	1	read-write					
+F	CC3G	3	1	read-write					
+F	CC2G	2	1	read-write					
+F	CC1G	1	1	read-write					
+F	UG	0	1	read-write					
+R	CCMR1_COMPARE	0x18	16	read-write	capture/compare	mode	register	1	
+F	OC2CE	15	1	read-write					
+F	OC2M	12	3	read-write					
+F	OC2PE	11	1	read-write					
+F	OC2FE	10	1	read-write					
+F	CC2S	8	2	read-write					
+F	OC1CE	7	1	read-write					
+F	OC1M	4	3	read-write					
+F	OC1PE	3	1	read-write					
+F	OC1FE	2	1	read-write					
+F	CC1S	0	2	read-write					
+R	CCMR2_COMPARE	0x1C	16	read-write	capture/compare	mode	register	2	
+F	OC4CE	15	1	read-write					
+F	OC4M	12	3	read-write					
+F	OC4PE	11	1	read-write					
+F	OC4FE	10	1	read-write					
+F	CC4S	8	2	read-write					
+F	OC3CE	7	1	read-write					
+F	OC3M	4	3	read-write					
+F	OC3PE	3	1	read-write					
+F	OC3FE	2	1	read-write					
+F	CC3S	0	2	read-write					
+R	CCER	0x20	16	read-write	capture/compare	enable	register		
+F	CC4P	13	1	read-write					
+F	CC4E	12	1	read-write					
+F	CC3NP	11	1	read-write					
+F	CC3NE	10	1	read-write					
+F	CC3P	9	1	read-write					
+F	CC3E	8	1	read-write					
+F	CC2NP	7	1	read-write					
+F	CC2NE	6	1	read-write					
+F	CC2P	5	1	read-write					
+F	CC2E	4	1	read-write					
+F	CC1NP	3	1	read-write					
+F	CC1NE	2	1	read-write					
+F	CC1P	1	1	read-write					
+F	CC1E	0	1	read-write					
+R	CNT	0x24	16	read-write	counter				
+F	CNT	0	16	read-write					
+R	PSC	0x28	16	read-write	prescaler				
+F	PSC	0	16	read-write					
+R	ARR	0x2C	16	read-write	auto-reload	register			
+F	ARR	0	16	read-write					
+R	RCR	0x30	16	read-write	repetition	counter	register		
+F	REP	0	8	read-write					
+R	BDTR	0x44	16	read-write	break	and	dead-time	register	
+F	MOE	15	1	read-write					
+F	AOE	14	1	read-write					
+F	BKP	13	1	read-write					
+F	BKE	12	1	read-write					
+F	OSSR	11	1	read-write					
+F	OSSI	10	1	read-write					
+F	LOCK	8	2	read-write					
+F	DTG	0	8	read-write					
+R	DCR	0x48	16	read-write	DMA	control	register		
+F	DBL	8	5	read-write					
+F	DBA	0	5	read-write					
+R	DMAR	0x4C	16	read-write	DMA	address	for	full	transfer
+F	DMAB	0	16	read-write					

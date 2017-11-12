@@ -1,0 +1,71 @@
+P	PWM	1	PWM	0x400c0000	PWM Timer0/1/2/3
+A	0x0	0x10000	IOregisters					
+R	TCR0	0x00	32	read-write	PWM	Timer	0	Control	Register	
+F	TM_LPDI	5	1	read-write						
+F	TM_LPSI 	4	1	read-write						
+F	TM_SIM	3	1	read-write						
+F	TM_AUTO	2	1	read-write						
+F	TM_INVT	1	1	read-write						
+F	TM_EN	0	1	read-write						
+R	PSR0	0x04	32	read-write	PWM	Timer	0	Pre-scalar	Value	Register
+F	TM_PSV	0	10	read-write						
+R	PVR0	0x08	32	read-write	PWM	Timer	0	Period	Value	Register
+F	TM_PV	0	12	read-write						
+R	DVR0	0x0c	32	read-write	PWM	Timer	0	Duty	Value	Register
+F	TM_DV	0	12	read-write						
+R	TCR1	0x10	32	read-write	PWM	Timer	1	Control	Register	
+F	TM_LPDI	5	1	read-write						
+F	TM_LPSI 	4	1	read-write						
+F	TM_SIM	3	1	read-write						
+F	TM_AUTO	2	1	read-write						
+F	TM_INVT	1	1	read-write						
+F	TM_EN	0	1	read-write						
+R	PSR1	0x14	32	read-write	PWM	Timer	1	Pre-scalar	Value	Register
+F	TM_PSV	0	10	read-write						
+R	PVR1	0x18	32	read-write	PWM	Timer	1	Period	Value	Register
+F	TM_PV	0	12	read-write						
+R	DVR1	0x1c	32	read-write	PWM	Timer	1	Duty	Value	Register
+F	TM_DV	0	12	read-write						
+R	TCR2	0x20	32	read-write	PWM	Timer	2	Control	Register	
+F	TM_LPDI	5	1	read-write						
+F	TM_LPSI 	4	1	read-write						
+F	TM_SIM	3	1	read-write						
+F	TM_AUTO	2	1	read-write						
+F	TM_INVT	1	1	read-write						
+F	TM_EN	0	1	read-write						
+R	PSR2	0x24	32	read-write	PWM	Timer	2	Pre-scalar	Value	Register
+F	TM_PSV	0	10	read-write						
+R	PVR2	0x28	32	read-write	PWM	Timer	2	Period	Value	Register
+F	TM_PV	0	12	read-write						
+R	DVR2	0x2c	32	read-write	PWM	Timer	2	Duty	Value	Register
+F	TM_DV	0	12	read-write						
+R	TCR3	0x30	32	read-write	PWM	Timer	3	Control	Register	
+F	TM_LPDI	5	1	read-write						
+F	TM_LPSI 	4	1	read-write						
+F	TM_SIM	3	1	read-write						
+F	TM_AUTO	2	1	read-write						
+F	TM_INVT	1	1	read-write						
+F	TM_EN	0	1	read-write						
+R	PSR3	0x34	32	read-write	PWM	Timer	3	Pre-scalar	Value	Register
+F	TM_PSV	0	10	read-write						
+R	PVR3	0x38	32	read-write	PWM	Timer	3	Period	Value	Register
+F	TM_PV	0	12	read-write						
+R	DVR3	0x3c	32	read-write	PWM	Timer	3	Duty	Value	Register
+F	TM_DV	0	12	read-write						
+R	TSR	0x40	32	read-only	PWM	Timer	Status	Register		
+F	TM3_DVRSS	27	1	read-only						
+F	TM3_PVRSS	26	1	read-only						
+F	TM3_PSRSS	25	1	read-only						
+F	TM3_CRSS	24	1	read-only						
+F	TM2_DVRSS	19	1	read-only						
+F	TM2_PVRSS	18	1	read-only						
+F	TM2_PSRSS	17	1	read-only						
+F	TM2_CRSS	16	1	read-only						
+F	TM1_DVRSS	11	1	read-only						
+F	TM1_PVRSS	10	1	read-only						
+F	TM1_PSRSS	9	1	read-only						
+F	TM1_CRSS	8	1	read-only						
+F	TM0_DVRSS	3	1	read-only						
+F	TM0_PVRSS	2	1	read-only						
+F	TM0_PSRSS	1	1	read-only						
+F	TM0_CRSS	0	1	read-only						

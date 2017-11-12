@@ -1,0 +1,45 @@
+P	PMU	1.0	PMU_	0x400e0000	PMU	controller
+A	0x0	0x1000	IOregisters
+R	BASIC			0x00	32	read-write	Basic register
+R	PSO_CON			0x04	32	read-write	PSO Power Control register
+R	RETEN_PM_CON		0x08	32	read-write	RAM0 Power Control register
+R	RAM_PM_CON		0x0C	32	read-write	RAM1 Power Control register
+R	CEVA0_PM_CON		0x10	32	read-write	RAM2 Power Control register
+R	CEVA1_PM_CON		0x14	32	read-write	RAM3 Power Control register
+R	POWER_PIN		0x18	32	read-write	RAM4 Power Control register
+R	PMU_PM_CON0		0x1C	32	read-write	RAM5 Power Control register
+R	PMU_PM_CON1		0x20	32	read-write	RAM6 Power Control register
+R	PMU_EXT			0x24	32	read-write	RAM7 Power Control register
+R	PADC_CON0		0x40	32	read-write	Pad Control 0 register
+R	PADC_CON1		0x44	32	read-write	Pad Control 1 register
+R	PADC_CON2		0x48	32	read-write	Pad Control 2 register
+R	PADC_CON3		0x4C	32	read-write	Pad Control 3 register
+R	PADC_CON4		0x50	32	read-write	Pad Control 4 register
+R	PADC_CON5		0x54	32	read-write	Pad Control 5 register
+R	PADC_CON6		0x58	32	read-write	Pad Control 6 register
+R	PADC_CON7		0x5C	32	read-write	Pad Control 7 register
+R	PADC_CON8		0x60	32	read-write	Pad Control 8 register
+R	PADC_CON9		0x64	32	read-write	Pad Control 9 register
+R	PADC_CON10		0x68	32	read-write	Pad Control 10 register
+R	PADC_CON11		0x6C	32	read-write	Pad Control 11 register
+R	PADC_CON12		0x70	32	read-write	Pad Control 12 register
+R	PADC_CON13		0x74	32	read-write	Pad Control 13 register
+R	PADC_CON14		0x78	32	read-write	Pad Control 14 register
+R	PADC_CON15		0x7C	32	read-write	Pad Control 15 register
+R	PADC_CON16		0x80	32	read-write	Pad Control 16 register
+R	PADC_CON17		0x84	32	read-write	Pad Control 17 register
+R	PADC_CON18		0x88	32	read-write	Pad Control 18 register
+R	PADC_CON19		0x8C	32	read-write	Pad Control 19 register
+R	PADC_CON20		0x90	32	read-write	Pad Control 20 register
+R	PADC_CON21		0x94	32	read-write	Pad Control 21 register
+R	PADC_CON22		0x98	32	read-write	Pad Control 22 register
+R	PADC_CON23		0x9C	32	read-write	Pad Control 23 register
+R	PADC_CSF		0xA0	32	read-write	
+R	CHIP_PM_PIN		0xA4	32	read-write	
+R	GPIO_STATUS0	0xC0	32	read-write	
+R	GPIO_STATUS1	0xC4	32	read-write	
+R	GPIO_PL_UP_30K	0xC8	32	read-write	
+R	RESET_EN		0xCC	32	read-write	
+R	OPT_RESET_CON	0xD0	32	read-write	
+R	ANA_CON			0xFC	32	read-write	
+

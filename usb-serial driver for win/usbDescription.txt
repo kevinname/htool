@@ -1,0 +1,124 @@
+一、基本概念　　
+
+　　1、USB协议本身很复杂，但方便在提供了统一的接口方式，使得驱动程序在使用设备的时候，工作简化到了类似操作串行接口。
+
+　　2、USB设备可以看作提供了多个串口的设备，依据USB的规范，我们将每个串口称作端点(Endpoint)，要和这个端点通信，我们就要打开到这个端点的连接，这个连接就是管道(Pipe)。
+
+　　3、打开端点之后，就可以像串口一样进行数据传输了。USB有4种不同类型的传输方式：控制传输(Control Transfer)，批量传输(Bulk Transfer)，中断传输(Interrupt Transfer)和实时传输(IsochTransfer)。
+
+　　4、由于一个设备可能要适应多种情况，端点的设置会有多套，以备使用。端点设置称为接口(Interface)。USB设备展现给我们能够找到的东西就是这些Interface，我们选择要用的Interface，就可以找到Endpoint，再打开Endpoint，就可以传输数据了。所以，在驱动程序开始的时候，需要记录下这些Interface。
+
+　　5、例如：OV511+的端点0是控制端点，用来设置参数以及起停设备；端点1是实时传输端点，用来传输视频。端点1有8套不同的设置，主要区别就在于一次传输的数据帧的大小，所以在USBDeviceAttach的时候，要记录这些设置到驱动程序中，后面才能够选用。
+
+二、描述符介绍
+ 　　标准的USB设备有5种USB描述符：设备描述符，配置描述符，字符串描述符，接口描述符，端点描述符。下面详解：
+
+1、设备描述符：一个设备只有一个设备描述符
+
+typedef struct _USB_DEVICE_DESCRIPTOR_
+{
+    BYTE        bLength,
+    BYTE        bDescriptorType,
+    WORD      bcdUSB,
+    BYTE        bDeviceClass,
+    BTYE        bDeviceSubClass,
+    BYTE        bDeviceProtol,
+    BYTE        bMaxPacketSize0,
+    WORD      idVenderI,
+    WORD      idProduct,
+    WORD      bcdDevice,
+    BYTE        iManufacturer,
+    BYTE        iProduct,
+    BYTE        iSerialNumber,
+    BYTE        iNumConfiguations
+}USB_DEVICE_DESCRIPTOR;
+
+bLength : 描述符大小．固定为0x12．
+bDescriptorType : 设备描述符类型．固定为0x01．
+bcdUSB : USB 规范发布号．表示了本设备能适用于那种协议，如2.0=0200，1.1=0110等．
+
+bDeviceClass : 类型代码（由USB指定）。当它的值是0时，表示所有接口在配置描述符里，并且所有接口是独立的。当它的值是1到FEH时，表示不同的接口关联的。当它的值是FFH时，它是厂商自己定义的．
+bDeviceSubClass : 子类型代码（由USB分配）．如果bDeviceClass值是0，一定要设置为0．其它情况就跟据USB-IF组织定义的编码．
+bDeviceProtocol : 协议代码（由USB分配）．如果使用USB-IF组织定义的协议，就需要设置这里的值，否则直接设置为0。如果厂商自己定义的可以设置为FFH．
+bMaxPacketSize0 : 端点０最大分组大小（只有8,16,32,64有效）．
+idVendor : 供应商ID（由USB分配）．
+
+idProduct : 产品ID（由厂商分配）．由供应商ID和产品ID，就可以让操作系统加载不同的驱动程序．
+bcdDevice : 设备出产编码．由厂家自行设置．
+
+iManufacturer : 厂商描述符字符串索引．索引到对应的字符串描述符． 为０则表示没有．
+iProduct : :产品描述符字符串索引．同上．
+iSerialNumber : 设备序列号字符串索引．同上．
+bNumConfigurations : 可能的配置数．指配置字符串的个数
+2、配置描述符：配置描述符定义了设备的配置信息，一个设备可以有多个配置描述符
+typedef struct _USB_CONFIGURATION_DESCRIPTOR_
+{
+    BYTE      bLength,
+    BYTE      bDescriptorType,
+    WORD    wTotalLength,
+    BYTE      bNumInterfaces,
+    BYTE      bConfigurationValue,
+    BYTE      iConfiguration,
+    BYTE      bmAttributes,
+    BYTE      MaxPower
+}USB_CONFIGURATION_DESCRIPTOR;
+
+bLength : 描述符大小．固定为0x09．
+bDescriptorType : 配置描述符类型．固定为0x02．
+wTotalLength : 返回整个数据的长度．指此配置返回的配置描述符，接口描述符以及端点描述符的全部大小．
+bNumInterfaces : 配置所支持的接口数．指该配置配备的接口数量，也表示该配置下接口描述符数量．
+bConfigurationValue : 作为Set Configuration的一个参数选择配置值．
+iConfiguration : 用于描述该配置字符串描述符的索引．
+bmAttributes : 供电模式选择．Bit4-0保留，D7:总线供电，D6:自供电，D5:远程唤醒．
+MaxPower : 总线供电的USB设备的最大消耗电流．以2mA为单位．
+3、接口描述符：接口描述符说明了接口所提供的配置，一个配置所拥有的接口数量通过配置描述符的bNumInterfaces决定
+typedef struct _USB_INTERFACE_DESCRIPTOR_
+{
+    BYTE      bLength,
+    BYTE      bDescriptorType,
+    BYTE      bInterfaceNumber,
+    BYTE      bAlternateSetting,
+    BYTE      bNumEndpoint,
+    BYTE      bInterfaceClass,
+    BYTE      bInterfaceSubClass,
+    BYTE      bInterfaceProtocol,
+    BYTE      iInterface
+}USB_INTERFACE_DESCRIPTOR;
+
+bLength : 描述符大小．固定为0x09．
+bDescriptorType : 接口描述符类型．固定为0x04．
+bInterfaceNumber: 该接口的编号．
+bAlternateSetting : 用于为上一个字段选择可供替换的位置．即备用的接口描述符标号．
+bNumEndpoint : 使用的端点数目．端点０除外．
+bInterfaceClass : 类型代码（由USB分配）．
+bInterfaceSubClass : 子类型代码（由USB分配）．
+bInterfaceProtocol : 协议代码（由USB分配）．
+iInterface : 字符串描述符的索引
+4、端点描述符：USB设备中的每个端点都有自己的端点描述符，由接口描述符中的bNumEndpoint决定其数量
+typedef struct _USB_ENDPOINT_DESCRIPTOR_
+{
+    BYTE        bLength,
+    BYTE        bDescriptorType,
+    BYTE        bEndpointAddress,
+    BYTE        bmAttributes,
+    WORD      wMaxPacketSize,
+    BYTE        bInterval
+}USB_ENDPOINT_DESCRIPTOR;
+
+bLength : 描述符大小．固定为0x07．
+bDescriptorType : 接口描述符类型．固定为0x05．
+bEndpointType : USB设备的端点地址．Bit7，方向，对于控制端点可以忽略，1/0:IN/OUT．Bit6-4，保留．BIt3-0：端点号．
+bmAttributes : 端点属性．Bit7-2，保留．BIt1-0：00控制，01同步，02批量，03中断．
+wMaxPacketSize : 本端点接收或发送的最大信息包大小．
+bInterval : 轮训数据传送端点的时间间隔．对于批量传送和控制传送的端点忽略．对于同步传送的端点，必须为１，对于中断传送的端点，范围为１－２５５．
+5、字符串描述符：其中字符串描述符是可选的．如果不支持字符串描述符，其设备，配置，接口描述符内的所有字符串描述符索引都必须为０
+typedef struct _USB_STRING_DESCRIPTION_
+{
+    BYTE      bLength,
+    BYTE      bDescriptionType,
+    BYTE      bString[1];
+}USB_STRING_DESCRIPTION;
+
+bLength : 描述符大小．由整个字符串的长度加上bLength和bDescriptorType的长度决定．
+bDescriptorType : 接口描述符类型．固定为0x03．
+bString[1] : Unicode编码字符串．

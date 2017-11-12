@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="communication">
+      <UniqueIdentifier>{12d46936-5db6-45f4-a055-519a9861ac80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dialog">
+      <UniqueIdentifier>{7d2cb27f-666a-43c5-860d-05d3c063a6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{a5d53344-ef0d-403b-8f21-0e0ab6530671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="sbc">
+      <UniqueIdentifier>{3f625a4e-f1cb-4d14-8ff3-ec712fed25b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\HToolC.ico">
+      <Filter>base\Resource Files</Filter>
+    </None>
+    <None Include="res\HToolC.rc2">
+      <Filter>base\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="comm_hal.h">
+      <Filter>communication</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>base\Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="comm_config.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="hs_package.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="comm_protocal.h">
+      <Filter>communication</Filter>
+    </ClInclude>
+    <ClInclude Include="comm_base.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="comm_cmd.h">
+      <Filter>communication</Filter>
+    </ClInclude>
+    <ClInclude Include="hs_debug.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="HToolCDlg.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="HToolC.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="hs_tone.h">
+      <Filter>dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="sbc\formats.h">
+      <Filter>sbc</Filter>
+    </ClInclude>
+    <ClInclude Include="sbc\sbc.h">
+      <Filter>sbc</Filter>
+    </ClInclude>
+    <ClInclude Include="sbc\sbc_math.h">
+      <Filter>sbc</Filter>
+    </ClInclude>
+    <ClInclude Include="sbc\sbc_tables.h">
+      <Filter>sbc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="comm_hal.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="comm_config.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="hs_package.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="comm_protocal.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="comm_base.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="comm_cmd.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="hs_debug.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="HToolCDlg.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="HToolC.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="hs_tone.cpp">
+      <Filter>dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="sbc\sbc.c">
+      <Filter>sbc</Filter>
+    </ClCompile>
+    <ClCompile Include="sbc\sbcenc.c">
+      <Filter>sbc</Filter>
+    </ClCompile>
+    <ClCompile Include="sbc\sbcinfo.c">
+      <Filter>sbc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HToolC.rc">
+      <Filter>base\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

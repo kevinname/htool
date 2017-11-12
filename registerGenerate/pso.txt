@@ -1,0 +1,27 @@
+P	CLK	1.0	CLK_	0x40001000	PSO
+A 	0x0 	0x1000 	IOregisters
+R	PSO_REV	0x00	32	read-write	PSO revision
+R	PSO_CPU_CFG			0x04	32	read-write	CPU clock configuration
+R	PSO_REG_UDP			0x08	32	read-write	Update shadow register
+R	PSO_APB_CFG			0x0c	32	read-write	APB clock configuration
+R	PSO_SFLASH_CFG		0x10	32	read-write	sflash clock configuration
+R	PSO_USB_CFP			0x14	32	read-write	USB clock configuration
+R	PSO_SD_CFG			0x18	32	read-write	SD clock configuration
+R	PSO_SD_DEV_CFG		0x1C	32	read-write	sd dev clock configuration
+R	PSO_TIMER1_CFG		0x20	32	read-write	timer1 clock configuration
+R	PSO_TIMER2_CFG		0x24	32	read-write	timer2 clock configuration
+R	PSO_TIMER3_CFG		0x28	32	read-write	timer3 clock configuration
+R	PSO_UART0_CFG		0x30	32	read-write	uart0 clock configuration
+R	PSO_UART1_CFG		0x34	32	read-write	uart1 clock configuration
+R	PSO_I2C_CFG			0x38	32	read-write	I2C clock configuration
+R	PSO_I2S_CFG			0x3c	32	read-write	I2S clock configuration	
+R	PSO_CODEC_CFG		0x44	32	read-write	CODEC clock configuration
+R	PSO_BT_PHY_CFG		0x4c	32	read-write	BT_PHY clock configuration
+R	PSO_SPI0_MST_CFG	0x50	32	read-write	SPI0 Master clock configuration
+R	PSO_SPI1_MST_CFG	0x54	32	read-write	SPI1 Master clock configuration
+R	PSO_WDT_CFG			0x58	32	read-write	WDT rst and clock configuartion
+R	PSO_CPU_INT_MASK	0x5c	32	read-write	CPU Tclk rst and clock configuration
+R	PSO_AHB_GATE_CFG	0x70	32	read-write	AHB Gate configuration
+R	CPM_GATE_CFG		0x74	32	read-write	CPM gate configuration
+R	CPM_ANA_CFG			0x78	32	read-write	CPM gate configuration
+	

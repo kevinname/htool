@@ -1,0 +1,133 @@
+P	USB_HOST_X	1	USB_HOST_	0x45000000	USB HOST	OTG	Controller									
+A	0x0	0x10000	IOregisters													
+I	INT_USB	5														
+I	INT_USB_DMA	38														
+R	FAddr	0x00	8	read-write	Function	address	register									
+F	Func_Addr	0	7	read-write												
+R	Power	0x01	8	read-write	Power	management	register									
+F	ISO_Update	7	1	read-write												
+F	Vbus_Val	6	1	read-only												
+F	Vbus_Sess	5	1	read-only												
+F	Vbus_Lo	4	1	read-only												
+F	Reset	3	1	read-write												
+F	Resume	2	1	read-write												
+F	Suspend_Mode	1	1	read-write												
+F	Enable_Suspend	0	1	read-write												
+R	IntrTx1E	0x07	8	read-write	Interrupt	enable	register	for	IntrTx1							
+F	EP3	3	1	read-write												
+F	EP2	2	1	read-write												
+F	EP1	1	1	read-write												
+F	EP0	0	1	read-write												
+R	IntrRx1E	0x09	8	read-write	Interrupt	enable	register	for	IntrRx1							
+F	EP3	3	1	read-write												
+F	EP2	2	1	read-write												
+F	EP1	1	1	read-write												
+R	IntrUSBE	0x0B	8	read-write	Interrupt	enable	register	for	IntrUSB							
+F	Vbus_Error	7	1	read-write												
+F	Sess_Req	6	1	read-write												
+F	Discon	5	1	read-write												
+F	Conn	4	1	read-write												
+F	SOF	3	1	read-write												
+F	Reset/Babble	2	1	read-write												
+F	Resume	1	1	read-write												
+F	Suspend	0	1	read-write												
+R	Frame1	0x0C	8	read-only	Frame	number	bits	0	to	7						
+F	FRAME_NUM_L	0	8	read-only												
+R	Frame2	0x0D	8	read-only	Frame	number	bits	8	to	10						
+F	FRAME_NUM_H	0	3	read-only												
+R	Index	0x0E	8	read-write	Index	register	for	selecting	the	endpoint	status	and	control	registers		
+F	SEL_ENDPOINT	0	4	read-write												
+R	DevCtl	0x0F	8	read-write	USB	device	control	register								
+F	CID	7	1	read-only												
+F	FSDev	6	1	read-only												
+F	LSDev	5	1	read-only												
+F	PUCON	4	1	read-only												
+F	PDCON	3	1	read-only												
+F	Host_Mode	2	1	read-only												
+F	Host_Req	1	1	read-write												
+F	Session	0	1	read-write												
+R	TxMaxP	0x10	8	read-write	Maximum	packet	size	for	host	OUT	endpoint					
+F	MAX_PACK_SZ/TRAN	0	8	read-write												
+R	TxCSR1	0x11	8	read-write	Control	Status	register	1	for	host	OUT	endpoint				
+F	NAK_Timeout	7	1	read-write												
+F	ClrDataTog	6	1	write-only												
+F	RxStall	5	1	read-write												
+F	FlushFIFO	3	1	write-only												
+F	Error	2	1	read-write												
+F	FIFONotEmpty	1	1	read-write												
+F	TxPktRdy	0	1	read-write												
+R	TxCSR2	0x12	8	read-write	Control	Status	register	2	for	host	OUT	endpoint				
+F	AutoSet	7	1	read-write												
+F	ISO	6	1	read-write												
+F	Mode	5	1	read-write												
+F	DMAEnab	4	1	read-write												
+F	FrcDataTog	3	1	read-write												
+F	DMAMode	2	1	read-write												
+R	RxMaxP	0x13	8	read-write	Maximum	packet	size	for	host	IN	endpoint					
+F	MAX_PACK_SZ/TRAN	0	8	read-write												
+R	RxCSR1	0x14	8	read-write	Control	Status	register	1	for	host	IN	endpoint				
+F	ClrDataTog	7	1	write-only												
+F	RxStall	6	1	read-write												
+F	ReqPkt	5	1	read-write												
+F	FlushFIFO	4	1	write-only												
+F	DataError/NAK_Timeout	3	1	read-write												
+F	Error	2	1	read-write												
+F	FIFOFull	1	1	read-only												
+F	RxPktRdy	0	1	read-write												
+R	RxCSR2	0x15	8	read-write	Control	Status	register	2	for	host	IN	endpoint				
+F	AutoClear	7	1	read-write												
+F	AutoReq	6	1	read-write												
+F	DMAEnab	5	1	read-write												
+F	DMAMode	4	1	read-write												
+R	RxCount1	0x16	8	read-only	Number	of	bytes	in	host	IN	endpoint	FIFO	(lower	byte)		
+F	Endpoint_Rx_Count_L	0	8	read-only												
+R	RxCount2	0x17	8	read-only	Number	of	bytes	in	host	IN	endpoint	FIFO	(upper	byte)		
+F	Endpoint_Rx_Count_H	0	3	read-only												
+R	TxType	0x18	8	read-write	Sets	the	transaction	protocol	and	peripheral	endpoint	number	for	the	host	OUT
+F	Protocol	4	2	read-write												
+F	Target_Endpoint_Number	0	4	read-write												
+R	TxInterval	0x19	8	read-write	Sets	the	polling	interval	for	an	OUT	Interrupt	"endpoint,"	in	ms	
+F	Tx_Poll_Interval/NAK_Limitn	0	8	read-write												
+R	RxType	0x1A	8	read-write	Sets	the	transaction	protocol	and	peripheral	endpoint	number	for	the	host	IN
+F	Protocol	4	2	read-write												
+F	Target_Endpoint_Number	0	4	read-write												
+R	RxInterval	0x1B	8	read-write	Sets	the	polling	interval	for	an	IN	Interrupt	"endpoint,"	in	ms	
+F	Rx_Poll_Interval/NAK_Timeoutn	0	8	read-write												
+R	TxFIFO1	0x1C	8	read-write	the start address AD7~0 of Tx endpoint FIFO
+F	AD[7:0]	0	8	read-write												
+R	TxFIFO2	0x1D	8	read-write	the start address AD11~8 and size of Tx endpoint FIFO
+F	SZ	5	3	read-write												
+F	DPB	4	1	read-write												
+F	AD[11:8]	0	4	read-write												
+R	RxFIFO1	0x1E	8	read-write	the start address AD7~0 of Rx endpoint FIFO
+F	AD[7:0]	0	8	read-write												
+R	RxFIFO2	0x1F	8	read-write	the start address AD11~8 and size of Rx endpoint FIFO
+F	SZ	5	3	read-write												
+F	DPB	4	1	read-write												
+F	AD[11:8]	0	4	read-write												
+R	DMA_INTR	0x200	8	read-only	Indicates pending interrupts											
+R	DMA_CNTL1	0x204	16	read-write	DMA	Channel	1	Control		
+F	BUS_ERROR	15	1	read-write						
+F	MAX_PACK_SZ_8B	8	7	read-write						
+F	ENDPOINT_NUM	4	4	read-write						
+F	INT_EN	3	1	read-write						
+F	DMA_MODE	2	1	read-write						
+F	DIRECT	1	1	read-write						
+F	DMA_EN	0	1	read-write						
+R	DMA_ADDR1	0x208	32	read-write	DMA	Channel	1	AHB	Memory	Address
+F	DMA_ADDR1	0	32	read-write						
+R	DMA_COUNT1	0x20C	32	read-write	DMA	Channel	1	Byte	Count	
+F	DMA_COUNT1	0	32	read-write						
+R	DMA_CNTL2	0x214	16	read-write	DMA	Channel	2	Control		
+F	BUS_ERROR	15	1	read-write						
+F	MAX_PACK_SZ_8B	8	7	read-write						
+F	ENDPOINT_NUM	4	4	read-write						
+F	INT_EN	3	1	read-write						
+F	DMA_MODE	2	1	read-write						
+F	DIRECT	1	1	read-write						
+F	DMA_EN	0	1	read-write						
+R	DMA_ADDR2	0x218	32	read-write	DMA	Channel	2	AHB	Memory	Address
+F	DMA_ADDR2	0	32	read-write						
+R	DMA_COUNT2	0x21C	32	read-write	DMA	Channel	2	Byte	Count	
+F	DMA_COUNT2	0	32	read-write						
+

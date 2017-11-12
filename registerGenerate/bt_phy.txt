@@ -1,0 +1,540 @@
+P	BT_PHY	1.0	BT_	0x40020000	Bluetooth PHY
+A 	0x0 	0x2000 	IOregisters
+
+R    rx_str_en    0x00000    32    read-write
+F    gfsk_str_en    0    1    read-write
+
+R    xcorr_mod_sel    0x00004    32    read-write
+F    ble_xcorr_mod_sel    0    1    read-write
+
+R    ble_xcorr_th    0x00008    32    read-write
+F    ble_xcorr_th    0    4    read-write
+
+R    fsync_det_sel_idx    0x0000c    32    read-write
+F    fsync_det_sel_idx    0    4    read-write
+
+R    cfo_fb_cnt_th_sel    0x00010    32    read-write
+F    cfo_fb_cnt_th_sel    0    4    read-write
+
+R    cfo_cap_th    0x00014    32    read-write
+F    cfo_cap_th    0    6    read-write
+
+R    en_cfo_est    0x00018    32    read-write
+F    en_cfo_est    0    1    read-write
+
+R    cfo_for_dpsk_sel    0x0001c    32    read-write
+F    cfo_for_dpsk_sel    0    1    read-write
+
+R    cfo_cap_fsync    0x00020    32    read-write
+F    cfo_cap_fsync    0    1    read-write
+
+R    rx_top_cfo_mode    0x00024    32    read-write
+F    rx_top_cfo_mode    0    1    read-write
+
+R    h_idx    0x00028    32    read-write
+F    h_idx    0    1    read-write
+
+R    tx_filt_gain_cmp    0x0002c    32    read-write
+F    tx_filt_gain_cmp    0    6    read-write
+
+R    en_gfsk_24x_sat    0x00030    32    read-write
+F    en_gfsk_24x_sat    0    1    read-write
+
+R    tx_edr2_dly_sel    0x00034    32    read-write
+F    tx_edr2_dly_sel    0    6    read-write
+
+R    en_dc_removal    0x00038    32    read-write
+F    en_dc_removal    0    1    read-write
+
+R    dcnotch_k_sel    0x0003c    32    read-write
+F    dcnotch_k_sel    0    4    read-write
+
+R    res_32x_en    0x00040    32    read-write
+F    res_32x_en    0    1    read-write
+
+R    err_scale_sel    0x00044    32    read-write
+F    err_scale_sel    0    2    read-write
+
+R    k1_gfsk_sel    0x00048    32    read-write
+F    k1_gfsk_sel    0    3    read-write
+
+R    k2_gfsk_sel    0x0004c    32    read-write
+F    k2_gfsk_sel    0    3    read-write
+
+R    k1_dpsk_sel    0x00050    32    read-write
+F    k1_dpsk_sel    0    3    read-write
+
+R    k2_dpsk_sel    0x00054    32    read-write
+F    k2_dpsk_sel    0    3    read-write
+
+R    k2_bypass    0x00058    32    read-write
+F    k2_bypass    0    1    read-write
+
+R    sw_vld_dly_sel    0x0005c    32    read-write
+F    sw_vld_dly_sel    0    3    read-write
+
+R    sw_win_lth_offset    0x00060    32    read-write
+F    sw_win_lth_offset    0    4    read-write
+
+R    sw_win_hth_offset    0x00064    32    read-write
+F    sw_win_hth_offset    0    4    read-write
+
+R    dem_dly_bkoff_gfsk    0x00068    32    read-write
+F    dem_dly_bkoff_gfsk    0    4    read-write
+
+R    dem_dly_bkoff_dpsk    0x0006c    32    read-write
+F    dem_dly_bkoff_dpsk    0    4    read-write
+
+R    n_extra_offset_sel    0x00070    32    read-write
+F    n_extra_offset_sel    0    1    read-write
+
+R    n_ftune_gfsk_sel    0x00074    32    read-write
+F    n_ftune_gfsk_sel    0    2    read-write
+
+R    n_ftune_dpsk_sel    0x00078    32    read-write
+F    n_ftune_dpsk_sel    0    2    read-write
+
+R    xcorr_th_gfsk_sel    0x0007c    32    read-write
+F    xcorr_th_gfsk_sel    0    4    read-write
+
+R    xcorr_th_dpsk_sel    0x00080    32    read-write
+F    xcorr_th_dpsk_sel    0    4    read-write
+
+R    xcorr_th_ble_sel    0x00084    32    read-write
+F    xcorr_th_ble_sel    0    4    read-write
+
+R    cnt2th    0x00088    32    read-write
+F    cnt2th    0    3    read-write
+
+R    k_fix0_2_timeout_sl    0x0008c    32    read-write
+F    k_fix0_2_timeout_sl    0    3    read-write
+
+R    fbfb_acc_fix_fsync    0x00098    32    read-write
+F    fbfb_acc_fix_fsync    0    1    read-write
+
+R    rx_fe_cfo_est_k    0x0009c    32    read-write
+F    rx_fe_cfo_est_k    0    3    read-write
+
+R    chf_ini_sel    0x000a0    32    read-write
+F    chf_ini_sel    0    1    read-write
+
+R    en_cfo_cmp    0x000a4    32    read-write
+F    en_cfo_cmp    0    1    read-write
+
+R    cfo_cmp_dis_lth    0x000a8    32    read-write
+F    cfo_cmp_dis_lth    0    3    read-write
+
+R    cfo_cmp_dis_hth    0x000ac    32    read-write
+F    cfo_cmp_dis_hth    0    3    read-write
+
+R    en_fagc    0x000b0    32    read-write
+F    en_fagc    0    1    read-write
+
+R    lwin    0x000b4    32    read-write
+F    lwin    0    1    read-write
+
+R    rx_fagc_ref    0x000b8    32    read-write
+F    rx_fagc_ref    0    2    read-write
+
+R    gfagc_reg    0x000bc    32    read-write
+F    gfagc_reg    0    16    read-write
+
+R    gfagc_wen    0x000c0    32    read-write
+F    gfagc_wen    0    1    read-write
+
+R    snr_est    0x000c4    32    read-write
+F    snr_est    0    6    read-write
+
+R    rssi_timeout_cnst    0x000c8    32    read-write
+F    rssi_timeout_cnst    0    4    read-write
+
+R    rssi_save_mode    0x000cc    32    read-write
+F    rssi_save_mode    0    2    read-write
+
+R    rssi_k_sel    0x000d0    32    read-write
+F    rssi_k_sel    0    2    read-write
+
+R    rssi_est_sel    0x000d4    32    read-write
+F    rssi_est_sel    0    1    read-write
+
+R    rssi_est_real_time    0x000d8    32    read-write
+F    rssi_est_real_time    0    1    read-write
+
+R    sig_dbm_est    0x000dc    32    read-write
+F    sig_dbm_est    0    8    read-write
+
+R    k_chg_ini0    0x000e0    32    read-write
+F    k_chg_ini0    0    4    read-write
+
+R    k_chg_ini1    0x000e4    32    read-write
+F    k_chg_ini1    0    4    read-write
+
+R    k_dcy_ini0    0x000e8    32    read-write
+F    k_dcy_ini0    0    4    read-write
+
+R    k_dcy_ini1    0x000ec    32    read-write
+F    k_dcy_ini1    0    4    read-write
+
+R    maxmin0_lim    0x000f0    32    read-write
+F    maxmin0_lim    0    2    read-write
+
+R    maxmin1_lim    0x000f4    32    read-write
+F    maxmin1_lim    0    2    read-write
+
+R    dc_lim    0x000f8    32    read-write
+F    dc_lim    0    2    read-write
+
+R    dcy_cond_th_sel    0x000fc    32    read-write
+F    dcy_cond_th_sel    0    2    read-write
+
+R    var_dcy_fsync_en    0x00100    32    read-write
+F    var_dcy_fsync_en    0    1    read-write
+
+R    k_chg_lim    0x00104    32    read-write
+F    k_chg_lim    0    3    read-write
+
+R    k_dcy_lim    0x00108    32    read-write
+F    k_dcy_lim    0    3    read-write
+
+R    cnt_chg_th_sel    0x0010c    32    read-write
+F    cnt_chg_th_sel    0    2    read-write
+
+R    cnt_dcy_th_sel    0x00110    32    read-write
+F    cnt_dcy_th_sel    0    2    read-write
+
+R    fine_dcy_sel    0x00114    32    read-write
+F    fine_dcy_sel    0    1    read-write
+
+R    dc_lpf_sel    0x00118    32    read-write
+F    dc_lpf_sel    0    1    read-write
+
+R    ref_th_sel    0x0011c    32    read-write
+F    ref_th_sel    0    2    read-write
+
+R    k_dcy_cnt_en    0x00120    32    read-write
+F    k_dcy_cnt_en    0    1    read-write
+
+R    k_dcy_ref_en    0x00124    32    read-write
+F    k_dcy_ref_en    0    1    read-write
+
+R    k_dcy_cond_en    0x00128    32    read-write
+F    k_dcy_cond_en    0    1    read-write
+
+R    k_chg_cnt_en    0x0012c    32    read-write
+F    k_chg_cnt_en    0    1    read-write
+
+R    k_chg_ref_en    0x00130    32    read-write
+F    k_chg_ref_en    0    1    read-write
+
+R    k_chg_cond_en    0x00134    32    read-write
+F    k_chg_cond_en    0    1    read-write
+
+R    k_slope_sel    0x00138    32    read-write
+F    k_slope_sel    0    1    read-write
+
+R    k_dc_lpf    0x0013c    32    read-write
+F    k_dc_lpf    0    2    read-write
+
+R    var_dcy_slope0    0x00140    32    read-write
+F    var_dcy_slope0    0    2    read-write
+
+R    var_dcy_slope1    0x00144    32    read-write
+F    var_dcy_slope1    0    2    read-write
+
+R    var_dx_en_range0    0x00148    32    read-write
+F    var_dx_en_range0    0    2    read-write
+
+R    var_dx_en_range1    0x0014c    32    read-write
+F    var_dx_en_range1    0    2    read-write
+
+R    var_dcy0_en    0x00150    32    read-write
+F    var_dcy0_en    0    1    read-write
+
+R    var_dcy1_en    0x00154    32    read-write
+F    var_dcy1_en    0    1    read-write
+
+R    noise_det_en    0x00158    32    read-write
+F    noise_det_en    0    1    read-write
+
+R    maxmin_lim_sel    0x0015c    32    read-write
+F    maxmin_lim_sel    0    1    read-write
+
+R    tx_edr3_dly_sel    0x00164    32    read-write
+F    tx_edr3_dly_sel    0    6    read-write
+
+R    gau_dly_cnt    0x00168    32    read-write
+F    gau_dly_cnt    0    8    read-write
+
+R    guard_dly_cnt    0x0016c    32    read-write
+F    guard_dly_cnt    0    8    read-write
+
+R    tx_ext_sel    0x00170    32    read-write
+F    tx_ext_sel    0    8    read-write
+
+R    TX_RX_EN    0x00174    32    read-write
+F    fsync_sel        3    1    read-write
+F    reg_tx_en_sel    2    1    read-write
+F    reg_rx_en        1    1    read-write
+F    reg_tx_en        0    1    read-write
+
+R    bt_phy_id    0x0017c    32    read-write
+F    bt_phy_id    0    32    read-write
+
+R    rx_gainc1    0x0018c    32    read-write
+F    rx_gainc_lut_0    0     5    read-write
+F    rx_gainc_lut_1    8     5    read-write
+F    rx_gainc_lut_2    16    5    read-write
+F    rx_gainc_lut_3    24    5    read-write
+
+R    rx_gainc2    0x00190    32    read-write
+F    rx_gainc_lut_4    0     5   read-write
+F    rx_gainc_lut_5    8     5    read-write
+F    rx_gainc_lut_6    16    5    read-write
+F    rx_gainc_lut_7    24    5    read-write
+
+R    rx_gainc3    0x00194    32    read-write
+F    rx_gainc_lut_8    0    5    read-write
+F    rx_gainc_lut_9    8    5    read-write
+
+R    RX_RFAGC1    0x00198    32    read-write
+F    rfagc_lut_0    0    10    read-write
+F    rfagc_lut_1    16   10    read-write
+
+R    RX_RFAGC2    0x0019c    32    read-write
+F    rfagc_lut_2    0    10    read-write
+F    rfagc_lut_3    16   10    read-write
+
+R    RX_RFAGC3    0x001a0    32    read-write
+F    rfagc_lut_4    0    10    read-write
+F    rfagc_lut_5    16   10    read-write
+
+R    RX_RFAGC4    0x001a4    32    read-write
+F    rfagc_lut_6    0    10    read-write
+
+R    RX_IFAGC1    0x001a8    32    read-write
+F    ifagc_lut1_0    0    10    read-write
+F    ifagc_lut1_1    16   10    read-write
+
+R    RX_IFAGC2    0x001ac    32    read-write
+F    ifagc_lut1_2    0    10    read-write
+F    ifagc_lut1_3    16   10    read-write
+
+R    RX_IFAGC3    0x001b0    32    read-write
+F    ifagc_lut1_4    0    10    read-write
+F    ifagc_lut1_5    16   10    read-write
+
+R    RX_IFAGC4    0x001b4    32    read-write
+F    ifagc_lut1_6    0    10    read-write
+
+R    RX_IFAGC5    0x001b8    32    read-write
+F    ifagc_lut2_0    0    10    read-write
+F    ifagc_lut2_1    16   10    read-write
+
+R    RX_IFAGC6    0x001bc    32    read-write
+F    ifagc_lut2_2    0    10    read-write
+F    ifagc_lut2_3    16   10    read-writeV
+
+R    RX_IFAGC7    0x001c0    32    read-write
+F    ifagc_lut2_4    0    10    read-write
+F    ifagc_lut2_5    16   10    read-write
+
+R    RX_IFAGC8    0x001c4    32    read-write
+F    ifagc_lut2_6    0    10    read-write
+
+R    dis_pld_cfo_cmp    0x001c8    32    read-write
+F    dis_pld_cfo_cmp    0    1    read-write
+
+R    en_anti_intf    0x001cc    32    read-write
+F    en_anti_intf    0    1    read-write
+
+R    maxmin0_lim2    0x001d0    32    read-write
+F    maxmin0_lim2    0    2    read-write
+
+R    maxmin1_lim2    0x001d4    32    read-write
+F    maxmin1_lim2    0    2    read-write
+
+R    clr_th    0x001d8    32    read-write
+F    clr_th    0    4    read-write
+
+R    en_clr    0x001dc    32    read-write
+F    en_clr    0    1    read-write
+
+R    dem_dly_bkoff_gfsk2    0x001e0    32    read-write
+F    dem_dly_bkoff_gfsk2    0    3    read-write
+
+R    rx_en_str_st1_wrt    0x001e4    32    read-write
+F    rx_en_str_st1_wrt    0    1    read-write
+
+R    en_cfo_acc_clr    0x001e8    32    read-write
+F    en_cfo_acc_clr    0    1    read-write
+
+R    en_cfo_clr_after_sync    0x001ec    32    read-write
+F    en_cfo_clr_after_sync    0    1    read-write
+
+R    cfo_acc_sat_lim    0x001f0    32    read-write
+F    cfo_acc_sat_lim    0    3    read-write
+
+R    dcnotch_k2    0x001f4    32    read-write
+F    dcnotch_k2    0    3    read-write
+
+R    dc_mode    0x001f8    32    read-write
+F    dc_mode    0    2    read-write
+
+R    str_xcorr_cut    0x001fc    32    read-write
+F    str_xcorr_cut    0    1    read-write
+
+R    th_sel    0x00200    32    read-write
+F    th_sel    0    4    read-write
+
+R    adc_clr_dur_sel    0x00204    32    read-write
+F    adc_clr_dur_sel    0    3    read-write
+
+R    sat_cnt_th_sel    0x00208    32    read-write
+F    sat_cnt_th_sel    0    4    read-write
+
+R    cnt_mode    0x0020c    32    read-write
+F    cnt_mode    0    1    read-write
+
+R    a_reg    0x00210    32    read-write
+F    a_reg    0    2    read-write
+
+R    c_reg    0x00214    32    read-write
+F    c_reg    0    3    read-write
+
+R    pd_clr_dur_sel    0x00218    32    read-write
+F    pd_clr_dur_sel    0    3    read-write
+
+R    din_sel    0x0021c    32    read-write
+F    din_sel    0    1    read-write
+
+R    pd_det_mode    0x00220    32    read-write
+F    pd_det_mode    0    2    read-write
+
+R    buf_l_sel    0x00224    32    read-write
+F    buf_l_sel    0    2    read-write
+
+R    th_analog    0x00228    32    read-write
+F    th_analog    0    4    read-write
+
+R    ble_xcorr_win_th    0x0022c    32    read-write
+F    ble_xcorr_win_hth    0    3    read-write
+F    ble_xcorr_win_lth    4    3    read-write
+
+R    gfsk_xcorr_win_th    0x00230    32    read-write
+F    gfsk_xcorr_win_hth    0    3    read-write
+F    gfsk_xcorr_win_lth    4    3    read-write
+
+R    dpsk_xcorr_win_th    0x00234    32    read-write
+F    dpsk_xcorr_win_hth    0    4    read-write
+F    dpsk_xcorr_win_lth    4    4    read-write
+
+R    if_reg    0x00238    32    read-write
+F    if_reg    0    12    read-write
+
+R    iq_in_swap    0x0023c    32    read-write
+F    iq_in_swap    0    1    read-write
+
+R    fm_mode    0x00240    32    read-write
+F    fm_mode    0    1    read-write
+
+R    fm_rssi    0x00244    32    read-write
+F    fm_rssi_k_sel    0    2    read-write
+F    fm_snr           4    8    read-write
+F    fm_rssi          12   8    read-write
+
+R    rmv2_deem    0x00248    32    read-write
+F    fm_dc_rmv2_k         0    2    read-write
+F    fm_dc_rmv2_en        4    1    read-write
+F    fm_deemphasis_tao    8    1    read-write
+F    fm_deemphasis_en    12    1    read-write
+
+R    fm_fagc    0x0024c    32    read-write
+F    fm_fagc_lpg    0    2    read-write
+F    fm_fagc_ref    4    8    read-write
+F    fm_fagc_en    12    1    read-write
+F    fm_fagc_gain  16    12   read-write
+
+R    fm_chhc_filt    0x00250    32    read-write
+F    fm_chhc_snr_thl    0    8    read-write
+F    fm_chhc_snr_thh    8    8    read-write
+F    fm_chhc_filt_en    16   1    read-write
+F    fm_hc_mode         20   1    read-write
+
+R    fm_lrhc_filt    0x00254    32    read-write
+F    fm_lrhc_snr_thl    0    8    read-write
+F    fm_lrhc_snr_thh    8    8    read-write
+F    fm_lrhc_filt_en    16   1    read-write
+F    fm_fir_ram_clr     20   1    read-write
+
+R    spi_apb_switch    0x00258    32    read-write
+F    spi_apb_switch    0    1    read-write
+
+R    cfo_est_acc_trunc    0x0025c    32    read-write
+F    cfo_est_acc_trunc    0    10    read-write
+
+R    fsync_early    0x00260    32    read-write
+F    fsync_early    0    1    read-write
+
+R    cfo_cap_for_dpsk    0x00264    32    read-write
+F    cfo_cap_for_dpsk    0    10    read-write
+
+R    tx_iq_mux    0x00268    32    read-write
+F    tx_i_reg           0     12    read-write
+F    tx_i_mn            12    1     read-write
+F    tx_q_mn            13    1     read-write
+F    trx_calib_iq_mn    14    1     read-write
+F    tx_q_reg           16    12    read-write
+
+R    fm_cordic_bp    0x0026c    32    read-write
+F    fm_cordic_bp           0    1    read-write
+F    iq_mismatch_enlarge    1    1    read-write
+F    enlarge_iqmis          2    2    read-write
+F    adc_clr_reg_clr        4    1    read-write
+F    adc_clr_o_reg          5    1    read-write
+F    phy_reg_reserv_l       6    10   read-write
+F    phy_reg_reserv_h       16   16   read-write
+
+R    tx_if_reg    0x00270    32    read-write
+F    gau_out_reg   0     11    read-write
+F    tx_if_reg_sel 11    1     read-write
+F    tx_iq_swp     12    1     read-write
+F    tx_inv_clk    13    1     read-write
+F    rx_inv_clk    14    1     read-write
+
+R    fm_decimation    0x00274    32    read-write
+F    decimation_o_s    0    16    read-write
+
+R    iq_com_single    0x0027c    32    read-write
+F    iq_com_single    0    1    read-write
+
+R    rxi_offset1    0x00280   32    read-write
+F    rxi_offset_lut_3    24   8    read-write
+F    rxi_offset_lut_2    16   8    read-write
+F    rxi_offset_lut_1    8    8    read-write
+F    rxi_offset_lut_0    0    8    read-write
+
+R    rxi_offset2    0x00284   32    read-write
+F    rxi_offset_lut_7    24   8    read-write
+F    rxi_offset_lut_6    16   8    read-write
+F    rxi_offset_lut_5    8    8    read-write
+F    rxi_offset_lut_4    0    8    read-write
+
+R    rxi_offset3    0x00288   32    read-write
+F    rxi_offset_lut_9    8    8    read-write
+F    rxi_offset_lut_8    0    8    read-write
+
+R    rxq_offset1    0x0028c   32    read-write
+F    rxi_offset_lut_3    24   8    read-write
+F    rxi_offset_lut_2    16   8    read-write
+F    rxi_offset_lut_1    8    8    read-write
+F    rxi_offset_lut_0    0    8    read-write
+
+R    rxq_offset2    0x00290   32    read-write
+F    rxi_offset_lut_7    24   8    read-write
+F    rxi_offset_lut_6    16   8    read-write
+F    rxi_offset_lut_5    8    8    read-write
+F    rxi_offset_lut_4    0    8    read-write
+
+R    rxq_offset3    0x00294   32    read-write
+F    rxi_offset_lut_9    8    8    read-write
+F    rxi_offset_lut_8    0    8    read-write

@@ -1,0 +1,20 @@
+P	DW_RTC	1.0	DW_RTC_	0x400F0000	DW RTC controller
+A 	0x0 	0x10000 	IOregisters
+I 	INT_RTC 	7
+R	CCVR	0x00	32	read-only	Current	Counter	Value	Register
+F	CCVR	0	32	read-only	Current value of internal counter			
+R	CMR	0x04	32	read-write	Counter	Match	Register	
+F	CMR	0	32	read-write	counter match			
+R	CLR	0x08	32	read-write	Counter	Load	Register	
+F	CLR	0	32	read-write	counter load			
+R	CCR	0x0C	32	read-write	Counter	Control	Register	
+F	WEN	3	1	read-write	wrap enable			
+F	EN	2	1	read-write	counter enable			
+F	MASK	1	1	read-write	Interrupt mask			
+F	IEN	0	1	read-write	interrupt enable			
+R	STAT	0x10	32	read-only	Interrupt	Status	Register	
+F	STAT	0	1	read-only	masked status			
+R	RSTAT	0x14	32	read-only	Interrupt	Raw	Status	Register
+F	RSTAT	0	1	read-only	raw status			
+R	RTC_COMP_VERSION 0x1C 	32	read-only Component Version Register
+F	rtc_ccmp_version 0	32	read-only

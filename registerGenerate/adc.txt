@@ -1,0 +1,40 @@
+P	ADC	1.0	ADC_	0x4000f400	SAR ADC
+A 	0x0 	0x2000 	IOregisters
+I 	INT_ADC 	12
+R	adc_intr			0x000	32	read-write	Interrupt Status Register
+R	adc_intr_mask		0x004	32	read-write	Interrupt Mask Register
+R	adc_cfg0			0x008	32	read-write	Configuration Register
+R	adc_cfg1			0x00C	32	read-write	Configuration Register
+R	adc_chselr			0x010	32	read-write	Channel Select Register
+R	adc_timing_cfg0		0x014	32	read-write	timing config 0
+R	adc_timing_cfg1		0x018	32	read-write	timing config 1
+R	adc_flag_fsm		0x01C	32	read-write	
+R	adc_debug_reg0		0x020	32	read-write	
+R	adc_debug_reg1		0x024	32	read-write	
+R	adc_ana_reg0		0x028	32	read-write	Channel 0 Analog Control Register
+R	adc_ana_reg1		0x02C	32	read-write	Channel 1 Analog Control Register
+R	adc_ana_reg2		0x030	32	read-write	Channel 2 Analog Control Register
+R	adc_ana_reg3		0x034	32	read-write	Channel 3 Analog Control Register
+R	adc_ana_reg4		0x038	32	read-write	Channel 4 Analog Control Register
+R	adc_ana_reg5		0x03C	32	read-write	Channel 5 Analog Control Register
+R	adc_ana_reg6		0x040	32	read-write	Channel 6 Analog Control Register
+R	adc_ana_reg7		0x044	32	read-write	Channel 7 Analog Control Register
+R	adc_ana_reg8		0x048	32	read-write	Channel 8 Analog Control Register
+R	adc_data_reg0		0x04C	32	read-write	Channel 0 Data Register
+R	adc_data_reg1		0x050	32	read-write	Channel 1 Data Register
+R	adc_data_reg2		0x054	32	read-write	Channel 2 Data Register
+R	adc_data_reg3		0x058	32	read-write	Channel 3 Data Register
+R	adc_data_reg4		0x05C	32	read-write	Channel 4 Data Register
+R	adc_data_reg5		0x060	32	read-write	Channel 5 Data Register
+R	adc_data_reg6		0x064	32	read-write	Channel 6 Data Register
+R	adc_data_reg7		0x068	32	read-write	Channel 7 Data Register
+R	adc_data_reg8		0x06C	32	read-write	Channel 8 Data Register
+R	adc_fifo_con		0x070	32	read-write	fifo control
+R	adc_dma_con			0x074	32	read-write	dma control
+R	adc_rxfifo_th		0x078	32	read-write	
+R	adc_rxfifo_fl		0x07c	32	read-write	
+R	adc_rxfifo_data		0x080	32	read-write	
+R	debug_data			0x084	32	read-write	
+R	debug_data_sample	0x088	32	read-write	
+R	adc_test_data		0x08c	32	read-write	
+

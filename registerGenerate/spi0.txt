@@ -1,0 +1,37 @@
+P	SPI0	1.0	SPI0_	0x40050000	SPI0
+A 	0x0 	0x10000 	IOregisters
+I 	INT_SPI0_0 	36
+I 	INT_SPI0_1 	37
+R	SPI_CTL	0x00000000	32	read-write	SPI	Control	Register
+F	tx_fifo_enable	31	1	read-write			
+F	rx_fifo_enable	30	1	read-write			
+F	tx_clr_fifo	29	1	read-write			
+F	rx_clr_fifo	28	1	read-write			
+F	rx_trigger_level	26	2	read-write			
+F	inactive_do_enl	25	1	read-write			
+F	active_do_enl	24	1	read-write			
+F	bidirect_data_h	23	1	read-write			
+F	use_rdy_out_h	22	1	read-write			
+F	invert_clock_h	21	1	read-write			
+F	msb_first_h	20	1	read-write			
+F	soft_reset_h	19	1	read-write			
+F	master_ce_at_end	18	1	read-write			
+F	mode1_h	17	1	read-write			
+F	master_enable_h	16	1	read-write			
+F	clk_divider	0	16	read-write			
+R	SPI_STAT	0x0000000c	32	read-write	Status	register	
+F	spi_int	31	1	read-write			
+F	bit_count	28	3	read-only			
+F	waiting_for_rdy_h	27	1	read-only			
+F	spi_rdy_out	26	1	read-only			
+F	spi_rdy_in	25	1	read-only			
+F	spi_active_h	24	1	read-only			
+F	tx_byte_cnt	16	8	read-write			
+F	rx_byte_cnt	8	8	read-write			
+F	rx_fifo_trig	7	1	read-write			
+F	rx_trig_int_en	6	1	read-write			
+F	tx_empty	5	1	read-write			
+F	tx_empty_int_en	4	1	read-write			
+F	tx_fifo_overrun	2	1	read-write			
+F	rx_fifo_overrun	1	1	read-write			
+F	rx_notempty_h	0	1	read-write			

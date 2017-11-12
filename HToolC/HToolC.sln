@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HToolC", "HToolC\HToolC.vcxproj", "{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C488106B-E281-BAF6-7058-77B466C418A4} = {C488106B-E281-BAF6-7058-77B466C418A4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Serial", "Serial\Serial.vcxproj", "{C488106B-E281-BAF6-7058-77B466C418A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Unicode|Win32 = Debug Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release Unicode|Win32 = Release Unicode|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Debug Unicode|Win32.ActiveCfg = Debug|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Debug Unicode|Win32.Build.0 = Debug|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Debug|Win32.Build.0 = Debug|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Release Unicode|Win32.ActiveCfg = Release|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Release Unicode|Win32.Build.0 = Release|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Release|Win32.ActiveCfg = Release|Win32
+		{5BFCF7E3-F0B0-4DD3-8E7A-EA3047A25889}.Release|Win32.Build.0 = Release|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Debug Unicode|Win32.ActiveCfg = Debug Unicode|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Debug Unicode|Win32.Build.0 = Debug Unicode|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Debug|Win32.Build.0 = Debug|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Release Unicode|Win32.ActiveCfg = Release Unicode|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Release|Win32.ActiveCfg = Release|Win32
+		{C488106B-E281-BAF6-7058-77B466C418A4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

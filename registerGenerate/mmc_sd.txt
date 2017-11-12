@@ -1,0 +1,217 @@
+P MMC_SD 1.0 SD_ 0x46000000 MMC SD controller
+A 0x0 0x100000 IOregisters
+I INT_SD 6
+R	CTRL	0x00	32	read-write	Control	register																
+F	use_internal_dmac	25	1	read-write																			
+F	enable_OD_pullup	24	1	read-write																			
+F	Card_voltage_b	20	4	read-write																			
+F	Card_voltage_a	16	4	read-write																			
+F	ceata_device_interrupt_status	11	1	read-write																			
+F	send_auto_stop_ccsd	10	1	read-write																			
+F	send_ccsd	9	1	read-write																			
+F	abort_read_data	8	1	read-write																			
+F	send_irq_response	7	1	read-write																			
+F	read_wait	6	1	read-write																			
+F	dma_enable	5	1	read-write																			
+F	int_enable	4	1	read-write																			
+F	dma_reset	2	1	read-write																			
+F	fifo_reset	1	1	read-write																			
+F	controller_reset	0	1	read-write																			
+R	PWREN	0x04	32	read-write	Power-enable	register																	
+F	power_enable	0	30	read-write																			
+R	CLKDIV	0x08	32	read-write	Clock-divider	register																	
+F	clk_divider3	24	8	read-write																			
+F	clk_divider2	16	8	read-write																			
+F	clk_divider1	8	8	read-write																			
+F	clk_divider0	0	8	read-write																			
+R	CLKSRC	0x0C	32	read-write	Clock-source	register																	
+F	clk_source	0	32	read-write																			
+R	CLKENA	0x10	32	read-write	Clock-enable	register																	
+F	cclk_low_power	16	16	read-write																			
+F	cclk_enable	0	16	read-write																			
+R	TMOUT	0x14	32	read-write	Time-out	register	(number	of	card	clock	output	clocks	-	cclk_out)									
+F	data_timeout	16	16	read-write																			
+F	response_timeout	0	8	read-write																			
+R	CTYPE	0x18	32	read-write	Card-type	register																	
+F	card_width_8_bit_card	16	16	read-write																			
+F	card_width_1_or4_bit_card	0	16	read-write																			
+R	BLKSIZ	0x1C	32	read-write	Block-size	register																	
+F	block_size	0	16	read-write																			
+R	BYTCNT	0x20	32	read-write	Byte-count	register																	
+F	byte_count	0	32	read-write																			
+R	INTMASK	0x24	32	read-write	Interrupt-mask	register																	
+F	sdio_int_mask	16	16	read-write	Mask SDIO interrupts																		
+F	EBE	15	1	read-write	End-bit	error	read_Write	no	CRC		
+F	ACD	14	1	read-write	Auto	command	done	ACD			
+F	SBE	13	1	read-write	Start-bit	error	SBE				
+F	HLE	12	1	read-write	Hardware	locked	write	error	HLE		
+F	FRUN	11	1	read-write	FIFO	underrun_overrun	error	FRUN			
+F	HTO_VSI	10	1	read-write	Data	starvation-by-host	timeout	HTO	Volt_switch_int		
+F	DRTO	9	1	read-write	Data	read	timeout	DRTO			
+F	RTO	8	1	read-write	Response	timeout	RTO				
+F	DCRC	7	1	read-write	Data	CRC	error	DCRC			
+F	RCRC	6	1	read-write	Response	CRC	error	RCRC			
+F	RXDR	5	1	read-write	Receive	FIFO	data	request	RXDR		
+F	TXDR	4	1	read-write	Transmit	FIFO	data	request	TXDR		
+F	DTO	3	1	read-write	Data	transfer	over	DTO			
+F	CMDONE	2	1	read-write	Command	done	CD				
+F	RE	1	1	read-write	Response	error	RE				
+F	CD	0	1	read-write	Card	detect	CD				
+R	CMDARG	0x28	32	read-write	Command-argument	register																	
+F	cmd_arg	0	32	read-write																			
+R	CMD	0x2C	32	read-write	Command	register																	
+F	start_cmd	31	1	read-write																			
+F	use_hold_reg	29	1	read-write																			
+F	volt_switch	28	1	read-write																			
+F	boot_mode	27	1	read-write																			
+F	disable_boot	26	1	read-write																			
+F	expect_boot_ack	25	1	read-write																			
+F	enable_boot	24	1	read-write																			
+F	ccs_expected	23	1	read-write																			
+F	read_ceata_device	22	1	read-write																			
+F	update_clock_registers_only	21	1	read-write																			
+F	card_number	16	5	read-write																			
+F	send_initialization	15	1	read-write																			
+F	stop_abort_cmd	14	1	read-write																			
+F	wait_prvdata_complete	13	1	read-write																			
+F	send_auto_stop	12	1	read-write																			
+F	transfer_mode	11	1	read-write																			
+F	read_write	10	1	read-write																			
+F	data_expected	9	1	read-write																			
+F	check_response_crc	8	1	read-write																			
+F	response_length	7	1	read-write																			
+F	response_expect	6	1	read-write																			
+F	cmd_index	0	6	read-write																			
+R	RESP0	0x30	32	read-write	Response-0	register																	
+F	response0	0	32	read-only																			
+R	RESP1	0x34	32	read-write	Response-1	register																	
+F	response1	0	32	read-only																			
+R	RESP2	0x38	32	read-write	Response-2	register																	
+F	response2	0	32	read-only																			
+R	RESP3	0x3C	32	read-write	Response-3	register																	
+F	response3	0	32	read-only																			
+R	MINTSTS	0x40	32	read-write	Masked	interrupt-status	register																
+F	sdio_interrupt	16	16	read-only Interrupt from SDIO card; one bit for each card																			
+F	EBE	15	1	read-only	End-bit	error	read_write	no	CRC	EBE	
+F	ACD	14	1	read-only	Auto	command	done	ACD			
+F	SBE	13	1	read-only	Start-bit	error	SBE				
+F	HLE	12	1	read-only	Hardware	locked	write	error	HLE		
+F	FRUN	11	1	read-only	FIFO	underrun_overrun	error	FRUN			
+F	HTO_VSI	10	1	read-only	Data	starvation	by	host	timeout	HTO_Volt_switch_int	
+F	DRTO	9	1	read-only	Data	read	timeout	DRTO			
+F	RTO	8	1	read-only	Response	timeout	RTO				
+F	DCRC	7	1	read-only	Data	CRC	error	DCRC			
+F	RCRC	6	1	read-only	Response	CRC	error	RCRC			
+F	RXDR	5	1	read-only	Receive	FIFO	data	request	RXDR		
+F	TXDR	4	1	read-only	Transmit	FIFO	data	request	TXDR		
+F	DTO	3	1	read-only	Data	transfer	over	DTO			
+F	CMDONE	2	1	read-only	Command	done	CD			
+F	RE	1	1	read-only	Response	error	RE				
+F	CD	0	1	read-only	Card	detect	CD				
+R	RINTSTS	0x44	32	read-write	Raw	interrupt-status	register																
+F	sdio_interrupt	16	16	read-write	Interrupt from SDIO card																		
+F	EBE	15	1	read-write	End-bit	error	read-write	no	CRC	EBE	
+F	ACD	14	1	read-write	Auto	command	done	ACD			
+F	SBE	13	1	read-write	Start-bit	error	SBE				
+F	HLE	12	1	read-write	Hardware	locked	write	error	HLE		
+F	FRUN	11	1	read-write	FIFO	underrun-overrun	error	FRUN			
+F	HTO_VSI	10	1	read-write	Data	starvation-by-host	timeout	HTO	Volt_switch_int		
+F	DRTO_BDS	9	1	read-write	Data	read	timeout	DRTO Boot	Data	Start	(BDS)
+F	RTO_BAR	8	1	read-write	Response	timeout	RTO Boot	Ack	Received	BAR	
+F	DCRC	7	1	read-write	Data	CRC	error	DCRC			
+F	RCRC	6	1	read-write	Response	CRC	error	RCRC			
+F	RXDR	5	1	read-write	Receive	FIFO	data	request	RXDR		
+F	TXDR	4	1	read-write	Transmit	FIFO	data	request	TXDR		
+F	DTO	3	1	read-write	Data	transfer	over	DTO			
+F	CMDONE	2	1	read-write	Command	done	CD				
+F	RE	1	1	read-write	Response	error	RE				
+F	CD	0	1	read-write	Card	detect	CD				
+R	STATUS	0x48	32	read-write	Status	register;	mainly	for	debug	purposes													
+F	dma_req	31	1	read-only																			
+F	dma_ack	30	1	read-only																			
+F	fifo_count	17	13	read-only																			
+F	response_index	11	6	read-only																			
+F	data_state_mc_busy	10	1	read-only																			
+F	data_busy	9	1	read-only																			
+F	data_3_status	8	1	read-only																			
+F	command_fsm_states	4	4	read-only																			
+F	fifo_full	3	1	read-only																			
+F	fifo_empty	2	1	read-only																			
+F	fifo_tx_watermark	1	1	read-only																			
+F	fifo_rx_watermark	0	1	read-only																			
+R	FIFOTH	0x4C	32	read-write	FIFO	threshold	register																
+F	DW_DMA_Multiple_Transaction_Size	28	3	read-write																			
+F	RX_WMark	16	11	read-write																			
+F	TX_WMark	0	12	read-write																			
+R	CDETECT	0x50	32	read-write	Card-detect	register																	
+F	card_detect_n	0	30	read-only																			
+R	WRTPRT	0x54	32	read-write	Write-protect	register																	
+F	write_protect	0	30	read-only																			
+R	GPIO	0x58	32	read-write	GPIO	register																	
+F	gpo	8	16	read-write																			
+F	gpi	0	8	read-only																			
+R	TCBCNT	0x5C	32	read-write	Transferred	CIU	card	byte	count														
+F	trans_card_byte_count	0	32	read-only																			
+R	TBBCNT	0x60	32	read-write	Transferred	host/DMA	to/from	BIU-FIFO	byte	count													
+F	trans_fifo_byte_count	0	32	read-only																			
+R	DEBNCE	0x64	32	read-write	Card	detect	debounce	register	number	of	host	clocks	-	clk									
+F	debounce_count	0	24	read-write																			
+R	USRID	0x68	32	read-write	User	ID	register																
+F	USRID	0	32	read-write																			
+R	VERID	0x6C	32	read-write	Synopsys	version	ID	register															
+F	VERID	0	32	read-only																			
+R	HCON	0x70	32	read-write	Hardware	configuration	register																
+F	AREA_OPTIMIZED	26	1	read-write																			
+F	NUM_CLK_DIVIDER	24	2	read-write																			
+F	SET_CLK_FALSE_PATH	23	1	read-write																			
+F	IMPLEMENT_HOLD_REG	22	1	read-write																			
+F	FIFO_RAM_INSIDE	21	1	read-write																			
+F	GE_DMA_DATA_WIDTH	18	3	read-write																			
+F	DMA_INTERFACE	16	2	read-write																			
+F	H_ADDR_WIDTH	10	6	read-write																			
+F	H_DATA_WIDTH	7	3	read-write																			
+F	H_BUS_TYPE	6	1	read-write																			
+F	NUM_CARDS	1	5	read-write																			
+F	CARD_TYPE	0	1	read-write																			
+R	UHS_REG	0x74	32	read-write	UHS-1	register																	
+F	DDR_REG	16	16	read-write																			
+F	VOLT_REG	0	16	read-write																			
+R	RST_n	0x78	32	read-write	Hardware	reset	register																
+F	CART_RESET	0	16	read-write																			
+R	BMOD	0x80	32	read-write	Bus	Mode	Register;	controls	the	Host	Interface	Mode.											
+F	PBL	8	3	read-write																			
+F	DE	7	1	read-write																			
+F	DSL	2	5	read-write																			
+F	FB	1	1	read-write																			
+F	SWR	0	1	read-write																			
+R	PLDMND	0x84	32	read-write	Poll	Demand	Register.	Used	by	the	host	to	instruct	the	IDMAC	to	poll	the	Descriptor	List	while	in	suspend.
+F	PD	0	32	write-only																			
+R	DBADDR	0x88	32	read-write	Descriptor	List	Base	Address	Register.														
+F	SDL	0	32	read-write																			
+R	IDSTS	0x8C	32	read-write	Internal	DMAC	Status	Register.															
+F	FSM	13	4	read-only																			
+F	EB	10	3	read-only																			
+F	AIS	9	1	read-write																			
+F	NIS	8	1	read-write																			
+F	CES	5	1	read-write																			
+F	DU	4	1	read-write																			
+F	FBE	2	1	read-write																			
+F	RI	1	1	read-write																			
+F	TI	0	1	read-write																			
+R	IDINTEN	0x90	32	read-write	Internal	DMAC	Interrupt	Enable	Register.														
+F	AI	9	1	read-write																			
+F	NI	8	1	read-write																			
+F	CES	5	1	read-write																			
+F	DU	4	1	read-write																			
+F	FBE	2	1	read-write																			
+F	RI	1	1	read-write																			
+F	TI	0	1	read-write																			
+R	DSCADDR	0x94	32	read-write	Current	Host	Descriptor	Address	Register.														
+F	HDA	0	32	read-only																			
+R	BUFADDR	0x98	32	read-write	Current	Host	Buffer	Address	Register.														
+F	HBA	0	32	read-only																			
+R	CARDTHRCTL	0x100	32	read-write	Card	Read	Threshold	Enable	CardRdThrEn														
+F	CardRd_Threshold	16	12	read-write																			
+F	CardRd_ThrEn	0	1	read-write																			
+R	BACK_END_POWER	0x104	16	read-write	Back-end	Power																	
+F	back_end_power	0	16	read-write																			
